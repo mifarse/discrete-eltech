@@ -1,0 +1,36 @@
+#student-page .user {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#student-page .user .photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+#student-page .user .info {
+    margin-left: 40px;
+}
+
+#student-page .user .info > .field {
+    margin-top: 14px;
+}
+#student-page .user .info > .field:first-child {
+    margin-top: 0;
+}
+
+#student-page .user .info a {
+    color: #000;
+}
+
+#student-page .tests ul {
+    margin: 0;
+    padding: 0;
+}
+
+#student-page .tests .student {
+    list-style-type: none;
+}

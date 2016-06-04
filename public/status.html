@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="apple-touch-icon" href="icon.png">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<title>Raspberry Node</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<nav class="teal">
+		<div class="nav-wrapper">
+		  <a href="#" class="brand-logo center">Сервер</a>
+		  <ul class="right">
+		  	<li><a href="#" id="refresh"><i class="material-icons">refresh</i></a></a></li>
+		  </ul>
+		</div>
+	</nav>
+
+	<div class="container" style="margin-top: 0.5cm">
+		<table class="striped">
+			<tbody>
+				<tr>
+					<td>Нагрузка</td>
+					<td id="load"></td>
+				</tr>
+				<tr>
+					<td>Память</td>
+					<td id="mem"></td>
+				</tr>
+				<tr>
+					<td>Server Uptime</td>
+					<td id="uptime"></td>
+				</tr>
+				<tr>
+					<td>NodeJS Uptime</td>
+					<td id="node_uptime"></td>
+				</tr>
+				<tr>
+					<td>Подключений</td>
+					<td id="connections"></td>
+				</tr>
+				<tr>
+					<td colspan="2">
+					<b>Данные о студентах</b>
+					</td>
+				</tr>
+				<tr>
+					<td>Количество</td>
+					<td id="students_count"></td>
+				</tr>
+				<tr>
+					<td>Объем данных</td>
+					<td id="students_size"></td>
+				</tr>
+				<tr>
+					<td colspan="2">
+					<b>Данные о заданиях</b>
+					</td>
+				</tr>
+				<tr>
+					<td>Количество</td>
+					<td id="tests_count"></td>
+				</tr>
+				<tr>
+					<td>Объем данных</td>
+					<td id="tests_size"></td>
+				</tr>
+			</tbody>
+		</table>
+		<small></small>
+	</div>
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+<script type="text/javascript" src="http://momentjs.com/downloads/moment-with-locales.js"></script>
+<script type="text/javascript">
+	host = window.location.host;
+	moment.locale('ru');
+	req = function(){
+		$.getJSON("http://"+host+"/server/status.json", function(data){
+			$("nav").removeClass("grey").addClass("teal");
+			$("#load").text(data.load[0].toFixed(5));
+			$("#mem").text((data.freemem/(1024*1024)).toFixed(2)+" Mb");
+			$("#uptime").text(moment.duration(data.uptime, 'seconds').humanize());
+			$("#node_uptime").text(moment.duration(data.node_uptime, 'seconds').humanize());
+			$("#connections").text(data.connections);
+			$("#tests_size").text((data.tests.size/1024).toFixed(2)+" Kb");
+			$("#tests_count").text(data.tests.count);
+			$("#students_size").text((data.students.size/1024).toFixed(2)+" Kb");
+			$("#students_count").text(data.students.count);
+			$("small").text("Powered by "+data.platform+" with "+data.architecture+" processor architecture.")
+		});
+	}
+	$("#refresh").click(req);
+	$(document).ready(req);
+</script>
+</body>
+</html>
