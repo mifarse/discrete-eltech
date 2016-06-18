@@ -39116,7 +39116,7 @@
 
 	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Group).call(this, props));
 
-	    fetch('http://88.201.187.23:8888/getGroup/' + parseInt(_this.props.params.groupID)).then(function (response) {
+	    fetch('http://discrete-eltech.eurodir.ru:8888/getGroup/' + parseInt(_this.props.params.groupID)).then(function (response) {
 	      return response.json();
 	    }).then(function (group) {
 	      _this.setState(group);
@@ -40241,7 +40241,7 @@
 
 	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Student).call(this, props));
 
-	    fetch('http://88.201.187.23:8888/s/' + _this.props.params.studentID + '/info').then(function (response) {
+	    fetch('http://discrete-eltech.eurodir.ru:8888/s/' + _this.props.params.studentID + '/info').then(function (response) {
 	      return response.json();
 	    }).then(function (student) {
 	      _this.setState(_extends({}, _this.state, {
@@ -40249,7 +40249,7 @@
 	      }));
 	    }).catch(console.error);
 
-	    fetch('http://88.201.187.23:8888/s/' + _this.props.params.studentID + '/tests').then(function (response) {
+	    fetch('http://discrete-eltech.eurodir.ru:8888/s/' + _this.props.params.studentID + '/tests').then(function (response) {
 	      return response.json();
 	    }).then(function (tests) {
 	      _this.setState(_extends({}, _this.state, {
@@ -40483,7 +40483,7 @@
 
 	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Stream).call(this, props));
 
-	    fetch('http://88.201.187.23:8888/g/list').then(function (response) {
+	    fetch('http://discrete-eltech.eurodir.ru:8888/g/list').then(function (response) {
 	      return response.json();
 	    }).then(function (stream) {
 	      _this.setState(stream);
@@ -40738,7 +40738,7 @@
 	    value: function refreshExample() {
 	      var _this2 = this;
 
-	      fetch('http://88.201.187.23:8888/solve/nod').then(function (response) {
+	      fetch('http://discrete-eltech.eurodir.ru:8888/solve/nod').then(function (response) {
 	        return response.json();
 	      }).then(function (example) {
 	        _this2.setState(example);
@@ -40867,7 +40867,7 @@
 	    value: function refreshExample() {
 	      var _this2 = this;
 
-	      fetch('http://88.201.187.23:8888/solve/nod').then(function (response) {
+	      fetch('http://discrete-eltech.eurodir.ru:8888/solve/nod').then(function (response) {
 	        return response.json();
 	      }).then(function (example) {
 	        var inputs = _reactDom2.default.findDOMNode(_this2).querySelectorAll('input[type="number"]'); // Fuck JavaScript
@@ -41031,7 +41031,7 @@
 	    value: function refreshExample() {
 	      var _this2 = this;
 
-	      fetch('http://88.201.187.23:8888/test/nod?id=' + (0, _getCookie2.default)('student_id')).then(function (response) {
+	      fetch('http://discrete-eltech.eurodir.ru:8888/test/nod?id=' + (0, _getCookie2.default)('student_id')).then(function (response) {
 	        return response.json();
 	      }).then(function (example) {
 	        var inputs = _reactDom2.default.findDOMNode(_this2).querySelectorAll('input[type="number"]'); // Fuck JavaScript
@@ -41052,7 +41052,7 @@
 	          return input.value !== '' ? parseInt(input.value) : '';
 	        });
 	      });
-	      fetch('http://88.201.187.23:8888/test/nod/', {
+	      fetch('http://discrete-eltech.eurodir.ru:8888/test/nod/', {
 	        method: 'post',
 	        body: JSON.stringify({
 	          input: this.state.input,
@@ -41199,7 +41199,7 @@
 	    value: function refreshExample() {
 	      var _this2 = this;
 
-	      fetch('http://88.201.187.23:8888/solve/axby1').then(function (response) {
+	      fetch('http://discrete-eltech.eurodir.ru:8888/solve/axby1').then(function (response) {
 	        return response.json();
 	      }).then(function (example) {
 	        _this2.setState(example);
@@ -41327,7 +41327,7 @@
 	    value: function refreshExample() {
 	      var _this2 = this;
 
-	      fetch('http://88.201.187.23:8888/solve/axby1').then(function (response) {
+	      fetch('http://discrete-eltech.eurodir.ru:8888/solve/axby1').then(function (response) {
 	        return response.json();
 	      }).then(function (example) {
 	        var inputs = _reactDom2.default.findDOMNode(_this2).querySelectorAll('input[type="number"]'); // Fuck JavaScript
@@ -41489,7 +41489,7 @@
 	    value: function refreshExample() {
 	      var _this2 = this;
 
-	      fetch('http://88.201.187.23:8888/test/axby1?id=' + (0, _getCookie2.default)('student_id')).then(function (response) {
+	      fetch('http://discrete-eltech.eurodir.ru:8888/test/axby1?id=' + (0, _getCookie2.default)('student_id')).then(function (response) {
 	        return response.json();
 	      }).then(function (example) {
 	        var inputs = _reactDom2.default.findDOMNode(_this2).querySelectorAll('input[type="number"]'); // Fuck JavaScript
@@ -41511,7 +41511,7 @@
 	        });
 	      });
 	      var output = [parseInt(this.refs.X.value), parseInt(this.refs.Y.value)];
-	      fetch('http://88.201.187.23:8888/test/axby1/', {
+	      fetch('http://discrete-eltech.eurodir.ru:8888/test/axby1/', {
 	        method: 'post',
 	        headers: new Headers({
 	          'Content-Type': 'application/json'
@@ -41653,7 +41653,7 @@
 	    value: function refreshExample() {
 	      var _this2 = this;
 
-	      fetch('http://88.201.187.23:8888/solve/fraction').then(function (response) {
+	      fetch('http://discrete-eltech.eurodir.ru:8888/solve/fraction').then(function (response) {
 	        return response.json();
 	      }).then(function (example) {
 	        _this2.setState(example);
@@ -41778,7 +41778,7 @@
 	    value: function refreshExample() {
 	      var _this2 = this;
 
-	      fetch('http://88.201.187.23:8888/solve/fraction').then(function (response) {
+	      fetch('http://discrete-eltech.eurodir.ru:8888/solve/fraction').then(function (response) {
 	        return response.json();
 	      }).then(function (example) {
 	        var inputs = _reactDom2.default.findDOMNode(_this2).querySelectorAll('input[type="number"]'); // Fuck JavaScript
@@ -41931,7 +41931,7 @@
 	    value: function refreshExample() {
 	      var _this2 = this;
 
-	      fetch('http://88.201.187.23:8888/test/fraction?id=' + (0, _getCookie2.default)('student_id')).then(function (response) {
+	      fetch('http://discrete-eltech.eurodir.ru:8888/test/fraction?id=' + (0, _getCookie2.default)('student_id')).then(function (response) {
 	        return response.json();
 	      }).then(function (example) {
 	        var inputs = _reactDom2.default.findDOMNode(_this2).querySelectorAll('input[type="number"]'); // Fuck JavaScript
@@ -41955,7 +41955,7 @@
 	      var output = table[1].filter(function (val) {
 	        return val !== '';
 	      });
-	      fetch('http://88.201.187.23:8888/test/fraction/', {
+	      fetch('http://discrete-eltech.eurodir.ru:8888/test/fraction/', {
 	        method: 'post',
 	        headers: new Headers({
 	          'Content-Type': 'application/json'
@@ -42081,7 +42081,7 @@
 	    value: function refreshExample() {
 	      var _this2 = this;
 
-	      fetch('http://88.201.187.23:8888/solve/convergents').then(function (response) {
+	      fetch('http://discrete-eltech.eurodir.ru:8888/solve/convergents').then(function (response) {
 	        return response.json();
 	      }).then(function (example) {
 	        _this2.setState(example);
@@ -42211,7 +42211,7 @@
 	    value: function refreshExample() {
 	      var _this2 = this;
 
-	      fetch('http://88.201.187.23:8888/solve/convergents').then(function (response) {
+	      fetch('http://discrete-eltech.eurodir.ru:8888/solve/convergents').then(function (response) {
 	        return response.json();
 	      }).then(function (example) {
 	        var inputs = _reactDom2.default.findDOMNode(_this2).querySelectorAll('input[type="number"]'); // Fuck JavaScript
@@ -42355,7 +42355,7 @@
 	    value: function refreshExample() {
 	      var _this2 = this;
 
-	      fetch('http://88.201.187.23:8888/test/convergents?id=' + (0, _getCookie2.default)('student_id')).then(function (response) {
+	      fetch('http://discrete-eltech.eurodir.ru:8888/test/convergents?id=' + (0, _getCookie2.default)('student_id')).then(function (response) {
 	        return response.json();
 	      }).then(function (example) {
 	        var inputs = _reactDom2.default.findDOMNode(_this2).querySelectorAll('input[type="number"]'); // Fuck JavaScript
@@ -42376,7 +42376,7 @@
 	          return input.value !== '' ? parseInt(input.value) : '';
 	        });
 	      });
-	      fetch('http://88.201.187.23:8888/test/convergents/', {
+	      fetch('http://discrete-eltech.eurodir.ru:8888/test/convergents/', {
 	        method: 'post',
 	        headers: new Headers({
 	          'Content-Type': 'application/json'
@@ -42501,7 +42501,7 @@
 	    value: function refreshExample() {
 	      var _this2 = this;
 
-	      fetch('http://88.201.187.23:8888/solve/inverse').then(function (response) {
+	      fetch('http://discrete-eltech.eurodir.ru:8888/solve/inverse').then(function (response) {
 	        return response.json();
 	      }).then(function (example) {
 	        _this2.setState(example);
@@ -42653,7 +42653,7 @@
 	    value: function refreshExample() {
 	      var _this2 = this;
 
-	      fetch('http://88.201.187.23:8888/solve/inverse').then(function (response) {
+	      fetch('http://discrete-eltech.eurodir.ru:8888/solve/inverse').then(function (response) {
 	        return response.json();
 	      }).then(function (example) {
 	        var inputs = _reactDom2.default.findDOMNode(_this2).querySelectorAll('input[type="number"]'); // Fuck JavaScript
@@ -42812,7 +42812,7 @@
 	    value: function refreshExample() {
 	      var _this2 = this;
 
-	      fetch('http://88.201.187.23:8888/test/inverse?id=' + (0, _getCookie2.default)('student_id')).then(function (response) {
+	      fetch('http://discrete-eltech.eurodir.ru:8888/test/inverse?id=' + (0, _getCookie2.default)('student_id')).then(function (response) {
 	        return response.json();
 	      }).then(function (example) {
 	        var inputs = _reactDom2.default.findDOMNode(_this2).querySelectorAll('input[type="number"]'); // Fuck JavaScript
@@ -42833,7 +42833,7 @@
 	          return input.value !== '' ? parseInt(input.value) : '';
 	        });
 	      });
-	      fetch('http://88.201.187.23:8888/test/inverse/', {
+	      fetch('http://discrete-eltech.eurodir.ru:8888/test/inverse/', {
 	        method: 'post',
 	        headers: new Headers({
 	          'Content-Type': 'application/json'
@@ -42971,7 +42971,7 @@
 	    value: function refreshExample() {
 	      var _this2 = this;
 
-	      fetch('http://88.201.187.23:8888/solve/diophantine').then(function (response) {
+	      fetch('http://discrete-eltech.eurodir.ru:8888/solve/diophantine').then(function (response) {
 	        return response.json();
 	      }).then(function (example) {
 	        _this2.setState(example);
@@ -43193,7 +43193,7 @@
 	    value: function refreshExample() {
 	      var _this2 = this;
 
-	      fetch('http://88.201.187.23:8888/solve/diophantine').then(function (response) {
+	      fetch('http://discrete-eltech.eurodir.ru:8888/solve/diophantine').then(function (response) {
 	        return response.json();
 	      }).then(function (example) {
 	        var inputs = _reactDom2.default.findDOMNode(_this2).querySelectorAll('input[type="number"]'); // Fuck JavaScript
@@ -43440,7 +43440,7 @@
 	    value: function refreshExample() {
 	      var _this2 = this;
 
-	      fetch('http://88.201.187.23:8888/test/diophantine?id=' + (0, _getCookie2.default)('student_id')).then(function (response) {
+	      fetch('http://discrete-eltech.eurodir.ru:8888/test/diophantine?id=' + (0, _getCookie2.default)('student_id')).then(function (response) {
 	        return response.json();
 	      }).then(function (example) {
 	        var inputs = _reactDom2.default.findDOMNode(_this2).querySelectorAll('input[type="number"]'); // Fuck JavaScript
@@ -43463,7 +43463,7 @@
 	        x: [this.refs.x0.value, this.refs.x1.value],
 	        y: [this.refs.y0.value, this.refs.y1.value]
 	      };
-	      fetch('http://88.201.187.23:8888/test/diophantine/', {
+	      fetch('http://discrete-eltech.eurodir.ru:8888/test/diophantine/', {
 	        method: 'post',
 	        headers: new Headers({
 	          'Content-Type': 'application/json'
@@ -43658,7 +43658,7 @@
 	    value: function refreshExample() {
 	      var _this2 = this;
 
-	      fetch('http://88.201.187.23:8888/solve/fastDegree').then(function (response) {
+	      fetch('http://discrete-eltech.eurodir.ru:8888/solve/fastDegree').then(function (response) {
 	        return response.json();
 	      }).then(function (example) {
 	        _this2.setState(example);
@@ -43780,7 +43780,7 @@
 	    value: function refreshExample() {
 	      var _this2 = this;
 
-	      fetch('http://88.201.187.23:8888/solve/fastDegree').then(function (response) {
+	      fetch('http://discrete-eltech.eurodir.ru:8888/solve/fastDegree').then(function (response) {
 	        return response.json();
 	      }).then(function (example) {
 	        var inputs = _reactDom2.default.findDOMNode(_this2).querySelectorAll('input[type="number"]'); // Fuck JavaScript
@@ -43937,7 +43937,7 @@
 	    value: function refreshExample() {
 	      var _this2 = this;
 
-	      fetch('http://88.201.187.23:8888/test/fastDegree?id=' + (0, _getCookie2.default)('student_id')).then(function (response) {
+	      fetch('http://discrete-eltech.eurodir.ru:8888/test/fastDegree?id=' + (0, _getCookie2.default)('student_id')).then(function (response) {
 	        return response.json();
 	      }).then(function (example) {
 	        var inputs = _reactDom2.default.findDOMNode(_this2).querySelectorAll('input[type="number"]'); // Fuck JavaScript
@@ -43958,7 +43958,7 @@
 	          return input.value !== '' ? parseInt(input.value) : '';
 	        });
 	      });
-	      fetch('http://88.201.187.23:8888/test/fastDegree/', {
+	      fetch('http://discrete-eltech.eurodir.ru:8888/test/fastDegree/', {
 	        method: 'post',
 	        headers: new Headers({
 	          'Content-Type': 'application/json'
@@ -44094,7 +44094,7 @@
 	    value: function refreshExample() {
 	      var _this2 = this;
 
-	      fetch('http://88.201.187.23:8888/solve/conversion').then(function (response) {
+	      fetch('http://discrete-eltech.eurodir.ru:8888/solve/conversion').then(function (response) {
 	        return response.json();
 	      }).then(function (example) {
 	        _this2.setState(example);
@@ -44226,7 +44226,7 @@
 	    value: function refreshExample() {
 	      var _this2 = this;
 
-	      fetch('http://88.201.187.23:8888/solve/conversion').then(function (response) {
+	      fetch('http://discrete-eltech.eurodir.ru:8888/solve/conversion').then(function (response) {
 	        return response.json();
 	      }).then(function (example) {
 	        var inputs = _reactDom2.default.findDOMNode(_this2).querySelectorAll('input[type="number"]'); // Fuck JavaScript
@@ -44388,7 +44388,7 @@
 	    value: function refreshExample() {
 	      var _this2 = this;
 
-	      fetch('http://88.201.187.23:8888/test/conversion?id=' + (0, _getCookie2.default)('student_id')).then(function (response) {
+	      fetch('http://discrete-eltech.eurodir.ru:8888/test/conversion?id=' + (0, _getCookie2.default)('student_id')).then(function (response) {
 	        return response.json();
 	      }).then(function (example) {
 	        var inputs = _reactDom2.default.findDOMNode(_this2).querySelectorAll('input[type="number"]'); // Fuck JavaScript
@@ -44409,7 +44409,7 @@
 	          return input.value !== '' ? parseInt(input.value) : '';
 	        });
 	      });
-	      fetch('http://88.201.187.23:8888/test/conversion', {
+	      fetch('http://discrete-eltech.eurodir.ru:8888/test/conversion', {
 	        method: 'post',
 	        headers: new Headers({
 	          'Content-Type': 'application/json'
@@ -44550,7 +44550,7 @@
 	    value: function refreshExample() {
 	      var _this2 = this;
 
-	      fetch('http://88.201.187.23:8888/solve/horner').then(function (response) {
+	      fetch('http://discrete-eltech.eurodir.ru:8888/solve/horner').then(function (response) {
 	        return response.json();
 	      }).then(function (example) {
 	        _this2.setState(example);
@@ -44701,7 +44701,7 @@
 	    value: function refreshExample() {
 	      var _this2 = this;
 
-	      fetch('http://88.201.187.23:8888/solve/horner').then(function (response) {
+	      fetch('http://discrete-eltech.eurodir.ru:8888/solve/horner').then(function (response) {
 	        return response.json();
 	      }).then(function (example) {
 	        var inputs = _reactDom2.default.findDOMNode(_this2).querySelectorAll('input[type="number"]'); // Fuck JavaScript
@@ -44869,7 +44869,7 @@
 	    value: function refreshExample() {
 	      var _this2 = this;
 
-	      fetch('http://88.201.187.23:8888/test/horner?id=' + (0, _getCookie2.default)('student_id')).then(function (response) {
+	      fetch('http://discrete-eltech.eurodir.ru:8888/test/horner?id=' + (0, _getCookie2.default)('student_id')).then(function (response) {
 	        return response.json();
 	      }).then(function (example) {
 	        var inputs = _reactDom2.default.findDOMNode(_this2).querySelectorAll('input[type="number"]'); // Fuck JavaScript
@@ -44890,7 +44890,7 @@
 	          return input.value !== '' ? parseInt(input.value) : '';
 	        });
 	      });
-	      fetch('http://88.201.187.23:8888/test/horner', {
+	      fetch('http://discrete-eltech.eurodir.ru:8888/test/horner', {
 	        method: 'post',
 	        headers: new Headers({
 	          'Content-Type': 'application/json'
