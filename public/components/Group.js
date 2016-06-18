@@ -6,7 +6,7 @@ export default class Group extends Component {
   
   constructor (props) {
     super(props)
-    fetch('http://88.201.187.23:8888/getGroup/' + parseInt(this.props.params.groupID))
+    fetch('http://discrete-eltech.eurodir.ru:8888/getGroup/' + parseInt(this.props.params.groupID))
       .then(response => response.json())
       .then(group => {
         this.setState(group)

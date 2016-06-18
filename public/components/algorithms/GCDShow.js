@@ -11,7 +11,7 @@ export default class GCDShow extends Component {
   state = {}
 
   refreshExample () {
-    fetch('http://88.201.187.23:8888/solve/nod')
+    fetch('http://discrete-eltech.eurodir.ru:8888/solve/nod')
       .then(response => response.json())
       .then(example => {
         this.setState(example)

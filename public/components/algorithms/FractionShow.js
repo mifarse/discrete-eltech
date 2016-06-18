@@ -11,7 +11,7 @@ export default class FractionShow extends Component {
   state = {}
 
   refreshExample () {
-    fetch('http://88.201.187.23:8888/solve/fraction')
+    fetch('http://discrete-eltech.eurodir.ru:8888/solve/fraction')
       .then(response => response.json())
       .then(example => {
         this.setState(example)

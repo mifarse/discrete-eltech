@@ -1,3 +1,3 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://mongo:dm4ever@ds028799.mlab.com:28799/discretka');
+mongoose.connect('mongodb://127.0.0.1:27017/dm');
 module.exports = mongoose.connection;

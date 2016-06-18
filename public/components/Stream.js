@@ -6,7 +6,7 @@ export default class Stream extends Component {
   
   constructor (props) {
     super(props)
-    fetch('http://88.201.187.23:8888/g/list')
+    fetch('http://discrete-eltech.eurodir.ru:8888/g/list')
       .then(response => response.json())
       .then(stream => {
         this.setState(stream)

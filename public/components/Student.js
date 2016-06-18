@@ -7,7 +7,11 @@ export default class Student extends Component {
   constructor (props) {
     super(props)
     
-    fetch('http://88.201.187.23:8888/s/' + this.props.params.studentID + '/info')
+    this.loadStudentInfo(this.props)
+  }
+
+  loadStudentInfo (props) {
+    fetch('http://discrete-eltech.eurodir.ru:8888/s/' + props.params.studentID + '/info')
       .then(response => response.json())
       .then(student => {
         this.setState({
@@ -17,7 +21,7 @@ export default class Student extends Component {
       })
       .catch(console.error)
 
-    fetch('http://88.201.187.23:8888/s/' + this.props.params.studentID + '/tests')
+    fetch('http://discrete-eltech.eurodir.ru:8888/s/' + props.params.studentID + '/tests')
       .then(response => response.json())
       .then(tests => {
         this.setState({
@@ -28,12 +32,16 @@ export default class Student extends Component {
       .catch(console.error)
   }
 
+  componentWillReceiveProps(nextProps) {
+    this.loadStudentInfo(nextProps)
+  }
+
   render () {
     return (
       <div id="student-page" className="content-wrap">
         {this.state && 'student' in this.state ? 
           <div>
-            <div className="user">
+            <div className="user" key={this.state.student._id}>
               <img src={this.state.student.photo} className="photo"/>
               <div className="info">
                 <div className="name field">{this.state.student.first_name} {this.state.student.last_name}</div>
@@ -44,6 +52,12 @@ export default class Student extends Component {
                 <div className="email field">
                   <a href={'mailto:' + this.state.student.email}>{this.state.student.email}</a>
                 </div>
+                {this.state.student.website ?
+                  <div className="website field">
+                    <a href={this.state.student.website} target="_blank">Google сайт</a>
+                  </div>
+                  : null
+                }
               </div>
             </div>
             <div className="tests">

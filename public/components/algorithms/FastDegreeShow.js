@@ -11,7 +11,7 @@ export default class FastDegreeShow extends Component {
   state = {}
 
   refreshExample () {
-    fetch('http://88.201.187.23:8888/solve/fastDegree')
+    fetch('http://discrete-eltech.eurodir.ru:8888/solve/fastDegree')
       .then(response => response.json())
       .then(example => {
         this.setState(example)

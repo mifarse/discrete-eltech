@@ -362,9 +362,9 @@ if (cluster.isMaster){
 	        res.redirect('/');
 	    });
 
-	app.get('/generatedoc', (req, res) => {
+	app.get('/otchet.docx', (req, res) => {
 		otchet();
-		res.jsonp({result: true});
+		res.download(path.join(__dirname, '/public/', 'otchet.docx'));
 	})
 
 	app.get(/.*/, (req,res) => {

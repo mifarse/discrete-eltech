@@ -38893,6 +38893,15 @@
 	            { to: '/group' },
 	            'Список групп'
 	          )
+	        ),
+	        _react2.default.createElement(
+	          'li',
+	          null,
+	          _react2.default.createElement(
+	            'a',
+	            { href: 'http://discrete-eltech.eurodir.ru:8888/otchet.docx', target: '_blank' },
+	            'Отчет'
+	          )
 	        )
 	      ),
 	      studentID ? _react2.default.createElement(
@@ -39064,16 +39073,6 @@
 	        null,
 	        "Уруков Серафим гр. 5371 ФКТИ"
 	      )
-	    ),
-	    _react2.default.createElement(
-	      "h2",
-	      null,
-	      "Заключение"
-	    ),
-	    _react2.default.createElement(
-	      "p",
-	      null,
-	      "Благодаря данному проекту, мы, участники, изучили такие языки программирования, как :PHP, MySQLi, JavaScript и HTML 5. Надеемся, что созданный нами проект окажется полезным и востребованным. Выражаем благодарность С.Н. Позднякову, Константину Данилову и команде \"Eltech web-dev\" за помощь в реализации проекта. Студенты группы 4391: Максим Маркин, Сергей Кравчук, Михаил Слабченко и Владислав Цветков."
 	    )
 	  );
 	}
@@ -40241,25 +40240,37 @@
 
 	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Student).call(this, props));
 
-	    fetch('http://discrete-eltech.eurodir.ru:8888/s/' + _this.props.params.studentID + '/info').then(function (response) {
-	      return response.json();
-	    }).then(function (student) {
-	      _this.setState(_extends({}, _this.state, {
-	        student: student
-	      }));
-	    }).catch(console.error);
-
-	    fetch('http://discrete-eltech.eurodir.ru:8888/s/' + _this.props.params.studentID + '/tests').then(function (response) {
-	      return response.json();
-	    }).then(function (tests) {
-	      _this.setState(_extends({}, _this.state, {
-	        tests: tests
-	      }));
-	    }).catch(console.error);
+	    _this.loadStudentInfo(_this.props);
 	    return _this;
 	  }
 
 	  _createClass(Student, [{
+	    key: 'loadStudentInfo',
+	    value: function loadStudentInfo(props) {
+	      var _this2 = this;
+
+	      fetch('http://discrete-eltech.eurodir.ru:8888/s/' + props.params.studentID + '/info').then(function (response) {
+	        return response.json();
+	      }).then(function (student) {
+	        _this2.setState(_extends({}, _this2.state, {
+	          student: student
+	        }));
+	      }).catch(console.error);
+
+	      fetch('http://discrete-eltech.eurodir.ru:8888/s/' + props.params.studentID + '/tests').then(function (response) {
+	        return response.json();
+	      }).then(function (tests) {
+	        _this2.setState(_extends({}, _this2.state, {
+	          tests: tests
+	        }));
+	      }).catch(console.error);
+	    }
+	  }, {
+	    key: 'componentWillReceiveProps',
+	    value: function componentWillReceiveProps(nextProps) {
+	      this.loadStudentInfo(nextProps);
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
@@ -40270,7 +40281,7 @@
 	          null,
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'user' },
+	            { className: 'user', key: this.state.student._id },
 	            _react2.default.createElement('img', { src: this.state.student.photo, className: 'photo' }),
 	            _react2.default.createElement(
 	              'div',
@@ -40300,7 +40311,16 @@
 	                  { href: 'mailto:' + this.state.student.email },
 	                  this.state.student.email
 	                )
-	              )
+	              ),
+	              this.state.student.website ? _react2.default.createElement(
+	                'div',
+	                { className: 'website field' },
+	                _react2.default.createElement(
+	                  'a',
+	                  { href: this.state.student.website, target: '_blank' },
+	                  'Google сайт'
+	                )
+	              ) : null
 	            )
 	          ),
 	          _react2.default.createElement(
@@ -40565,99 +40585,99 @@
 
 	var _GCDTest3 = _interopRequireDefault(_GCDTest2);
 
-	var _axbyShow2 = __webpack_require__(632);
+	var _axbyShow2 = __webpack_require__(633);
 
 	var _axbyShow3 = _interopRequireDefault(_axbyShow2);
 
-	var _axbyTrainer2 = __webpack_require__(633);
+	var _axbyTrainer2 = __webpack_require__(634);
 
 	var _axbyTrainer3 = _interopRequireDefault(_axbyTrainer2);
 
-	var _axbyTest2 = __webpack_require__(634);
+	var _axbyTest2 = __webpack_require__(635);
 
 	var _axbyTest3 = _interopRequireDefault(_axbyTest2);
 
-	var _FractionShow2 = __webpack_require__(635);
+	var _FractionShow2 = __webpack_require__(636);
 
 	var _FractionShow3 = _interopRequireDefault(_FractionShow2);
 
-	var _FractionTrainer2 = __webpack_require__(636);
+	var _FractionTrainer2 = __webpack_require__(637);
 
 	var _FractionTrainer3 = _interopRequireDefault(_FractionTrainer2);
 
-	var _FractionTest2 = __webpack_require__(637);
+	var _FractionTest2 = __webpack_require__(638);
 
 	var _FractionTest3 = _interopRequireDefault(_FractionTest2);
 
-	var _ConvergentsShow2 = __webpack_require__(638);
+	var _ConvergentsShow2 = __webpack_require__(639);
 
 	var _ConvergentsShow3 = _interopRequireDefault(_ConvergentsShow2);
 
-	var _ConvergentsTrainer2 = __webpack_require__(639);
+	var _ConvergentsTrainer2 = __webpack_require__(640);
 
 	var _ConvergentsTrainer3 = _interopRequireDefault(_ConvergentsTrainer2);
 
-	var _ConvergentsTest2 = __webpack_require__(640);
+	var _ConvergentsTest2 = __webpack_require__(641);
 
 	var _ConvergentsTest3 = _interopRequireDefault(_ConvergentsTest2);
 
-	var _InverseShow2 = __webpack_require__(641);
+	var _InverseShow2 = __webpack_require__(642);
 
 	var _InverseShow3 = _interopRequireDefault(_InverseShow2);
 
-	var _InverseTrainer2 = __webpack_require__(642);
+	var _InverseTrainer2 = __webpack_require__(643);
 
 	var _InverseTrainer3 = _interopRequireDefault(_InverseTrainer2);
 
-	var _InverseTest2 = __webpack_require__(643);
+	var _InverseTest2 = __webpack_require__(644);
 
 	var _InverseTest3 = _interopRequireDefault(_InverseTest2);
 
-	var _DiophantineShow2 = __webpack_require__(644);
+	var _DiophantineShow2 = __webpack_require__(645);
 
 	var _DiophantineShow3 = _interopRequireDefault(_DiophantineShow2);
 
-	var _DiophantineTrainer2 = __webpack_require__(645);
+	var _DiophantineTrainer2 = __webpack_require__(646);
 
 	var _DiophantineTrainer3 = _interopRequireDefault(_DiophantineTrainer2);
 
-	var _DiophantineTest2 = __webpack_require__(646);
+	var _DiophantineTest2 = __webpack_require__(647);
 
 	var _DiophantineTest3 = _interopRequireDefault(_DiophantineTest2);
 
-	var _FastDegreeShow2 = __webpack_require__(647);
+	var _FastDegreeShow2 = __webpack_require__(648);
 
 	var _FastDegreeShow3 = _interopRequireDefault(_FastDegreeShow2);
 
-	var _FastDegreeTrainer2 = __webpack_require__(648);
+	var _FastDegreeTrainer2 = __webpack_require__(649);
 
 	var _FastDegreeTrainer3 = _interopRequireDefault(_FastDegreeTrainer2);
 
-	var _FastDegreeTest2 = __webpack_require__(649);
+	var _FastDegreeTest2 = __webpack_require__(650);
 
 	var _FastDegreeTest3 = _interopRequireDefault(_FastDegreeTest2);
 
-	var _ConversionShow2 = __webpack_require__(650);
+	var _ConversionShow2 = __webpack_require__(651);
 
 	var _ConversionShow3 = _interopRequireDefault(_ConversionShow2);
 
-	var _ConversionTrainer2 = __webpack_require__(651);
+	var _ConversionTrainer2 = __webpack_require__(652);
 
 	var _ConversionTrainer3 = _interopRequireDefault(_ConversionTrainer2);
 
-	var _ConversionTest2 = __webpack_require__(652);
+	var _ConversionTest2 = __webpack_require__(653);
 
 	var _ConversionTest3 = _interopRequireDefault(_ConversionTest2);
 
-	var _HornerShow2 = __webpack_require__(653);
+	var _HornerShow2 = __webpack_require__(654);
 
 	var _HornerShow3 = _interopRequireDefault(_HornerShow2);
 
-	var _HornerTrainer2 = __webpack_require__(654);
+	var _HornerTrainer2 = __webpack_require__(655);
 
 	var _HornerTrainer3 = _interopRequireDefault(_HornerTrainer2);
 
-	var _HornerTest2 = __webpack_require__(655);
+	var _HornerTest2 = __webpack_require__(656);
 
 	var _HornerTest3 = _interopRequireDefault(_HornerTest2);
 
@@ -41000,7 +41020,7 @@
 
 	var _Table2 = _interopRequireDefault(_Table);
 
-	var _getCookie = __webpack_require__(656);
+	var _getCookie = __webpack_require__(632);
 
 	var _getCookie2 = _interopRequireDefault(_getCookie);
 
@@ -41154,6 +41174,21 @@
 
 /***/ },
 /* 632 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = getCookie;
+	function getCookie(name) {
+	  var matches = document.cookie.match(new RegExp("(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"));
+	  return matches ? decodeURIComponent(matches[1]) : undefined;
+	}
+
+/***/ },
+/* 633 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41277,7 +41312,7 @@
 	exports.default = axbyShow;
 
 /***/ },
-/* 633 */
+/* 634 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41433,7 +41468,7 @@
 	exports.default = axbyTrainer;
 
 /***/ },
-/* 634 */
+/* 635 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41458,7 +41493,7 @@
 
 	var _Table2 = _interopRequireDefault(_Table);
 
-	var _getCookie = __webpack_require__(656);
+	var _getCookie = __webpack_require__(632);
 
 	var _getCookie2 = _interopRequireDefault(_getCookie);
 
@@ -41607,7 +41642,7 @@
 	exports.default = axbyTest;
 
 /***/ },
-/* 635 */
+/* 636 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41728,7 +41763,7 @@
 	exports.default = FractionShow;
 
 /***/ },
-/* 636 */
+/* 637 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41875,7 +41910,7 @@
 	exports.default = FractionTrainer;
 
 /***/ },
-/* 637 */
+/* 638 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41900,7 +41935,7 @@
 
 	var _Table2 = _interopRequireDefault(_Table);
 
-	var _getCookie = __webpack_require__(656);
+	var _getCookie = __webpack_require__(632);
 
 	var _getCookie2 = _interopRequireDefault(_getCookie);
 
@@ -42035,7 +42070,7 @@
 	exports.default = FractionTest;
 
 /***/ },
-/* 638 */
+/* 639 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -42161,7 +42196,7 @@
 	exports.default = ConvergentsShow;
 
 /***/ },
-/* 639 */
+/* 640 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -42299,7 +42334,7 @@
 	exports.default = ConvergentsTrainer;
 
 /***/ },
-/* 640 */
+/* 641 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -42324,7 +42359,7 @@
 
 	var _Table2 = _interopRequireDefault(_Table);
 
-	var _getCookie = __webpack_require__(656);
+	var _getCookie = __webpack_require__(632);
 
 	var _getCookie2 = _interopRequireDefault(_getCookie);
 
@@ -42455,7 +42490,7 @@
 	exports.default = ConvergentsTest;
 
 /***/ },
-/* 641 */
+/* 642 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -42532,17 +42567,17 @@
 	            'p',
 	            null,
 	            'Найти обратный элемент к ',
-	            this.state.input[0],
-	            ' в поле вычетов по модулю b. Класс вычетов определяется остатком по модулю ',
 	            this.state.input[1],
+	            ' в поле вычетов по модулю b. Класс вычетов определяется остатком по модулю ',
+	            this.state.input[0],
 	            '. Или другими словами мы имеем уравнение'
 	          ),
 	          _react2.default.createElement(
 	            'p',
 	            null,
-	            this.state.input[0],
+	            this.state.input[1],
 	            'x = 1 mod ',
-	            this.state.input[1]
+	            this.state.input[0]
 	          ),
 	          _react2.default.createElement(
 	            'p',
@@ -42552,18 +42587,18 @@
 	          _react2.default.createElement(
 	            'p',
 	            null,
-	            this.state.input[0],
-	            'x - ',
 	            this.state.input[1],
+	            'x - ',
+	            this.state.input[0],
 	            'y = 1'
 	          ),
 	          _react2.default.createElement(
 	            'p',
 	            null,
 	            'применим к ',
-	            this.state.input[0],
-	            ' и ',
 	            this.state.input[1],
+	            ' и ',
+	            this.state.input[0],
 	            ' расширенный алгоритм Евклида. Если x < 0 нужно прибавить к нему модуль кольца вычетов'
 	          ),
 	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
@@ -42603,7 +42638,7 @@
 	exports.default = InverseShow;
 
 /***/ },
-/* 642 */
+/* 643 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -42703,11 +42738,11 @@
 	            'p',
 	            null,
 	            'Найти обратный элемент к ',
-	            this.state.input[0],
-	            ' в поле вычетов по модулю ',
 	            this.state.input[1],
+	            ' в поле вычетов по модулю ',
+	            this.state.input[0],
 	            ' заполнив нужную часть таблицы расширенного алгоритма Евклид.Классы вычетов определяется остатком по модулю ',
-	            this.state.input[1]
+	            this.state.input[0]
 	          ),
 	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
 	              return row.map(function (col) {
@@ -42756,7 +42791,7 @@
 	exports.default = InverseTrainer;
 
 /***/ },
-/* 643 */
+/* 644 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -42781,7 +42816,7 @@
 
 	var _Table2 = _interopRequireDefault(_Table);
 
-	var _getCookie = __webpack_require__(656);
+	var _getCookie = __webpack_require__(632);
 
 	var _getCookie2 = _interopRequireDefault(_getCookie);
 
@@ -42877,11 +42912,11 @@
 	            'p',
 	            null,
 	            'Найти обратный элемент к ',
-	            this.state.input[0],
-	            ' в поле вычетов по модулю ',
 	            this.state.input[1],
+	            ' в поле вычетов по модулю ',
+	            this.state.input[0],
 	            ' заполнив нужную часть таблицы расширенного алгоритма Евклида. Классы вычетов определяется остатком по модулю ',
-	            this.state.input[1]
+	            this.state.input[0]
 	          ),
 	          _react2.default.createElement(
 	            'div',
@@ -42925,7 +42960,7 @@
 	exports.default = InverseTest;
 
 /***/ },
-/* 644 */
+/* 645 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43143,7 +43178,7 @@
 	exports.default = DiophantineShow;
 
 /***/ },
-/* 645 */
+/* 646 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43384,7 +43419,7 @@
 	exports.default = DiophantineTrainer;
 
 /***/ },
-/* 646 */
+/* 647 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43409,7 +43444,7 @@
 
 	var _Table2 = _interopRequireDefault(_Table);
 
-	var _getCookie = __webpack_require__(656);
+	var _getCookie = __webpack_require__(632);
 
 	var _getCookie2 = _interopRequireDefault(_getCookie);
 
@@ -43443,6 +43478,7 @@
 	      fetch('http://discrete-eltech.eurodir.ru:8888/test/diophantine?id=' + (0, _getCookie2.default)('student_id')).then(function (response) {
 	        return response.json();
 	      }).then(function (example) {
+	        console.log(example);
 	        var inputs = _reactDom2.default.findDOMNode(_this2).querySelectorAll('input[type="number"]'); // Fuck JavaScript
 	        [].forEach.call(inputs, function (input) {
 	          return input.value = '';
@@ -43455,13 +43491,19 @@
 	    value: function check() {
 	      var _this3 = this;
 
+	      var tableNode = _reactDom2.default.findDOMNode(this).querySelectorAll('.table tr');
+	      var table = [].map.call(tableNode, function (tr) {
+	        return [].map.call(tr.querySelectorAll('input[type="number"]'), function (input) {
+	          return input.value !== '' ? parseInt(input.value) : '';
+	        });
+	      });
 	      var output = {
-	        nod: this.refs.nod.value,
-	        a1: this.refs.a1.value,
-	        b1: this.refs.b1.value,
-	        c1: this.refs.c1.value,
-	        x: [this.refs.x0.value, this.refs.x1.value],
-	        y: [this.refs.y0.value, this.refs.y1.value]
+	        nod: parseInt(this.refs.nod.value),
+	        a: parseInt(this.refs.a1.value),
+	        b: parseInt(this.refs.b1.value),
+	        c: parseInt(this.refs.c1.value),
+	        x: [parseInt(this.refs.x0.value), parseInt(this.refs.x1.value)],
+	        y: [parseInt(this.refs.y0.value), parseInt(this.refs.y1.value)]
 	      };
 	      fetch('http://discrete-eltech.eurodir.ru:8888/test/diophantine/', {
 	        method: 'post',
@@ -43470,6 +43512,7 @@
 	        }),
 	        body: JSON.stringify({
 	          input: this.state.input,
+	          table: table,
 	          output: output,
 	          test_id: this.state.test_id
 	        })
@@ -43591,6 +43634,15 @@
 	          ),
 	          _react2.default.createElement(
 	            'div',
+	            { className: 'table' },
+	            _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row, i) {
+	                return row.map(function (col, j) {
+	                  return i == 1 && j < 2 ? _react2.default.createElement('input', { type: 'number', disabled: true }) : _react2.default.createElement('input', { type: 'number' });
+	                });
+	              }) })
+	          ),
+	          _react2.default.createElement(
+	            'div',
 	            { className: 'button-wrap' },
 	            _react2.default.createElement(
 	              'button',
@@ -43612,7 +43664,7 @@
 	exports.default = DiophantineTest;
 
 /***/ },
-/* 647 */
+/* 648 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43730,7 +43782,7 @@
 	exports.default = FastDegreeShow;
 
 /***/ },
-/* 648 */
+/* 649 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43881,7 +43933,7 @@
 	exports.default = FastDegreeTrainer;
 
 /***/ },
-/* 649 */
+/* 650 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43906,7 +43958,7 @@
 
 	var _Table2 = _interopRequireDefault(_Table);
 
-	var _getCookie = __webpack_require__(656);
+	var _getCookie = __webpack_require__(632);
 
 	var _getCookie2 = _interopRequireDefault(_getCookie);
 
@@ -44048,7 +44100,7 @@
 	exports.default = FastDegreeTest;
 
 /***/ },
-/* 650 */
+/* 651 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44176,7 +44228,7 @@
 	exports.default = ConversionShow;
 
 /***/ },
-/* 651 */
+/* 652 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44332,7 +44384,7 @@
 	exports.default = ConversionTrainer;
 
 /***/ },
-/* 652 */
+/* 653 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44357,7 +44409,7 @@
 
 	var _Table2 = _interopRequireDefault(_Table);
 
-	var _getCookie = __webpack_require__(656);
+	var _getCookie = __webpack_require__(632);
 
 	var _getCookie2 = _interopRequireDefault(_getCookie);
 
@@ -44504,7 +44556,7 @@
 	exports.default = ConversionTest;
 
 /***/ },
-/* 653 */
+/* 654 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44651,7 +44703,7 @@
 	exports.default = HornerShow;
 
 /***/ },
-/* 654 */
+/* 655 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44813,7 +44865,7 @@
 	exports.default = HornerTrainer;
 
 /***/ },
-/* 655 */
+/* 656 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44838,7 +44890,7 @@
 
 	var _Table2 = _interopRequireDefault(_Table);
 
-	var _getCookie = __webpack_require__(656);
+	var _getCookie = __webpack_require__(632);
 
 	var _getCookie2 = _interopRequireDefault(_getCookie);
 
@@ -44991,21 +45043,6 @@
 	}(_react.Component);
 
 	exports.default = HornerTest;
-
-/***/ },
-/* 656 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.default = getCookie;
-	function getCookie(name) {
-	  var matches = document.cookie.match(new RegExp("(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"));
-	  return matches ? decodeURIComponent(matches[1]) : undefined;
-	}
 
 /***/ }
 /******/ ]);

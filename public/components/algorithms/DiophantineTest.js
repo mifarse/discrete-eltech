@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import Table from '../Table'
+import getCookie from './getCookie'
 
 export default class DiophantineTest extends Component {
 
@@ -12,9 +13,10 @@ export default class DiophantineTest extends Component {
   state = {}
 
   refreshExample () {
-    fetch('http://88.201.187.23:8888/test/diophantine')
+    fetch('http://discrete-eltech.eurodir.ru:8888/test/diophantine?id=' + getCookie('student_id'))
       .then(response => response.json())
       .then(example => {
+        console.log(example)
         let inputs = ReactDOM.findDOMNode(this).querySelectorAll('input[type="number"]'); // Fuck JavaScript
         [].forEach.call(inputs, input => input.value = '')
         this.setState(example)
@@ -23,21 +25,28 @@ export default class DiophantineTest extends Component {
   }
 
   check () {
+    let tableNode = ReactDOM.findDOMNode(this).querySelectorAll('.table tr');
+    let table = [].map.call(tableNode, tr => {
+      return [].map.call(tr.querySelectorAll('input[type="number"]'), input => {
+        return input.value !== '' ? parseInt(input.value) : ''
+      })
+    })
     let output = {
-      nod : this.refs.nod.value,
-      a1  : this.refs.a1.value,
-      b1  : this.refs.b1.value,
-      c1  : this.refs.c1.value,
-      x   : [this.refs.x0.value, this.refs.x1.value],
-      y   : [this.refs.y0.value, this.refs.y1.value],
+      nod : parseInt(this.refs.nod.value),
+      a   : parseInt(this.refs.a1.value),
+      b   : parseInt(this.refs.b1.value),
+      c   : parseInt(this.refs.c1.value),
+      x   : [parseInt(this.refs.x0.value), parseInt(this.refs.x1.value)],
+      y   : [parseInt(this.refs.y0.value), parseInt(this.refs.y1.value)],
     }
-    fetch('http://88.201.187.23:8888/test/diophantine/', {
+    fetch('http://discrete-eltech.eurodir.ru:8888/test/diophantine/', {
       method  : 'post',
       headers : new Headers({
         'Content-Type': 'application/json'
       }),
       body    : JSON.stringify({
         input   : this.state.input,
+        table   : table,
         output  : output,
         test_id : this.state.test_id,
       }),
@@ -102,6 +111,13 @@ export default class DiophantineTest extends Component {
                 </div>
                 t
               </div>
+            </div>
+            <div className="table">
+              <Table data={this.state.table.map((row, i) => row.map((col, j) => {
+                  return i == 1 && j < 2 ? 
+                          <input type="number" disabled={true}/> : 
+                          <input type="number"/>
+              }))}/>
             </div>
             <div className="button-wrap">
               <button onClick={e => this.check(e)}>Проверить</button>

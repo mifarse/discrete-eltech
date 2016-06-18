@@ -11,7 +11,7 @@ export default class axbyShow extends Component {
   state = {}
 
   refreshExample () {
-    fetch('http://88.201.187.23:8888/solve/axby1')
+    fetch('http://discrete-eltech.eurodir.ru:8888/solve/axby1')
       .then(response => response.json())
       .then(example => {
         this.setState(example)

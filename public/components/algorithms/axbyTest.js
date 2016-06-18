@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import Table from '../Table'
+import getCookie from './getCookie'
 
 export default class axbyTest extends Component {
 
@@ -12,7 +13,7 @@ export default class axbyTest extends Component {
   state = {}
 
   refreshExample () {
-    fetch('http://88.201.187.23:8888/test/axby1')
+    fetch('http://discrete-eltech.eurodir.ru:8888/test/axby1?id=' + getCookie('student_id'))
       .then(response => response.json())
       .then(example => {
         let inputs = ReactDOM.findDOMNode(this).querySelectorAll('input[type="number"]'); // Fuck JavaScript
@@ -30,7 +31,7 @@ export default class axbyTest extends Component {
       })
     })
     let output = [parseInt(this.refs.X.value), parseInt(this.refs.Y.value)]
-    fetch('http://88.201.187.23:8888/test/axby1/', {
+    fetch('http://discrete-eltech.eurodir.ru:8888/test/axby1/', {
       method  : 'post',
       headers : new Headers({
         'Content-Type': 'application/json'

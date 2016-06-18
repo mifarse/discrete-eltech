@@ -12,7 +12,7 @@ export default class InverseTrainer extends Component {
   state = {}
 
   refreshExample () {
-    fetch('http://88.201.187.23:8888/solve/inverse')
+    fetch('http://discrete-eltech.eurodir.ru:8888/solve/inverse')
       .then(response => response.json())
       .then(example => {
         let inputs = ReactDOM.findDOMNode(this).querySelectorAll('input[type="number"]'); // Fuck JavaScript
@@ -46,7 +46,7 @@ export default class InverseTrainer extends Component {
         <h2>Тренажёр</h2>
         {this.state.input ? 
           <div>
-            <p>Найти обратный элемент к {this.state.input[0]} в поле вычетов по модулю {this.state.input[1]} заполнив нужную часть таблицы расширенного алгоритма Евклид.Классы вычетов определяется остатком по модулю {this.state.input[1]}</p>
+            <p>Найти обратный элемент к {this.state.input[1]} в поле вычетов по модулю {this.state.input[0]} заполнив нужную часть таблицы расширенного алгоритма Евклид.Классы вычетов определяется остатком по модулю {this.state.input[0]}</p>
             <Table data={this.state.table.map(row => row.map(col => 
               col !== '' ? (
                 <div className="input-number-wrap">
