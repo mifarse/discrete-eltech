@@ -27,6 +27,7 @@ export default class axbyShow extends Component {
             <h1>Используя расширенный алгоритм Евклида, найдите частное решение диофантова уравнения</h1>
             <h2>Демонстрация</h2>
             <p>{this.state.input[0]}x + {this.state.input[1]}y = 1</p>
+            <p>{'|'}x{'|'} {'<'} {'|'}{this.state.input[0]}{'|'}, {'|'}y{'|'} {'<'} {'|'}{this.state.input[1]}{'|'}</p>
             <p>Для решения этой задачи нам необходимо воспользоваться расширенным алгоритмом Евклида, как показано в следующей таблице.</p>
             <Table data={this.state.table.map(row => row.map(col => 
                 <div className="number-wrap">{col}</div>
