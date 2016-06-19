@@ -43768,15 +43768,6 @@
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'table' },
-	            _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row, i) {
-	                return row.map(function (col, j) {
-	                  return i == 1 && j < 2 ? _react2.default.createElement('input', { type: 'number', disabled: true }) : _react2.default.createElement('input', { type: 'number' });
-	                });
-	              }) })
-	          ),
-	          _react2.default.createElement(
-	            'div',
 	            { className: 'button-wrap' },
 	            _react2.default.createElement(
 	              'button',

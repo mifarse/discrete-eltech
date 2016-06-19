@@ -115,13 +115,6 @@ export default class DiophantineTest extends Component {
                 t
               </div>
             </div>
-            <div className="table">
-              <Table data={this.state.table.map((row, i) => row.map((col, j) => {
-                  return i == 1 && j < 2 ? 
-                          <input type="number" disabled={true}/> : 
-                          <input type="number"/>
-              }))}/>
-            </div>
             <div className="button-wrap">
               <button onClick={e => this.check(e)}>Проверить</button>
                 {this.state.status !== undefined ?
