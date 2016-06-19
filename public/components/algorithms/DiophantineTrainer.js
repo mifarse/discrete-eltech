@@ -47,6 +47,9 @@ export default class DiophantineTrainer extends Component {
         {this.state.input ? 
           <div>
             <p>Решите уравение: {this.state.input[0]}x + {this.state.input[1]}y = {this.state.input[2]}</p>
+            <Table data={this.state.table.map(row => row.map(col => 
+              <div className="number-wrap">{col}</div>
+            ))}/>
             <div className="answer-area">
               НОД ({this.state.input.join(', ')}) = &nbsp;
               <div className="input-number-wrap">
@@ -100,14 +103,6 @@ export default class DiophantineTrainer extends Component {
                 &nbsp;t
               </div>
             </div>
-            <Table data={this.state.table.map(row => row.map(col => 
-              col !== '' ? (
-                <div className="input-number-wrap">
-                  <input type="number" data-original={col} onBlur={e => this.check(e)}/>
-                  <i className="checker"></i>
-                </div>
-              ) : null
-            ))}/>
             <div className="button-wrap">
               <button onClick={e => this.refreshExample()}>Обновить</button>
             </div>

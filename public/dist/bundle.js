@@ -43108,6 +43108,15 @@
 	            this.state.output.b,
 	            ' расширенный алгоритм Евклида'
 	          ),
+	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
+	              return row.map(function (col) {
+	                return _react2.default.createElement(
+	                  'div',
+	                  { className: 'number-wrap' },
+	                  col
+	                );
+	              });
+	            }) }),
 	          _react2.default.createElement(
 	            'p',
 	            null,
@@ -43152,15 +43161,6 @@
 	            this.state.output.y[1],
 	            't'
 	          ),
-	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
-	              return row.map(function (col) {
-	                return _react2.default.createElement(
-	                  'div',
-	                  { className: 'number-wrap' },
-	                  col
-	                );
-	              });
-	            }) }),
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'button-wrap' },
@@ -43289,6 +43289,15 @@
 	            'y = ',
 	            this.state.input[2]
 	          ),
+	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
+	              return row.map(function (col) {
+	                return _react2.default.createElement(
+	                  'div',
+	                  { className: 'number-wrap' },
+	                  col
+	                );
+	              });
+	            }) }),
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'answer-area' },
@@ -43390,18 +43399,6 @@
 	              ' t'
 	            )
 	          ),
-	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
-	              return row.map(function (col) {
-	                return col !== '' ? _react2.default.createElement(
-	                  'div',
-	                  { className: 'input-number-wrap' },
-	                  _react2.default.createElement('input', { type: 'number', 'data-original': col, onBlur: function onBlur(e) {
-	                      return _this3.check(e);
-	                    } }),
-	                  _react2.default.createElement('i', { className: 'checker' })
-	                ) : null;
-	              });
-	            }) }),
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'button-wrap' },
@@ -43448,6 +43445,10 @@
 	var _Table = __webpack_require__(626);
 
 	var _Table2 = _interopRequireDefault(_Table);
+
+	var _Secret = __webpack_require__(657);
+
+	var _Secret2 = _interopRequireDefault(_Secret);
 
 	var _getCookie = __webpack_require__(632);
 
@@ -43496,12 +43497,6 @@
 	    value: function check() {
 	      var _this3 = this;
 
-	      var tableNode = _reactDom2.default.findDOMNode(this).querySelectorAll('.table tr');
-	      var table = [].map.call(tableNode, function (tr) {
-	        return [].map.call(tr.querySelectorAll('input[type="number"]'), function (input) {
-	          return input.value !== '' ? parseInt(input.value) : '';
-	        });
-	      });
 	      var output = {
 	        nod: parseInt(this.refs.nod.value),
 	        a: parseInt(this.refs.a1.value),
@@ -43517,7 +43512,7 @@
 	        }),
 	        body: JSON.stringify({
 	          input: this.state.input,
-	          table: table,
+	          table: this.state.table.table,
 	          output: output,
 	          test_id: this.state.test_id
 	        })
@@ -43559,6 +43554,23 @@
 	            this.state.input[1],
 	            'y = ',
 	            this.state.input[2]
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'spoiler-wrap' },
+	            _react2.default.createElement(_Secret2.default, { title: 'Открыть таблицу', content: _react2.default.createElement(
+	                'div',
+	                { className: 'table' },
+	                _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
+	                    return row.map(function (col) {
+	                      return _react2.default.createElement(
+	                        'div',
+	                        { className: 'number-wrap' },
+	                        col
+	                      );
+	                    });
+	                  }) })
+	              ) })
 	          ),
 	          _react2.default.createElement(
 	            'div',
@@ -43636,15 +43648,6 @@
 	              ),
 	              't'
 	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'table' },
-	            _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row, i) {
-	                return row.map(function (col, j) {
-	                  return i == 1 && j < 2 ? _react2.default.createElement('input', { type: 'number', disabled: true }) : _react2.default.createElement('input', { type: 'number' });
-	                });
-	              }) })
 	          ),
 	          _react2.default.createElement(
 	            'div',
@@ -45048,6 +45051,73 @@
 	}(_react.Component);
 
 	exports.default = HornerTest;
+
+/***/ },
+/* 657 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(122);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Secret = function (_Component) {
+	    _inherits(Secret, _Component);
+
+	    function Secret() {
+	        _classCallCheck(this, Secret);
+
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(Secret).apply(this, arguments));
+	    }
+
+	    _createClass(Secret, [{
+	        key: 'showSecret',
+	        value: function showSecret(e) {
+	            e.target.closest('.secret').classList.add('active');
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            var _this2 = this;
+
+	            return _react2.default.createElement(
+	                'div',
+	                { className: 'secret' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'title', onClick: function onClick(e) {
+	                            _this2.showSecret(e);
+	                        } },
+	                    this.props.title
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'content' },
+	                    this.props.content
+	                )
+	            );
+	        }
+	    }]);
+
+	    return Secret;
+	}(_react.Component);
+
+	exports.default = Secret;
 
 /***/ }
 /******/ ]);

@@ -265,3 +265,20 @@ h1, h2, h3, h4, h5, h6 {
 #content .button-wrap .checker {
     margin-left: 20px;
 }
+
+/* Spoiler */
+
+.secret {
+    height: 20px;
+    margin: 30px 0;
+    overflow: hidden;
+}
+
+.secret.active {
+    height: auto;
+}
+
+.secret .title {
+    line-height: 20px;
+    cursor: pointer;
+}

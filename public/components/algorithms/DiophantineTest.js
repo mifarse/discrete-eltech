@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import Table from '../Table'
+import Secret from '../Secret'
 import getCookie from './getCookie'
 
 export default class DiophantineTest extends Component {
@@ -25,12 +26,6 @@ export default class DiophantineTest extends Component {
   }
 
   check () {
-    let tableNode = ReactDOM.findDOMNode(this).querySelectorAll('.table tr');
-    let table = [].map.call(tableNode, tr => {
-      return [].map.call(tr.querySelectorAll('input[type="number"]'), input => {
-        return input.value !== '' ? parseInt(input.value) : ''
-      })
-    })
     let output = {
       nod : parseInt(this.refs.nod.value),
       a   : parseInt(this.refs.a1.value),
@@ -46,7 +41,7 @@ export default class DiophantineTest extends Component {
       }),
       body    : JSON.stringify({
         input   : this.state.input,
-        table   : table,
+        table   : this.state.table.table,
         output  : output,
         test_id : this.state.test_id,
       }),
@@ -67,6 +62,15 @@ export default class DiophantineTest extends Component {
         {this.state.input ? 
           <div>
             <p>Решите уравение: {this.state.input[0]}x + {this.state.input[1]}y = {this.state.input[2]}</p>
+            <div className="spoiler-wrap">
+              <Secret title="Открыть таблицу" content={(
+                <div className="table">
+                  <Table data={this.state.table.map(row => row.map(col => 
+                    <div className="number-wrap">{col}</div>
+                  ))}/>
+                </div>
+              )}/>
+            </div>
             <div className="answer-area">
               НОД ({this.state.input.join(', ')}) = &nbsp;
               <div className="input-number-wrap inline">
@@ -111,13 +115,6 @@ export default class DiophantineTest extends Component {
                 </div>
                 t
               </div>
-            </div>
-            <div className="table">
-              <Table data={this.state.table.map((row, i) => row.map((col, j) => {
-                  return i == 1 && j < 2 ? 
-                          <input type="number" disabled={true}/> : 
-                          <input type="number"/>
-              }))}/>
             </div>
             <div className="button-wrap">
               <button onClick={e => this.check(e)}>Проверить</button>
