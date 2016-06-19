@@ -43510,6 +43510,18 @@
 	              ' t'
 	            )
 	          ),
+	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
+	              return row.map(function (col) {
+	                return col !== '' ? _react2.default.createElement(
+	                  'div',
+	                  { className: 'input-number-wrap' },
+	                  _react2.default.createElement('input', { type: 'number', 'data-original': col, onBlur: function onBlur(e) {
+	                      return _this3.check(e);
+	                    } }),
+	                  _react2.default.createElement('i', { className: 'checker' })
+	                ) : null;
+	              });
+	            }) }),
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'button-wrap' },
@@ -43604,6 +43616,12 @@
 	    value: function check() {
 	      var _this3 = this;
 
+	      var tableNode = _reactDom2.default.findDOMNode(this).querySelectorAll('.table tr');
+	      var table = [].map.call(tableNode, function (tr) {
+	        return [].map.call(tr.querySelectorAll('input[type="number"]'), function (input) {
+	          return input.value !== '' ? parseInt(input.value) : '';
+	        });
+	      });
 	      var output = {
 	        nod: parseInt(this.refs.nod.value),
 	        a: parseInt(this.refs.a1.value),
@@ -43619,7 +43637,7 @@
 	        }),
 	        body: JSON.stringify({
 	          input: this.state.input,
-	          table: this.state.table.table,
+	          table: table,
 	          output: output,
 	          test_id: this.state.test_id
 	        })
@@ -43747,6 +43765,15 @@
 	              ),
 	              't'
 	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'table' },
+	            _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row, i) {
+	                return row.map(function (col, j) {
+	                  return i == 1 && j < 2 ? _react2.default.createElement('input', { type: 'number', disabled: true }) : _react2.default.createElement('input', { type: 'number' });
+	                });
+	              }) })
 	          ),
 	          _react2.default.createElement(
 	            'div',
