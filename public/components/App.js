@@ -16,7 +16,7 @@ export default function App({ children }) {
           {title: 'Обратное число', url: '/inverse'},
           {title: 'Диофантово уравнение', url: '/diophantine'},
           {title: 'Быстрое возведение в степень', url: '/fastDegree'},
-          {title: 'Перевод из одной системы счисления в другую', url: '/conversion'},
+          // {title: 'Перевод из одной системы счисления в другую', url: '/conversion'},
           {title: 'Схема Горнера', url: '/horner'},
         ]}/>
         <main id="content">{children}</main>

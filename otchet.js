@@ -6,6 +6,7 @@ var StudentSchema	= require("./schemas/students");
 var fs 			= require('fs');
 var officegen 	= require('officegen'); 
 
+
 module.exports = () => {
 	var agg = [
 		{
@@ -32,14 +33,26 @@ module.exports = () => {
 	date = new Date();
 
 	var docx = officegen("docx");
+
+	docx.on ( 'finalize', function ( written ) {
+				console.log ( 'Finish to create Word file.\nTotal bytes created: ' + written + '\n' );
+			});
+
+	docx.on ( 'error', function ( err ) {
+				console.log ( err );
+			});
+
+
 	var pObj = docx.createP({ align: 'center' });
-	pObj.addText ( 'Санкт-Петербургский государственный электротехнический университет им. В. И. Ульянова (Ленина)', times);
+	pObj.addText ( 'Санкт-Петербургский государственный электротехнический университет', times);
+	pObj.addLineBreak ();
+	pObj.addText ( ' им. В. И. Ульянова (Ленина)', times);
 	pObj.addLineBreak ();
 
 	var pObj = docx.createP({ align: 'center' });
 	pObj.addText ( 'Отчет по работе системы', { underline: true, font_face: 'Arial', font_size: 16 } );
 	var pObj = docx.createP({ align: 'center' });
-	pObj.addText('Все представленные ниже данные актуальны на момент времени  ', {font_face: 'Times New Roman', italic: true});
+	pObj.addText('Все представленные ниже данные актуальны на момент времени: ', {font_face: 'Times New Roman', italic: true});
 	pObj.addText( date.getHours()+":"+date.getMinutes()+" "+date.getDate()+"."+(date.getMonth()+1)+"."+date.getFullYear() , times);
 
 
@@ -132,9 +145,11 @@ module.exports = () => {
 						pObj.addText( ' Модель процессора '+os.cpus()[0].model, times);
 						pObj.addText( '. Операционная система '+os.platform()+', дистрибутив '+os.type()+' версии '+os.release(), times);
 
-						var FILENAME = "otchet.docx";
-						var out = fs.createWriteStream('public/' + FILENAME);
-						docx.generate(out);
+						var out = fs.createWriteStream ( 'public/otchet.docx' );
+						out.on ( 'error', function ( err ) {
+							console.log ( err );
+						});
+						docx.generate ( out );
 						return true;	
 					})
 

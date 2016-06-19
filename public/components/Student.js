@@ -24,6 +24,10 @@ export default class Student extends Component {
     fetch('http://discrete-eltech.eurodir.ru:8888/s/' + props.params.studentID + '/tests')
       .then(response => response.json())
       .then(tests => {
+        console.log({
+          ...this.state,
+          tests : tests,
+        })
         this.setState({
           ...this.state,
           tests : tests,
@@ -79,7 +83,7 @@ export default class Student extends Component {
                               <div className="number-wrap">{col}</div>
                             ))}/>
                             <h4>Ответ</h4>
-                            <div>{test.object.output}</div>
+                            <div>{JSON.stringify(test.object.output)}</div>
                           </div>
                         : null}
                       </li>)

@@ -18,7 +18,7 @@ export default function Header () {
           <li><Link to="/about">О проекте</Link></li>
           <li><Link to="/group">Список групп</Link></li>
           <li>
-            <a href="http://discrete-eltech.eurodir.ru:8888/otchet.docx" target="_blank">
+            <a href="http://discrete-eltech.eurodir.ru:8888/generatedoc" target="_blank">
               Отчет
             </a>
           </li>

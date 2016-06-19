@@ -38706,7 +38706,9 @@
 	    _react2.default.createElement(
 	      'div',
 	      { className: 'container' },
-	      _react2.default.createElement(_MainNavigation2.default, { items: [{ title: 'НОД', url: '/gcd' }, { title: 'ax + by = 1', url: '/axby1' }, { title: 'Цепная дробь', url: '/fraction' }, { title: 'Подходящие дроби', url: '/convergents' }, { title: 'Обратное число', url: '/inverse' }, { title: 'Диофантово уравнение', url: '/diophantine' }, { title: 'Быстрое возведение в степень', url: '/fastDegree' }, { title: 'Перевод из одной системы счисления в другую', url: '/conversion' }, { title: 'Схема Горнера', url: '/horner' }] }),
+	      _react2.default.createElement(_MainNavigation2.default, { items: [{ title: 'НОД', url: '/gcd' }, { title: 'ax + by = 1', url: '/axby1' }, { title: 'Цепная дробь', url: '/fraction' }, { title: 'Подходящие дроби', url: '/convergents' }, { title: 'Обратное число', url: '/inverse' }, { title: 'Диофантово уравнение', url: '/diophantine' }, { title: 'Быстрое возведение в степень', url: '/fastDegree' },
+	        // {title: 'Перевод из одной системы счисления в другую', url: '/conversion'},
+	        { title: 'Схема Горнера', url: '/horner' }] }),
 	      _react2.default.createElement(
 	        'main',
 	        { id: 'content' },
@@ -38899,7 +38901,7 @@
 	          null,
 	          _react2.default.createElement(
 	            'a',
-	            { href: 'http://discrete-eltech.eurodir.ru:8888/otchet.docx', target: '_blank' },
+	            { href: 'http://discrete-eltech.eurodir.ru:8888/generatedoc', target: '_blank' },
 	            'Отчет'
 	          )
 	        )
@@ -40260,6 +40262,9 @@
 	      fetch('http://discrete-eltech.eurodir.ru:8888/s/' + props.params.studentID + '/tests').then(function (response) {
 	        return response.json();
 	      }).then(function (tests) {
+	        console.log(_extends({}, _this2.state, {
+	          tests: tests
+	        }));
 	        _this2.setState(_extends({}, _this2.state, {
 	          tests: tests
 	        }));
@@ -40391,7 +40396,7 @@
 	                      _react2.default.createElement(
 	                        'div',
 	                        null,
-	                        test.object.output
+	                        JSON.stringify(test.object.output)
 	                      )
 	                    ) : null
 	                  );

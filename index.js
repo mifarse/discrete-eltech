@@ -362,9 +362,10 @@ if (cluster.isMaster){
 	        res.redirect('/');
 	    });
 
-	app.get('/otchet.docx', (req, res) => {
+	app.get('/generatedoc', (req, res) => {
 		otchet();
-		res.download(path.join(__dirname, '/public/', 'otchet.docx'));
+		date = new Date();
+		res.download(path.join(__dirname, '/public', 'otchet.docx'), 'Отчет сервера '+date.getDate()+"-"+(date.getMonth()+1)+"-"+date.getFullYear()+'.docx');
 	})
 
 	app.get(/.*/, (req,res) => {
