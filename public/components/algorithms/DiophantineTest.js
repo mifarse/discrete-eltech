@@ -90,6 +90,7 @@ export default class DiophantineTest extends Component {
                 <input type="number" ref="c1"/>
               </div>
             </div>
+            <p>Где a1, b1, c1 - сокращенные коэффиценты уравнения</p>
             <p>Ответ:</p>
             <div>
               <div className="answer-area">

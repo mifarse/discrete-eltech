@@ -43446,6 +43446,11 @@
 	              _react2.default.createElement('i', { className: 'checker' })
 	            )
 	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Где a1, b1, c1 - сокращенные коэффиценты уравнения'
+	          ),
 	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
 	              return row.map(function (col) {
 	                return _react2.default.createElement(
@@ -43510,18 +43515,6 @@
 	              ' t'
 	            )
 	          ),
-	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
-	              return row.map(function (col) {
-	                return col !== '' ? _react2.default.createElement(
-	                  'div',
-	                  { className: 'input-number-wrap' },
-	                  _react2.default.createElement('input', { type: 'number', 'data-original': col, onBlur: function onBlur(e) {
-	                      return _this3.check(e);
-	                    } }),
-	                  _react2.default.createElement('i', { className: 'checker' })
-	                ) : null;
-	              });
-	            }) }),
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'button-wrap' },
@@ -43722,6 +43715,11 @@
 	              { className: 'input-number-wrap inline' },
 	              _react2.default.createElement('input', { type: 'number', ref: 'c1' })
 	            )
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Где a1, b1, c1 - сокращенные коэффиценты уравнения'
 	          ),
 	          _react2.default.createElement(
 	            'p',
