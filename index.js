@@ -134,7 +134,10 @@ if (cluster.isMaster){
 			if (req.params.method == 'diophantine'){
 				class_x = (req.body.output.x[0] - server_solution.output.x[0]) % server_solution.output.x[1] == 0;
 				class_y = (req.body.output.y[0] - server_solution.output.y[0]) % server_solution.output.y[1] == 0;
-				isSimilar = class_y && class_x;
+				t_x = Math.abs(req.body.output.x[1]) == Math.abs(server_solution.output.x[1]);
+				t_y = Math.abs(req.body.output.y[1]) == Math.abs(server_solution.output.y[1]);  
+				t_s = req.body.output.y[1]*req.body.output.x[1] < 0;
+				isSimilar = class_y && class_x && t_x && t_y && t_s;
 			}
 
 			if (isSimilar){
