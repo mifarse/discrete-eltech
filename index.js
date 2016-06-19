@@ -38,6 +38,7 @@ if (cluster.isMaster){
 
 	var app = express();
 	server = http.createServer(app).listen(8888);
+	console.log('diophantine');
 
 	app.use(bodyParser.json());
 	app.use(cookieParser());
@@ -119,16 +120,21 @@ if (cluster.isMaster){
 			console.log(a,b,c);
 			console.log('THIS IS REQUEST:');
 			console.log(req.body);
-
+			console.log('THIS IS SERVER SOLUTION:')
 			if (c == null) {
-				isSimilar = deepEqual(req.body, discretka[req.params.method].solve(a, b) );
-				console.log('THIS IS SERVER SOLUTION:')
-				console.log( discretka[req.params.method].solve(a, b) )
+				server_solution = discretka[req.params.method].solve(a, b)
+				isSimilar = deepEqual(req.body, server_solution );
 			}
 			else {
-				isSimilar = deepEqual(req.body, discretka[req.params.method].solve(a, b, c) );
-				console.log('THIS IS SERVER SOLUTI0N:')
-				console.log( discretka[req.params.method].solve(a, b, c) )
+				server_solution = discretka[req.params.method].solve(a, b, c)
+				isSimilar = deepEqual(req.body, server_solution );
+			}
+			console.log(server_solution);
+
+			if (req.params.method == 'diophantine'){
+				class_x = (req.body.output.x[0] - server_solution.output.x[0]) % server_solution.output.x[1] == 0;
+				class_y = (req.body.output.y[0] - server_solution.output.y[0]) % server_solution.output.y[1] == 0;
+				isSimilar = class_y && class_x;
 			}
 
 			if (isSimilar){
