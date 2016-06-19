@@ -31,6 +31,7 @@ export default class FractionShow extends Component {
             <Table data={this.state.table.map(row => row.map(col => 
                 <div className="number-wrap">{col}</div>
             ))}/>
+            <code>Ответ: [{this.state.output.filter(x => x !== 0).join(', ')}]</code>
             <div className="button-wrap">
               <button onClick={e => this.refreshExample()}>Обновить</button>
             </div>
