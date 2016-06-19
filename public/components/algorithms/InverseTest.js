@@ -38,7 +38,7 @@ export default class InverseTest extends Component {
       body    : JSON.stringify({
         input   : this.state.input,
         table   : table,
-        output  : this.refs.output.value,
+        output  : parseInt(this.refs.output.value),
         test_id : this.state.test_id,
       }),
     })
