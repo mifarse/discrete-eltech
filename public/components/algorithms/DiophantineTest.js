@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import Table from '../Table'
-import Secret from '../Secret'
 import getCookie from './getCookie'
 
 export default class DiophantineTest extends Component {
@@ -62,15 +61,9 @@ export default class DiophantineTest extends Component {
         {this.state.input ? 
           <div>
             <p>Решите уравение: {this.state.input[0]}x + {this.state.input[1]}y = {this.state.input[2]}</p>
-            <div className="spoiler-wrap">
-              <Secret title="Открыть таблицу" content={(
-                <div className="table">
-                  <Table data={this.state.table.map(row => row.map(col => 
-                    <div className="number-wrap">{col}</div>
-                  ))}/>
-                </div>
-              )}/>
-            </div>
+            <Table data={this.state.table.map(row => row.map(col => 
+              <div className="number-wrap">{col}</div>
+            ))}/>
             <div className="answer-area">
               НОД ({this.state.input.join(', ')}) = &nbsp;
               <div className="input-number-wrap inline">

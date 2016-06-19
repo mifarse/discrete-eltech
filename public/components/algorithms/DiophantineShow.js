@@ -34,9 +34,6 @@ export default class DiophantineShow extends Component {
             <p>Решим уравнение</p>
             <p>{this.state.output.a}x + {this.state.output.b}y = 1</p>
             <p>применив к {this.state.output.a} и {this.state.output.b} расширенный алгоритм Евклида</p>
-            <Table data={this.state.table.map(row => row.map(col =>
-                <div className="number-wrap">{col}</div>
-            ))}/>
             <p>Полученные ответы умножим на {this.state.output.c} и получим</p>
             <p>
               X0 = {this.state.table[this.state.table.length - 2][this.state.table[0].length - 2]} * {this.state.output.c} = {this.state.output.x[0]}
@@ -49,6 +46,9 @@ export default class DiophantineShow extends Component {
               <br/>
               Y = {this.state.output.y[0]} + {this.state.output.y[1]}t
             </p>
+            <Table data={this.state.table.map(row => row.map(col => 
+              <div className="number-wrap">{col}</div>
+            ))}/>
             <div className="button-wrap">
               <button onClick={e => this.refreshExample()}>Обновить</button>
             </div>
