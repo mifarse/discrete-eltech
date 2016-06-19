@@ -121,23 +121,23 @@ if (cluster.isMaster){
 			console.log('THIS IS REQUEST:');
 			console.log(req.body);
 			console.log('THIS IS SERVER SOLUTION:')
-			if (c == null) {
-				server_solution = discretka[req.params.method].solve(a, b)
-				isSimilar = deepEqual(req.body, server_solution );
-			}
-			else {
-				server_solution = discretka[req.params.method].solve(a, b, c)
-				isSimilar = deepEqual(req.body, server_solution );
-			}
+			
+			server_solution =  (c == null) ? discretka[req.params.method].solve(a, b) : server_solution = discretka[req.params.method].solve(a, b, c);
 			console.log(server_solution);
 
-			if (req.params.method == 'diophantine'){
-				class_x = (req.body.output.x[0] - server_solution.output.x[0]) % server_solution.output.x[1] == 0;
-				class_y = (req.body.output.y[0] - server_solution.output.y[0]) % server_solution.output.y[1] == 0;
-				t_x = Math.abs(req.body.output.x[1]) == Math.abs(server_solution.output.x[1]);
-				t_y = Math.abs(req.body.output.y[1]) == Math.abs(server_solution.output.y[1]);  
-				t_s = req.body.output.y[1]*req.body.output.x[1] < 0;
-				isSimilar = class_y && class_x && t_x && t_y && t_s;
+			switch (req.params.method){
+				case 'diophantine': {
+					class_x = (req.body.output.x[0] - server_solution.output.x[0]) % server_solution.output.x[1] == 0;
+					class_y = (req.body.output.y[0] - server_solution.output.y[0]) % server_solution.output.y[1] == 0;
+					t_x = Math.abs(req.body.output.x[1]) == Math.abs(server_solution.output.x[1]);
+					t_y = Math.abs(req.body.output.y[1]) == Math.abs(server_solution.output.y[1]);  
+					t_s = req.body.output.y[1]*req.body.output.x[1] < 0;
+					isSimilar = class_y && class_x && t_x && t_y && t_s;
+					break;
+				}
+				default: {
+					isSimilar = deepEqual(req.body, server_solution );
+				}
 			}
 
 			if (isSimilar){
