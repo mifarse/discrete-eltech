@@ -20,6 +20,14 @@ export default class ConvergentsShow extends Component {
   }
 
   render () {
+    let output = []
+    if (this.state.input) {
+      for (let i = 2; i < this.state.table[2].length; i++) {
+        if (this.state.table[2][i] !== 0) {
+          output.push([this.state.table[2][i], this.state.table[3][i]])
+        }
+      }
+    }
     return (
       <div>
         {this.state.input ? 
@@ -32,6 +40,7 @@ export default class ConvergentsShow extends Component {
             <Table data={this.state.table.map(row => row.map(col => 
                 <div className="number-wrap">{col}</div>
             ))}/>
+            <code>Ответ: [{output.map(f => f[0] + '/' + f[1]).join(', ')}]</code>
             <div className="button-wrap">
               <button onClick={e => this.refreshExample()}>Обновить</button>
             </div>
