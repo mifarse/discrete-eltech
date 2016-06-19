@@ -40650,39 +40650,39 @@
 
 	var _DiophantineTest3 = _interopRequireDefault(_DiophantineTest2);
 
-	var _FastDegreeShow2 = __webpack_require__(648);
+	var _FastDegreeShow2 = __webpack_require__(649);
 
 	var _FastDegreeShow3 = _interopRequireDefault(_FastDegreeShow2);
 
-	var _FastDegreeTrainer2 = __webpack_require__(649);
+	var _FastDegreeTrainer2 = __webpack_require__(650);
 
 	var _FastDegreeTrainer3 = _interopRequireDefault(_FastDegreeTrainer2);
 
-	var _FastDegreeTest2 = __webpack_require__(650);
+	var _FastDegreeTest2 = __webpack_require__(651);
 
 	var _FastDegreeTest3 = _interopRequireDefault(_FastDegreeTest2);
 
-	var _ConversionShow2 = __webpack_require__(651);
+	var _ConversionShow2 = __webpack_require__(652);
 
 	var _ConversionShow3 = _interopRequireDefault(_ConversionShow2);
 
-	var _ConversionTrainer2 = __webpack_require__(652);
+	var _ConversionTrainer2 = __webpack_require__(653);
 
 	var _ConversionTrainer3 = _interopRequireDefault(_ConversionTrainer2);
 
-	var _ConversionTest2 = __webpack_require__(653);
+	var _ConversionTest2 = __webpack_require__(654);
 
 	var _ConversionTest3 = _interopRequireDefault(_ConversionTest2);
 
-	var _HornerShow2 = __webpack_require__(654);
+	var _HornerShow2 = __webpack_require__(655);
 
 	var _HornerShow3 = _interopRequireDefault(_HornerShow2);
 
-	var _HornerTrainer2 = __webpack_require__(655);
+	var _HornerTrainer2 = __webpack_require__(656);
 
 	var _HornerTrainer3 = _interopRequireDefault(_HornerTrainer2);
 
-	var _HornerTest2 = __webpack_require__(656);
+	var _HornerTest2 = __webpack_require__(657);
 
 	var _HornerTest3 = _interopRequireDefault(_HornerTest2);
 
@@ -41277,6 +41277,29 @@
 	          _react2.default.createElement(
 	            'p',
 	            null,
+	            '|',
+	            'x',
+	            '|',
+	            ' ',
+	            '<',
+	            ' ',
+	            '|',
+	            this.state.input[0],
+	            '|',
+	            ', ',
+	            '|',
+	            'y',
+	            '|',
+	            ' ',
+	            '<',
+	            ' ',
+	            '|',
+	            this.state.input[1],
+	            '|'
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
 	            'Для решения этой задачи нам необходимо воспользоваться расширенным алгоритмом Евклида, как показано в следующей таблице.'
 	          ),
 	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
@@ -41420,6 +41443,29 @@
 	            'x + ',
 	            this.state.input[1],
 	            'y = 1'
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            '|',
+	            'x',
+	            '|',
+	            ' ',
+	            '<',
+	            ' ',
+	            '|',
+	            this.state.input[0],
+	            '|',
+	            ', ',
+	            '|',
+	            'y',
+	            '|',
+	            ' ',
+	            '<',
+	            ' ',
+	            '|',
+	            this.state.input[1],
+	            '|'
 	          ),
 	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
 	              return row.map(function (col) {
@@ -41600,6 +41646,29 @@
 	            'y = 1'
 	          ),
 	          _react2.default.createElement(
+	            'p',
+	            null,
+	            '|',
+	            'x',
+	            '|',
+	            ' ',
+	            '<',
+	            ' ',
+	            '|',
+	            this.state.input[0],
+	            '|',
+	            ', ',
+	            '|',
+	            'y',
+	            '|',
+	            ' ',
+	            '<',
+	            ' ',
+	            '|',
+	            this.state.input[1],
+	            '|'
+	          ),
+	          _react2.default.createElement(
 	            'div',
 	            { className: 'table' },
 	            _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row, i) {
@@ -41746,6 +41815,15 @@
 	                );
 	              });
 	            }) }),
+	          _react2.default.createElement(
+	            'code',
+	            null,
+	            'Ответ: [',
+	            this.state.output.filter(function (x) {
+	              return x !== 0;
+	            }).join(', '),
+	            ']'
+	          ),
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'button-wrap' },
@@ -42132,6 +42210,14 @@
 	    value: function render() {
 	      var _this3 = this;
 
+	      var output = [];
+	      if (this.state.input) {
+	        for (var i = 2; i < this.state.table[2].length; i++) {
+	          if (this.state.table[2][i] !== 0) {
+	            output.push([this.state.table[2][i], this.state.table[3][i]]);
+	          }
+	        }
+	      }
 	      return _react2.default.createElement(
 	        'div',
 	        null,
@@ -42179,6 +42265,15 @@
 	                );
 	              });
 	            }) }),
+	          _react2.default.createElement(
+	            'code',
+	            null,
+	            'Ответ: [',
+	            output.map(function (f) {
+	              return f[0] + '/' + f[1];
+	            }).join(', '),
+	            ']'
+	          ),
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'button-wrap' },
@@ -42573,9 +42668,19 @@
 	            null,
 	            'Найти обратный элемент к ',
 	            this.state.input[1],
-	            ' в поле вычетов по модулю b. Класс вычетов определяется остатком по модулю ',
-	            this.state.input[0],
-	            '. Или другими словами мы имеем уравнение'
+	            ' в кольце вычетов по модулю ',
+	            this.state.input[0]
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Классы вычетов определяется остатком по модулю ',
+	            this.state.input[0]
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Или другими словами мы имеем уравнение'
 	          ),
 	          _react2.default.createElement(
 	            'p',
@@ -42587,7 +42692,7 @@
 	          _react2.default.createElement(
 	            'p',
 	            null,
-	            'где x обратное число, перейдём к уравнению'
+	            'Где x обратное число, перейдём к уравнению'
 	          ),
 	          _react2.default.createElement(
 	            'p',
@@ -42600,11 +42705,13 @@
 	          _react2.default.createElement(
 	            'p',
 	            null,
-	            'применим к ',
-	            this.state.input[1],
-	            ' и ',
+	            'Применим к ',
 	            this.state.input[0],
-	            ' расширенный алгоритм Евклида. Если x < 0 нужно прибавить к нему модуль кольца вычетов'
+	            ' и ',
+	            this.state.input[1],
+	            ' расширенный алгоритм Евклида.Если x ',
+	            '<',
+	            ' 0 нужно прибавить к нему модуль кольца вычетов'
 	          ),
 	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
 	              return row.map(function (col) {
@@ -42746,7 +42853,7 @@
 	            this.state.input[1],
 	            ' в поле вычетов по модулю ',
 	            this.state.input[0],
-	            ' заполнив нужную часть таблицы расширенного алгоритма Евклид.Классы вычетов определяется остатком по модулю ',
+	            ' заполнив нужную часть таблицы расширенного алгоритма Евклида. Классы вычетов определяется остатком по модулю ',
 	            this.state.input[0]
 	          ),
 	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
@@ -42926,9 +43033,13 @@
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'table' },
-	            _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row, i) {
-	                return row.map(function (col, j) {
-	                  return i == 1 && j < 2 ? _react2.default.createElement('input', { type: 'number', disabled: true }) : _react2.default.createElement('input', { type: 'number' });
+	            _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
+	                return row.map(function (col) {
+	                  return _react2.default.createElement(
+	                    'div',
+	                    { className: 'number-wrap' },
+	                    col
+	                  );
 	                });
 	              }) })
 	          ),
@@ -43108,15 +43219,6 @@
 	            this.state.output.b,
 	            ' расширенный алгоритм Евклида'
 	          ),
-	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
-	              return row.map(function (col) {
-	                return _react2.default.createElement(
-	                  'div',
-	                  { className: 'number-wrap' },
-	                  col
-	                );
-	              });
-	            }) }),
 	          _react2.default.createElement(
 	            'p',
 	            null,
@@ -43161,6 +43263,15 @@
 	            this.state.output.y[1],
 	            't'
 	          ),
+	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
+	              return row.map(function (col) {
+	                return _react2.default.createElement(
+	                  'div',
+	                  { className: 'number-wrap' },
+	                  col
+	                );
+	              });
+	            }) }),
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'button-wrap' },
@@ -43289,15 +43400,6 @@
 	            'y = ',
 	            this.state.input[2]
 	          ),
-	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
-	              return row.map(function (col) {
-	                return _react2.default.createElement(
-	                  'div',
-	                  { className: 'number-wrap' },
-	                  col
-	                );
-	              });
-	            }) }),
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'answer-area' },
@@ -43344,6 +43446,15 @@
 	              _react2.default.createElement('i', { className: 'checker' })
 	            )
 	          ),
+	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
+	              return row.map(function (col) {
+	                return _react2.default.createElement(
+	                  'div',
+	                  { className: 'number-wrap' },
+	                  col
+	                );
+	              });
+	            }) }),
 	          _react2.default.createElement(
 	            'p',
 	            null,
@@ -43445,10 +43556,6 @@
 	var _Table = __webpack_require__(626);
 
 	var _Table2 = _interopRequireDefault(_Table);
-
-	var _Secret = __webpack_require__(657);
-
-	var _Secret2 = _interopRequireDefault(_Secret);
 
 	var _getCookie = __webpack_require__(632);
 
@@ -43555,23 +43662,15 @@
 	            'y = ',
 	            this.state.input[2]
 	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'spoiler-wrap' },
-	            _react2.default.createElement(_Secret2.default, { title: 'Открыть таблицу', content: _react2.default.createElement(
-	                'div',
-	                { className: 'table' },
-	                _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
-	                    return row.map(function (col) {
-	                      return _react2.default.createElement(
-	                        'div',
-	                        { className: 'number-wrap' },
-	                        col
-	                      );
-	                    });
-	                  }) })
-	              ) })
-	          ),
+	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
+	              return row.map(function (col) {
+	                return _react2.default.createElement(
+	                  'div',
+	                  { className: 'number-wrap' },
+	                  col
+	                );
+	              });
+	            }) }),
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'answer-area' },
@@ -43672,7 +43771,8 @@
 	exports.default = DiophantineTest;
 
 /***/ },
-/* 648 */
+/* 648 */,
+/* 649 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43790,7 +43890,7 @@
 	exports.default = FastDegreeShow;
 
 /***/ },
-/* 649 */
+/* 650 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43941,7 +44041,7 @@
 	exports.default = FastDegreeTrainer;
 
 /***/ },
-/* 650 */
+/* 651 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44108,7 +44208,7 @@
 	exports.default = FastDegreeTest;
 
 /***/ },
-/* 651 */
+/* 652 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44236,7 +44336,7 @@
 	exports.default = ConversionShow;
 
 /***/ },
-/* 652 */
+/* 653 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44392,7 +44492,7 @@
 	exports.default = ConversionTrainer;
 
 /***/ },
-/* 653 */
+/* 654 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44564,7 +44664,7 @@
 	exports.default = ConversionTest;
 
 /***/ },
-/* 654 */
+/* 655 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44711,7 +44811,7 @@
 	exports.default = HornerShow;
 
 /***/ },
-/* 655 */
+/* 656 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44873,7 +44973,7 @@
 	exports.default = HornerTrainer;
 
 /***/ },
-/* 656 */
+/* 657 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45051,73 +45151,6 @@
 	}(_react.Component);
 
 	exports.default = HornerTest;
-
-/***/ },
-/* 657 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(122);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Secret = function (_Component) {
-	    _inherits(Secret, _Component);
-
-	    function Secret() {
-	        _classCallCheck(this, Secret);
-
-	        return _possibleConstructorReturn(this, Object.getPrototypeOf(Secret).apply(this, arguments));
-	    }
-
-	    _createClass(Secret, [{
-	        key: 'showSecret',
-	        value: function showSecret(e) {
-	            e.target.closest('.secret').classList.add('active');
-	        }
-	    }, {
-	        key: 'render',
-	        value: function render() {
-	            var _this2 = this;
-
-	            return _react2.default.createElement(
-	                'div',
-	                { className: 'secret' },
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'title', onClick: function onClick(e) {
-	                            _this2.showSecret(e);
-	                        } },
-	                    this.props.title
-	                ),
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'content' },
-	                    this.props.content
-	                )
-	            );
-	        }
-	    }]);
-
-	    return Secret;
-	}(_react.Component);
-
-	exports.default = Secret;
 
 /***/ }
 /******/ ]);
