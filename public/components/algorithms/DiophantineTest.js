@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import Table from '../Table'
+import Toolbar from '../Toolbar'
 import getCookie from './getCookie'
 
 export default class DiophantineTest extends Component {
@@ -62,14 +63,12 @@ export default class DiophantineTest extends Component {
   render () {
     return (
       <div className="content-wrap">
+        <Toolbar />
         <h1>Решение диофантово уравнения</h1>
         <h2>Контроль</h2>
         {this.state.input ? 
           <div>
             <p>Решите уравение: {this.state.input[0]}x + {this.state.input[1]}y = {this.state.input[2]}</p>
-            <Table data={this.state.table.map(row => row.map(col => 
-              <div className="number-wrap">{col}</div>
-            ))}/>
             <div className="answer-area">
               НОД ({this.state.input.join(', ')}) = &nbsp;
               <div className="input-number-wrap inline">
