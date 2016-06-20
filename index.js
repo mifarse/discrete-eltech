@@ -107,7 +107,7 @@ if (cluster.isMaster){
 		discretka[req.params.method].properties.forEach(function(name){
 			if (!req.body.hasOwnProperty(name)){
 				res.status(400).jsonp({status: false, text: 'Not found properties in request. Do you have input, output, table?'});
-				next();
+				return false;
 			}
 		});
 		if (!req.body.hasOwnProperty("test_id")){
@@ -146,6 +146,10 @@ if (cluster.isMaster){
 						server_solution.table[2][ server_solution.table[2].length -1 ] = '';
 						server_solution.table[3][ server_solution.table[3].length -1 ] = '';
 					}
+					isSimilar = deepEqual(req.body, server_solution );
+					break;
+				case 'inverse':
+					server_solution.table = [];
 					isSimilar = deepEqual(req.body, server_solution );
 					break;
 				default: 
