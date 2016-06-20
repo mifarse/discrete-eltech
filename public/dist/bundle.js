@@ -40650,39 +40650,39 @@
 
 	var _DiophantineTest3 = _interopRequireDefault(_DiophantineTest2);
 
-	var _FastDegreeShow2 = __webpack_require__(649);
+	var _FastDegreeShow2 = __webpack_require__(648);
 
 	var _FastDegreeShow3 = _interopRequireDefault(_FastDegreeShow2);
 
-	var _FastDegreeTrainer2 = __webpack_require__(650);
+	var _FastDegreeTrainer2 = __webpack_require__(649);
 
 	var _FastDegreeTrainer3 = _interopRequireDefault(_FastDegreeTrainer2);
 
-	var _FastDegreeTest2 = __webpack_require__(651);
+	var _FastDegreeTest2 = __webpack_require__(650);
 
 	var _FastDegreeTest3 = _interopRequireDefault(_FastDegreeTest2);
 
-	var _ConversionShow2 = __webpack_require__(652);
+	var _ConversionShow2 = __webpack_require__(651);
 
 	var _ConversionShow3 = _interopRequireDefault(_ConversionShow2);
 
-	var _ConversionTrainer2 = __webpack_require__(653);
+	var _ConversionTrainer2 = __webpack_require__(652);
 
 	var _ConversionTrainer3 = _interopRequireDefault(_ConversionTrainer2);
 
-	var _ConversionTest2 = __webpack_require__(654);
+	var _ConversionTest2 = __webpack_require__(653);
 
 	var _ConversionTest3 = _interopRequireDefault(_ConversionTest2);
 
-	var _HornerShow2 = __webpack_require__(655);
+	var _HornerShow2 = __webpack_require__(654);
 
 	var _HornerShow3 = _interopRequireDefault(_HornerShow2);
 
-	var _HornerTrainer2 = __webpack_require__(656);
+	var _HornerTrainer2 = __webpack_require__(655);
 
 	var _HornerTrainer3 = _interopRequireDefault(_HornerTrainer2);
 
-	var _HornerTest2 = __webpack_require__(657);
+	var _HornerTest2 = __webpack_require__(656);
 
 	var _HornerTest3 = _interopRequireDefault(_HornerTest2);
 
@@ -41284,7 +41284,7 @@
 	            '<',
 	            ' ',
 	            '|',
-	            this.state.input[0],
+	            this.state.input[1],
 	            '|',
 	            ', ',
 	            '|',
@@ -41294,7 +41294,7 @@
 	            '<',
 	            ' ',
 	            '|',
-	            this.state.input[1],
+	            this.state.input[0],
 	            '|'
 	          ),
 	          _react2.default.createElement(
@@ -41454,7 +41454,7 @@
 	            '<',
 	            ' ',
 	            '|',
-	            this.state.input[0],
+	            this.state.input[1],
 	            '|',
 	            ', ',
 	            '|',
@@ -41464,7 +41464,7 @@
 	            '<',
 	            ' ',
 	            '|',
-	            this.state.input[1],
+	            this.state.input[0],
 	            '|'
 	          ),
 	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
@@ -41655,7 +41655,7 @@
 	            '<',
 	            ' ',
 	            '|',
-	            this.state.input[0],
+	            this.state.input[1],
 	            '|',
 	            ', ',
 	            '|',
@@ -41665,7 +41665,7 @@
 	            '<',
 	            ' ',
 	            '|',
-	            this.state.input[1],
+	            this.state.input[0],
 	            '|'
 	          ),
 	          _react2.default.createElement(
@@ -41932,7 +41932,7 @@
 	        _react2.default.createElement(
 	          'h1',
 	          null,
-	          'Найти (x,y) удовлетворяющих условию'
+	          'Разложение в цепную дробь'
 	        ),
 	        _react2.default.createElement(
 	          'h2',
@@ -42071,7 +42071,7 @@
 	        });
 	      });
 	      var output = table[1].filter(function (val) {
-	        return val !== '';
+	        return val !== '' && val !== 0;
 	      });
 	      fetch('http://discrete-eltech.eurodir.ru:8888/test/fraction/', {
 	        method: 'post',
@@ -43821,8 +43821,7 @@
 	exports.default = DiophantineTest;
 
 /***/ },
-/* 648 */,
-/* 649 */
+/* 648 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43940,7 +43939,7 @@
 	exports.default = FastDegreeShow;
 
 /***/ },
-/* 650 */
+/* 649 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44091,7 +44090,7 @@
 	exports.default = FastDegreeTrainer;
 
 /***/ },
-/* 651 */
+/* 650 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44258,7 +44257,7 @@
 	exports.default = FastDegreeTest;
 
 /***/ },
-/* 652 */
+/* 651 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44386,7 +44385,7 @@
 	exports.default = ConversionShow;
 
 /***/ },
-/* 653 */
+/* 652 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44542,7 +44541,7 @@
 	exports.default = ConversionTrainer;
 
 /***/ },
-/* 654 */
+/* 653 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44714,7 +44713,7 @@
 	exports.default = ConversionTest;
 
 /***/ },
-/* 655 */
+/* 654 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44861,7 +44860,7 @@
 	exports.default = HornerShow;
 
 /***/ },
-/* 656 */
+/* 655 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45023,7 +45022,7 @@
 	exports.default = HornerTrainer;
 
 /***/ },
-/* 657 */
+/* 656 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
