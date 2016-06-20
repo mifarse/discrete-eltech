@@ -42071,7 +42071,7 @@
 	        });
 	      });
 	      var output = table[1].filter(function (val) {
-	        return val !== '';
+	        return val !== '' && val !== 0;
 	      });
 	      fetch('http://discrete-eltech.eurodir.ru:8888/test/fraction/', {
 	        method: 'post',

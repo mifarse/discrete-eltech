@@ -30,7 +30,7 @@ export default class FractionTest extends Component {
         return input.value !== '' ? parseInt(input.value) : ''
       })
     })
-    let output = table[1].filter(val => val !== '')
+    let output = table[1].filter(val => val !== '' && val !== 0)
     fetch('http://discrete-eltech.eurodir.ru:8888/test/fraction/', {
       method  : 'post',
       headers : new Headers({
