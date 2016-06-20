@@ -150,7 +150,7 @@ if (cluster.isMaster){
 					isSimilar = deepEqual(req.body, server_solution );
 					break;
 				case 'inverse':
-					server_solution.table = [];
+					delete server_solution.table;
 					console.log('now');
 					console.log(server_solution);
 					isSimilar = deepEqual(req.body, server_solution );
