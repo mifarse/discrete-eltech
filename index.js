@@ -134,7 +134,15 @@ if (cluster.isMaster){
 					t_s = req.body.output.y[1]*req.body.output.x[1] < 0;
 					isSimilar = class_y && class_x && t_x && t_y && t_s;
 					break;
-				}
+				},
+				case 'axby1':{
+					if ((req.body.table[2][ req.body.table[2].length -1 ] == '') && (req.body.table[3][ req.body.table[3].length -1 ] == '')){
+						server_solution.table[2][ server_solution.table[2].length -1 ] = '';
+						server_solution.table[3][ server_solution.table[3].length -1 ] = '';
+					}
+					isSimilar = deepEqual(req.body, server_solution );
+					break;
+				},
 				default: {
 					isSimilar = deepEqual(req.body, server_solution );
 				}
