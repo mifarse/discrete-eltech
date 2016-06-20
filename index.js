@@ -107,6 +107,7 @@ if (cluster.isMaster){
 		discretka[req.params.method].properties.forEach(function(name){
 			if (!req.body.hasOwnProperty(name)){
 				res.status(400).jsonp({status: false, text: 'Not found properties in request. Do you have input, output, table?'});
+				next();
 				return false;
 			}
 		});
