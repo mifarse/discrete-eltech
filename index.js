@@ -74,7 +74,14 @@ if (cluster.isMaster){
 	app.get('/solve/:method', function(req,res){
 		req.params.method = req.params.method.toLowerCase()
 		if (discretka.hasOwnProperty(req.params.method)){
-			res.jsonp( discretka[req.params.method].solve() );
+			if (req.params.method == 'pem'){
+				if (req.query.a !== undefined && req.query.a !== undefined){
+					a = parseInt(req.query.a);
+					b = parseInt(req.query.b);
+					res.jsonp( discretka[req.params.method].solve(a, b) );
+				} else res.jsonp();
+			}
+			else res.jsonp( discretka[req.params.method].solve() );
 		} else { res.status(404).jsonp({"result": "404, "+req.params.method+" not found."}) }
 	});
 
@@ -101,6 +108,7 @@ if (cluster.isMaster){
 			if (!req.body.hasOwnProperty(name)){
 				res.status(400).jsonp({status: false, text: 'Not found properties in request. Do you have input, output, table?'});
 				next();
+				return false;
 			}
 		});
 		if (!req.body.hasOwnProperty("test_id")){
@@ -139,6 +147,12 @@ if (cluster.isMaster){
 						server_solution.table[2][ server_solution.table[2].length -1 ] = '';
 						server_solution.table[3][ server_solution.table[3].length -1 ] = '';
 					}
+					isSimilar = deepEqual(req.body, server_solution );
+					break;
+				case 'inverse':
+					delete server_solution.table;
+					console.log('now');
+					console.log(server_solution);
 					isSimilar = deepEqual(req.body, server_solution );
 					break;
 				default: 
