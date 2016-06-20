@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import Table from '../Table'
+import Toolbar from '../Toolbar'
 import getCookie from './getCookie'
 
 export default class InverseTest extends Component {
@@ -24,12 +24,6 @@ export default class InverseTest extends Component {
   }
 
   check () {
-    let tableNode = ReactDOM.findDOMNode(this).querySelectorAll('.table tr');
-    let table = [].map.call(tableNode, tr => {
-      return [].map.call(tr.querySelectorAll('input[type="number"]'), input => {
-        return input.value !== '' ? parseInt(input.value) : ''
-      })
-    })
     fetch('http://discrete-eltech.eurodir.ru:8888/test/inverse/', {
       method  : 'post',
       headers : new Headers({
@@ -37,7 +31,6 @@ export default class InverseTest extends Component {
       }),
       body    : JSON.stringify({
         input   : this.state.input,
-        table   : this.state.table,
         output  : parseInt(this.refs.output.value),
         test_id : this.state.test_id,
       }),
@@ -53,16 +46,12 @@ export default class InverseTest extends Component {
   render () {
     return (
       <div className="content-wrap">
+        <Toolbar />
         <h1>Нахождение обратного числа</h1>
         <h2>Контроль</h2>
         {this.state.input ? 
           <div>
             <p>Найти обратный элемент к {this.state.input[1]} в поле вычетов по модулю {this.state.input[0]} заполнив нужную часть таблицы расширенного алгоритма Евклида. Классы вычетов определяется остатком по модулю {this.state.input[0]}</p>
-            <div className="table">
-              <Table data={this.state.table.map(row => row.map(col => 
-                <div className="number-wrap">{col}</div>
-              ))}/>
-            </div>
             <code className="answer-area">
               Ответ: &nbsp;
               <div className="input-number-wrap">
