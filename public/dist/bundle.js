@@ -43468,11 +43468,14 @@
 	          ),
 	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
 	              return row.map(function (col) {
-	                return _react2.default.createElement(
+	                return col !== '' ? _react2.default.createElement(
 	                  'div',
-	                  { className: 'number-wrap' },
-	                  col
-	                );
+	                  { className: 'input-number-wrap' },
+	                  _react2.default.createElement('input', { type: 'number', 'data-original': col, onBlur: function onBlur(e) {
+	                      return _this3.check(e);
+	                    } }),
+	                  _react2.default.createElement('i', { className: 'checker' })
+	                ) : null;
 	              });
 	            }) }),
 	          _react2.default.createElement(

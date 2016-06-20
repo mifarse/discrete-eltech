@@ -112,7 +112,12 @@ export default class DiophantineTrainer extends Component {
             </div>
             <p>Где a1, b1, c1 - сокращенные коэффиценты уравнения</p>
             <Table data={this.state.table.map(row => row.map(col => 
-              <div className="number-wrap">{col}</div>
+              col !== '' ? (
+                <div className="input-number-wrap">
+                  <input type="number" data-original={col} onBlur={e => this.check(e)}/>
+                  <i className="checker"></i>
+                </div>
+              ) : null
             ))}/>
             <p>Ответ:</p>
             <div className="output" ref="outputWrap">
