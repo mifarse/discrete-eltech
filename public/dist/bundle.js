@@ -43359,13 +43359,47 @@
 	  }, {
 	    key: 'check',
 	    value: function check(event) {
+	      console.log('current value = ', event.currentTarget.value);
 	      if (event.currentTarget.value != '') {
-	        if (event.currentTarget.value === event.currentTarget.dataset.original) {
-	          event.currentTarget.classList.remove('wrong');
-	          event.currentTarget.classList.add('ok');
+	        console.log('.output = ', event.currentTarget.closest('.output'));
+	        if (event.currentTarget.closest('.output')) {
+	          var a1 = this.refs.a1;
+	          var a2 = this.refs.a2;
+	          var b1 = this.refs.b1;
+	          var b2 = this.refs.b2;
+	          if (a1.value && a2.value && b1.value && b2.value) {
+	            console.log('a2 value = ', parseInt(a2.value));
+	            console.log('a2 original = ', parseInt(a2.dataset.original));
+	            console.log('b2 original = ', parseInt(b2.dataset.original));
+	            console.log('class_y = ', (parseInt(a2.value) - parseInt(a2.dataset.original)) % parseInt(b2.dataset.original));
+	            var class_x = (parseInt(a1.value) - parseInt(a1.dataset.original)) % parseInt(b1.dataset.original) === 0;
+	            var class_y = (parseInt(a2.value) - parseInt(a2.dataset.original)) % parseInt(b2.dataset.original) === 0;
+	            var t_x = Math.abs(parseInt(b1.value)) == Math.abs(parseInt(b1.dataset.original));
+	            var t_y = Math.abs(parseInt(b2.value)) == Math.abs(parseInt(b2.dataset.original));
+	            var t_s = parseInt(b1.value) * parseInt(b2.value) < 0;
+	            console.log(class_y, class_x, t_x, t_y, t_s);
+	            if (class_y && class_x && t_x && t_y && t_s) {
+	              var inputs = this.refs.outputWrap.querySelectorAll('input[type=number]');
+	              [].forEach.call(inputs, function (input) {
+	                input.classList.remove('wrong');
+	                input.classList.add('ok');
+	              });
+	            } else {
+	              var _inputs = this.refs.outputWrap.querySelectorAll('input[type=number]');
+	              [].forEach.call(_inputs, function (input) {
+	                input.classList.remove('ok');
+	                input.classList.add('wrong');
+	              });
+	            }
+	          }
 	        } else {
-	          event.currentTarget.classList.remove('ok');
-	          event.currentTarget.classList.add('wrong');
+	          if (event.currentTarget.value === event.currentTarget.dataset.original) {
+	            event.currentTarget.classList.remove('wrong');
+	            event.currentTarget.classList.add('ok');
+	          } else {
+	            event.currentTarget.classList.remove('ok');
+	            event.currentTarget.classList.add('wrong');
+	          }
 	        }
 	      }
 	    }
@@ -43467,7 +43501,7 @@
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            null,
+	            { className: 'output', ref: 'outputWrap' },
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'answer-area' },
@@ -43477,7 +43511,7 @@
 	                { className: 'input-number-wrap' },
 	                _react2.default.createElement('input', { type: 'number', 'data-original': this.state.output.x[0], onBlur: function onBlur(e) {
 	                    return _this3.check(e);
-	                  } }),
+	                  }, ref: 'a1' }),
 	                _react2.default.createElement('i', { className: 'checker' })
 	              ),
 	              '  +  ',
@@ -43486,7 +43520,7 @@
 	                { className: 'input-number-wrap' },
 	                _react2.default.createElement('input', { type: 'number', 'data-original': this.state.output.x[1], onBlur: function onBlur(e) {
 	                    return _this3.check(e);
-	                  } }),
+	                  }, ref: 'b1' }),
 	                _react2.default.createElement('i', { className: 'checker' })
 	              ),
 	              ' t'
@@ -43500,7 +43534,7 @@
 	                { className: 'input-number-wrap' },
 	                _react2.default.createElement('input', { type: 'number', 'data-original': this.state.output.y[0], onBlur: function onBlur(e) {
 	                    return _this3.check(e);
-	                  } }),
+	                  }, ref: 'a2' }),
 	                _react2.default.createElement('i', { className: 'checker' })
 	              ),
 	              '  +  ',
@@ -43509,7 +43543,7 @@
 	                { className: 'input-number-wrap' },
 	                _react2.default.createElement('input', { type: 'number', 'data-original': this.state.output.y[1], onBlur: function onBlur(e) {
 	                    return _this3.check(e);
-	                  } }),
+	                  }, ref: 'b2' }),
 	                _react2.default.createElement('i', { className: 'checker' })
 	              ),
 	              ' t'

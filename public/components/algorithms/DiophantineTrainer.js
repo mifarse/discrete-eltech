@@ -27,14 +27,53 @@ export default class DiophantineTrainer extends Component {
   }
 
   check (event) {
+    console.log('current value = ', event.currentTarget.value)
     if (event.currentTarget.value != '') {
-      if (event.currentTarget.value === event.currentTarget.dataset.original) {
-        event.currentTarget.classList.remove('wrong')
-        event.currentTarget.classList.add('ok')
+      console.log('.output = ', event.currentTarget.closest('.output'))
+      if (event.currentTarget.closest('.output')) {
+        let a1 = this.refs.a1
+        let a2 = this.refs.a2
+        let b1 = this.refs.b1
+        let b2 = this.refs.b2
+        if (a1.value && a2.value && b1.value && b2.value) {
+          console.log('a2 value = ', parseInt(a2.value))
+          console.log('a2 original = ', parseInt(a2.dataset.original))
+          console.log('b2 original = ', parseInt(b2.dataset.original))
+          console.log('class_y = ', (parseInt(a2.value) - parseInt(a2.dataset.original)) % 
+            parseInt(b2.dataset.original))
+          let class_x = (parseInt(a1.value) - parseInt(a1.dataset.original)) % 
+            parseInt(b1.dataset.original) === 0;
+          let class_y = (parseInt(a2.value) - parseInt(a2.dataset.original)) % 
+            parseInt(b2.dataset.original) === 0;
+          let t_x = Math.abs(parseInt(b1.value)) == Math.abs(parseInt(b1.dataset.original));
+          let t_y = Math.abs(parseInt(b2.value)) == Math.abs(parseInt(b2.dataset.original));  
+          let t_s = parseInt(b1.value) * parseInt(b2.value) < 0;
+          console.log(class_y, class_x, t_x, t_y, t_s)
+          if (class_y && class_x && t_x && t_y && t_s) {
+            let inputs = this.refs.outputWrap.querySelectorAll('input[type=number]');
+            [].forEach.call(inputs, input => {
+              input.classList.remove('wrong')
+              input.classList.add('ok')
+            })
+          }
+          else {
+            let inputs = this.refs.outputWrap.querySelectorAll('input[type=number]');
+            [].forEach.call(inputs, input => {
+              input.classList.remove('ok')
+              input.classList.add('wrong')
+            })
+          }
+        }
       }
       else {
-        event.currentTarget.classList.remove('ok')
-        event.currentTarget.classList.add('wrong')
+        if (event.currentTarget.value === event.currentTarget.dataset.original) {
+          event.currentTarget.classList.remove('wrong')
+          event.currentTarget.classList.add('ok')
+        }
+        else {
+          event.currentTarget.classList.remove('ok')
+          event.currentTarget.classList.add('wrong')
+        }
       }
     }
   }
@@ -76,16 +115,16 @@ export default class DiophantineTrainer extends Component {
               <div className="number-wrap">{col}</div>
             ))}/>
             <p>Ответ:</p>
-            <div>
+            <div className="output" ref="outputWrap">
               <div className="answer-area">
                 X = &nbsp;
                 <div className="input-number-wrap">
-                  <input type="number" data-original={this.state.output.x[0]} onBlur={e => this.check(e)}/>
+                  <input type="number" data-original={this.state.output.x[0]} onBlur={e => this.check(e)} ref="a1"/>
                   <i className="checker"></i>
                 </div>
                 &nbsp; + &nbsp;
                 <div className="input-number-wrap">
-                  <input type="number" data-original={this.state.output.x[1]} onBlur={e => this.check(e)}/>
+                  <input type="number" data-original={this.state.output.x[1]} onBlur={e => this.check(e)} ref="b1"/>
                   <i className="checker"></i>
                 </div>
                 &nbsp;t
@@ -93,12 +132,12 @@ export default class DiophantineTrainer extends Component {
               <div className="answer-area">
                 Y = &nbsp;
                 <div className="input-number-wrap">
-                  <input type="number" data-original={this.state.output.y[0]} onBlur={e => this.check(e)}/>
+                  <input type="number" data-original={this.state.output.y[0]} onBlur={e => this.check(e)} ref="a2"/>
                   <i className="checker"></i>
                 </div>
                 &nbsp; + &nbsp;
                 <div className="input-number-wrap">
-                  <input type="number" data-original={this.state.output.y[1]} onBlur={e => this.check(e)}/>
+                  <input type="number" data-original={this.state.output.y[1]} onBlur={e => this.check(e)} ref="b2"/>
                   <i className="checker"></i>
                 </div>
                 &nbsp;t
