@@ -74,9 +74,9 @@ if (cluster.isMaster){
 	app.get('/solve/:method', function(req,res){
 		req.params.method = req.params.method.toLowerCase()
 		if (discretka.hasOwnProperty(req.params.method)){
-			if (req.params.a !== undefined && req.params.b !== undefined)
-				res.jsonp( discretka[req.params.method].solve(a, b) );
-			else res.jsonp( discretka[req.params.method].solve() );
+			if (req.query.a !== undefined && req.query.b !== undefined)
+				res.jsonp( discretka[req.query.method].solve(a, b) );
+			else res.jsonp( discretka[req.query.method].solve() );
 		} else { res.status(404).jsonp({"result": "404, "+req.params.method+" not found."}) }
 	});
 
