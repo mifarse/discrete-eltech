@@ -47,7 +47,7 @@ export default class axbyTrainer extends Component {
         {this.state.input ? 
           <div>
             <p>{this.state.input[0]}x + {this.state.input[1]}y = 1</p>
-            <p>{'|'}x{'|'} {'<'} {'|'}{this.state.input[0]}{'|'}, {'|'}y{'|'} {'<'} {'|'}{this.state.input[1]}{'|'}</p>
+            <p>{'|'}x{'|'} {'<'} {'|'}{this.state.input[1]}{'|'}, {'|'}y{'|'} {'<'} {'|'}{this.state.input[0]}{'|'}</p>
             <Table data={this.state.table.map(row => row.map(col => 
               col !== '' ? (
                 <div className="input-number-wrap">

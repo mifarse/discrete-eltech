@@ -41284,7 +41284,7 @@
 	            '<',
 	            ' ',
 	            '|',
-	            this.state.input[0],
+	            this.state.input[1],
 	            '|',
 	            ', ',
 	            '|',
@@ -41294,7 +41294,7 @@
 	            '<',
 	            ' ',
 	            '|',
-	            this.state.input[1],
+	            this.state.input[0],
 	            '|'
 	          ),
 	          _react2.default.createElement(
@@ -41454,7 +41454,7 @@
 	            '<',
 	            ' ',
 	            '|',
-	            this.state.input[0],
+	            this.state.input[1],
 	            '|',
 	            ', ',
 	            '|',
@@ -41464,7 +41464,7 @@
 	            '<',
 	            ' ',
 	            '|',
-	            this.state.input[1],
+	            this.state.input[0],
 	            '|'
 	          ),
 	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
@@ -41655,7 +41655,7 @@
 	            '<',
 	            ' ',
 	            '|',
-	            this.state.input[0],
+	            this.state.input[1],
 	            '|',
 	            ', ',
 	            '|',
@@ -41665,7 +41665,7 @@
 	            '<',
 	            ' ',
 	            '|',
-	            this.state.input[1],
+	            this.state.input[0],
 	            '|'
 	          ),
 	          _react2.default.createElement(
