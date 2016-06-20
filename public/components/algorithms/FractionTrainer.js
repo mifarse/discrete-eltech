@@ -42,7 +42,7 @@ export default class FractionTrainer extends Component {
   render () {
     return (
       <div className="content-wrap">
-        <h1>Найти (x,y) удовлетворяющих условию</h1>
+        <h1>Разложение в цепную дробь</h1>
         <h2>Тренажёр</h2>
         {this.state.input ? 
           <div>
