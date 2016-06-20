@@ -76,7 +76,7 @@ if (cluster.isMaster){
 		if (discretka.hasOwnProperty(req.params.method)){
 			if (req.query.a !== undefined && req.query.b !== undefined)
 				res.jsonp( discretka[req.query.method].solve(a, b) );
-			else res.jsonp( discretka[req.query.method].solve() );
+			else res.jsonp( discretka[req.params.method].solve() );
 		} else { res.status(404).jsonp({"result": "404, "+req.params.method+" not found."}) }
 	});
 
