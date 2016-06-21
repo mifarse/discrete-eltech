@@ -27,7 +27,7 @@ export default class GCDShow extends Component {
             <h1>Наибольший общий делитель</h1>
             <h2>Демонстрация</h2>
             <p>Даны числа {this.state.input.join(', ')}.</p>
-            <p>Применим к ним алгоритм Евклида.</p>
+            <p>Примените к ним алгоритм Евклида (для определенности сохраняя порядок, в котором указаны исходные числа)</p>
             <p>Получим следующую таблицу:</p>
             <Table data={this.state.table.map((row, i) => row.map((col, j) => 
                 <div className={'number-wrap' + (i == 0 && j == row.length - 2 ? ' primary-answer' : '')}>

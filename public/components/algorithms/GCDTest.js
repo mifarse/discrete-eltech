@@ -60,7 +60,7 @@ export default class GCDTest extends Component {
         {this.state.input ? 
           <div>
             <p>Даны числа {this.state.input.join(', ')}.</p>
-            <p>Примените к ним алгоритм Евклида.</p>
+            <p>Примените к ним алгоритм Евклида (для определенности сохраняя порядок, в котором указаны исходные числа)</p>
             <p>Вводите полученные значения в следующую таблицу:</p>
             <div className="table">
               <Table data={this.state.table.map((row, i) => row.map((col, j) => {

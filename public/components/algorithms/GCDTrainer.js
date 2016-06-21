@@ -49,7 +49,7 @@ export default class GCDTrainer extends Component {
         {this.state.input ? 
           <div>
             <p>Даны числа {this.state.input.join(', ')}.</p>
-            <p>Применим к ним алгоритм Евклида.</p>
+            <p>Примените к ним алгоритм Евклида (для определенности сохраняя порядок, в котором указаны исходные числа)</p>
             <p>Вводите полученные значения в следующую таблицу:</p>
             <Table data={this.state.table.map(row => row.map(col => 
               col !== '' ? (
