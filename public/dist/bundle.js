@@ -44413,6 +44413,16 @@
 	            ' в ',
 	            this.state.input[1]
 	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'В первую строку таблицы запишем степень в двоичной системе счисления'
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Во второй строке числа вычисляются следующим образом: первое число - это основание, далее мы возводим это число в квадрат и если на той же позиции в верхней строке стоит 1, то еще домножаем на основание'
+	          ),
 	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
 	              return row.map(function (col) {
 	                return _react2.default.createElement(
@@ -45294,7 +45304,7 @@
 	        return response.json();
 	      }).then(function (example) {
 	        _this2.setState(example);
-	      }).catch(console.error);
+	      });
 	    }
 	  }, {
 	    key: 'polynomial',
@@ -45348,6 +45358,58 @@
 	            ' на бином (',
 	            this.polynomial([1, -1 * this.state.input[1]]),
 	            ')'
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Составим таблицу из двух строк'
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'В первой строке запишем коэффициенты многочлена ',
+	            this.polynomial(this.state.input[0]),
+	            ', расположенные по убыванию степеней переменной x'
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Так как мы делим на (',
+	            this.polynomial([1, -1 * this.state.input[1]]),
+	            '), то во второй строке запишем ',
+	            this.state.input[1]
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Во вторую ячейку второй строки запишем число ',
+	            this.state.input[0][0],
+	            ', просто перенеся его из соответствующей ячейки первой строки'
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Следующую ячейку заполним по такому принципу: ',
+	            this.state.input[1],
+	            ' * ',
+	            this.state.input[0][0],
+	            ' + ',
+	            this.state.input[0][1],
+	            ' = ',
+	            this.state.table[1][2]
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Аналогично заполним и четвертую ячейку второй строки: ',
+	            this.state.input[1],
+	            ' * ',
+	            this.state.table[1][2],
+	            ' + ',
+	            this.state.input[0][2],
+	            ' = ',
+	            this.state.table[1][3],
+	            ', и так далее'
 	          ),
 	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
 	              return row.map(function (col) {
