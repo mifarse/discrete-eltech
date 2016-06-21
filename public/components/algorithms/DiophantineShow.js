@@ -46,8 +46,13 @@ export default class DiophantineShow extends Component {
               <br/>
               Y = {this.state.output.y[0]} + {this.state.output.y[1]}t
             </p>
-            <Table data={this.state.table.map(row => row.map(col => 
-              <div className="number-wrap">{col}</div>
+            <Table data={this.state.table.map((row, i) => row.map((col, j) => 
+              <div className={'number-wrap' + (
+                (i == 2 && j == row.length - 2) || (i == 3 && j == row.length - 1) ? 
+                  ' primary-answer' : '')
+                + ((i == 2 && j == row.length - 1) || (i == 3 && j == row.length - 2) ? 
+                  ' secondary-answer' : '')
+              }>{col}</div>
             ))}/>
             <div className="button-wrap">
               <button onClick={e => this.refreshExample()}>Обновить</button>

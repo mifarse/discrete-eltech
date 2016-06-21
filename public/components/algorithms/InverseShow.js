@@ -33,8 +33,8 @@ export default class InverseShow extends Component {
             <p>Где x обратное число, перейдём к уравнению</p>
             <p>{this.state.input[1]}x - {this.state.input[0]}y = 1</p>
             <p>Применим к {this.state.input[0]} и {this.state.input[1]} расширенный алгоритм Евклида.Если x {'<'} 0 нужно прибавить к нему модуль кольца вычетов</p>
-            <Table data={this.state.table.map(row => row.map(col => 
-                <div className="number-wrap">{col}</div>
+            <Table data={this.state.table.map((row, i) => row.map((col, j) => 
+                <div className={'number-wrap' + (i == 2 && j == row.length - 2 ? ' primary-answer' : '')}>{col}</div>
             ))}/>
             <code>Ответ: {this.state.output}</code>
             <div className="button-wrap">

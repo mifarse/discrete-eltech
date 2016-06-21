@@ -40811,11 +40811,11 @@
 	            null,
 	            'Получим следующую таблицу:'
 	          ),
-	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
-	              return row.map(function (col) {
+	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row, i) {
+	              return row.map(function (col, j) {
 	                return _react2.default.createElement(
 	                  'div',
-	                  { className: 'number-wrap' },
+	                  { className: 'number-wrap' + (i == 0 && j == row.length - 2 ? ' primary-answer' : '') },
 	                  col
 	                );
 	              });
@@ -41810,11 +41810,11 @@
 	            null,
 	            'Для решения этой задачи нам необходимо воспользоваться расширенным алгоритмом Евклида, как показано в следующей таблице.'
 	          ),
-	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
-	              return row.map(function (col) {
+	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row, i) {
+	              return row.map(function (col, j) {
 	                return _react2.default.createElement(
 	                  'div',
-	                  { className: 'number-wrap' },
+	                  { className: 'number-wrap' + (i == 2 && j == row.length - 2 ? ' primary-answer' : '') + (i == 3 && j == row.length - 2 ? ' secondary-answer' : '') },
 	                  col
 	                );
 	              });
@@ -42284,7 +42284,7 @@
 	        return response.json();
 	      }).then(function (example) {
 	        _this2.setState(example);
-	      }).catch(console.error);
+	      });
 	    }
 	  }, {
 	    key: 'render',
@@ -42324,11 +42324,11 @@
 	            this.state.input[1],
 	            ' и применим алгоритм Евклида, получим следующую таблицу:'
 	          ),
-	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
-	              return row.map(function (col) {
+	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row, i) {
+	              return row.map(function (col, j) {
 	                return _react2.default.createElement(
 	                  'div',
-	                  { className: 'number-wrap' },
+	                  { className: 'number-wrap' + (i == 1 && j == 2 ? ' primary-answer' : '') + (i == 1 && j > 2 ? ' secondary-answer' : '') },
 	                  col
 	                );
 	              });
@@ -42784,11 +42784,11 @@
 	            null,
 	            'Получим следующую таблицу:'
 	          ),
-	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
-	              return row.map(function (col) {
+	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row, i) {
+	              return row.map(function (col, j) {
 	                return _react2.default.createElement(
 	                  'div',
-	                  { className: 'number-wrap' },
+	                  { className: 'number-wrap' + (i == 2 && j > 1 ? ' primary-answer' : '') + (i == 3 && j > 1 ? ' secondary-answer' : '') },
 	                  col
 	                );
 	              });
@@ -43251,11 +43251,11 @@
 	            '<',
 	            ' 0 нужно прибавить к нему модуль кольца вычетов'
 	          ),
-	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
-	              return row.map(function (col) {
+	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row, i) {
+	              return row.map(function (col, j) {
 	                return _react2.default.createElement(
 	                  'div',
-	                  { className: 'number-wrap' },
+	                  { className: 'number-wrap' + (i == 2 && j == row.length - 2 ? ' primary-answer' : '') },
 	                  col
 	                );
 	              });
@@ -43787,11 +43787,11 @@
 	            this.state.output.y[1],
 	            't'
 	          ),
-	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
-	              return row.map(function (col) {
+	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row, i) {
+	              return row.map(function (col, j) {
 	                return _react2.default.createElement(
 	                  'div',
-	                  { className: 'number-wrap' },
+	                  { className: 'number-wrap' + (i == 2 && j == row.length - 2 || i == 3 && j == row.length - 1 ? ' primary-answer' : '') + (i == 2 && j == row.length - 1 || i == 3 && j == row.length - 2 ? ' secondary-answer' : '') },
 	                  col
 	                );
 	              });
@@ -44436,11 +44436,11 @@
 	            null,
 	            'Во второй строке числа вычисляются следующим образом: первое число - это основание, далее мы возводим это число в квадрат и если на той же позиции в верхней строке стоит 1, то еще домножаем на основание'
 	          ),
-	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
-	              return row.map(function (col) {
+	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row, i) {
+	              return row.map(function (col, j) {
 	                return _react2.default.createElement(
 	                  'div',
-	                  { className: 'number-wrap' },
+	                  { className: 'number-wrap' + (i == 1 && j == row.length - 1 ? ' primary-answer' : '') },
 	                  col
 	                );
 	              });
@@ -45424,11 +45424,11 @@
 	            this.state.table[1][3],
 	            ', и так далее'
 	          ),
-	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
-	              return row.map(function (col) {
+	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row, i) {
+	              return row.map(function (col, j) {
 	                return _react2.default.createElement(
 	                  'div',
-	                  { className: 'number-wrap' },
+	                  { className: 'number-wrap' + (i == 1 && j > 0 && j < row.length - 1 ? ' primary-answer' : '') + (i == 1 && j == row.length - 1 ? ' secondary-answer' : '') },
 	                  col
 	                );
 	              });

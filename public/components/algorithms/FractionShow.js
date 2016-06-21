@@ -16,7 +16,6 @@ export default class FractionShow extends Component {
       .then(example => {
         this.setState(example)
       })
-      .catch(console.error)
   }
 
   render () {
@@ -28,8 +27,9 @@ export default class FractionShow extends Component {
             <h2>Демонстрация</h2>
             <p>Дана дробь {this.state.input[0]}/{this.state.input[1]}</p>
             <p>Возьмем {this.state.input[0]} и {this.state.input[1]} и применим алгоритм Евклида, получим следующую таблицу:</p>
-            <Table data={this.state.table.map(row => row.map(col => 
-                <div className="number-wrap">{col}</div>
+            <Table data={this.state.table.map((row, i) => row.map((col, j) => 
+                <div className={'number-wrap' + (i == 1 && j == 2 ? ' primary-answer' : '')
+                  + (i == 1 && j > 2 ? ' secondary-answer' : '')}>{col}</div>
             ))}/>
             <code>Ответ: [{this.state.output.filter(x => x !== 0).join(', ')}]</code>
             <div className="button-wrap">

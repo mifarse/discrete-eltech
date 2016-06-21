@@ -37,8 +37,9 @@ export default class ConvergentsShow extends Component {
             <p>Дана дробь {this.state.input[0]}/{this.state.input[1]}</p>
             <p>Возьмем {this.state.input[0]} и {this.state.input[1]} и применим расширенный алгоритм Евклида для подходящих дробей.</p>
             <p>Получим следующую таблицу:</p>
-            <Table data={this.state.table.map(row => row.map(col => 
-                <div className="number-wrap">{col}</div>
+            <Table data={this.state.table.map((row, i) => row.map((col, j) => 
+                <div className={'number-wrap' + (i == 2 && j > 1 ? ' primary-answer' : '')
+                  + (i == 3 && j > 1 ? ' secondary-answer' : '')}>{col}</div>
             ))}/>
             <code>Ответ: [{output.map(f => f[0] + '/' + f[1]).join(', ')}]</code>
             <div className="button-wrap">

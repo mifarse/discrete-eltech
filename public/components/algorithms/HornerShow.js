@@ -44,8 +44,11 @@ export default class HornerShow extends Component {
             <p>Во вторую ячейку второй строки запишем число {this.state.input[0][0]}, просто перенеся его из соответствующей ячейки первой строки</p>
             <p>Следующую ячейку заполним по такому принципу: {this.state.input[1]} * {this.state.input[0][0]} + {this.state.input[0][1]} = {this.state.table[1][2]}</p>
             <p>Аналогично заполним и четвертую ячейку второй строки: {this.state.input[1]} * {this.state.table[1][2]} + {this.state.input[0][2]} = {this.state.table[1][3]}, и так далее</p>
-            <Table data={this.state.table.map(row => row.map(col => 
-                <div className="number-wrap">{col}</div>
+            <Table data={this.state.table.map((row, i) => row.map((col, j) => 
+                <div className={'number-wrap' + (i == 1 && (j > 0 && j < (row.length - 1)) ? 
+                  ' primary-answer' : '') + (i == 1 && j == row.length - 1 ? ' secondary-answer' : '')}>
+                  {col}
+                </div>
             ))}/>
             <code>Ответ: ({this.polynomial([1, -1 * this.state.input[1]])})({this.polynomial(this.state.table[1].slice(1, -1))}){this.state.table[1].slice(-1).pop() > 0 ? '+' : ''}{this.state.table[1].slice(-1).pop() !== 0 ? this.state.table[1].slice(-1).pop() : ''}
             </code>

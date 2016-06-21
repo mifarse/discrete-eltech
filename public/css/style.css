@@ -384,3 +384,11 @@ div.equal:hover {
 div.equal:active {
   font-weight: bold;
 }
+
+.primary-answer {
+  background-color: #24B871;
+}
+
+.secondary-answer {
+  background-color: #589389;
+}

@@ -29,8 +29,10 @@ export default class GCDShow extends Component {
             <p>Даны числа {this.state.input.join(', ')}.</p>
             <p>Применим к ним алгоритм Евклида.</p>
             <p>Получим следующую таблицу:</p>
-            <Table data={this.state.table.map(row => row.map(col => 
-                <div className="number-wrap">{col}</div>
+            <Table data={this.state.table.map((row, i) => row.map((col, j) => 
+                <div className={'number-wrap' + (i == 0 && j == row.length - 2 ? ' primary-answer' : '')}>
+                  {col}
+                </div>
             ))}/>
             <code>НОД({this.state.input.join(', ')}) = {this.state.output}</code>
             <button onClick={e => this.refreshExample()}>Обновить</button>
