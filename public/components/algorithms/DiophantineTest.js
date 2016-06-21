@@ -63,7 +63,7 @@ export default class DiophantineTest extends Component {
   render () {
     return (
       <div className="content-wrap">
-        <Toolbar />
+        <Toolbar smartTable={true}/>
         <h1>Решение диофантово уравнения</h1>
         <h2>Контроль</h2>
         {this.state.input ? 

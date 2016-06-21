@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import Table from '../Table'
+import Toolbar from '../Toolbar'
 
 export default class FastDegreeTrainer extends Component {
 
@@ -42,6 +43,7 @@ export default class FastDegreeTrainer extends Component {
   render () {
     return (
       <div className="content-wrap">
+        <Toolbar />
         <h1>Быстрое возведение в степень</h1>
         <h2>Тренажёр</h2>
         {this.state.input ? 

@@ -131,16 +131,19 @@ export default class Toolbar extends Component {
     render () {
         return (
             <div className="panel-group" ref="root">
-                <div className="panel panel-default">
-                    <div className="panel-heading">
-                        <button type="button" className="btn btn-default btn-xs spoiler-trigger" data-toggle="collapse" onClick={e => this.toggle(e)}>Расширенный алгоритм Евклида</button>
-                    </div>
-                    <div className="panel-collapse collapse out">
-                        <div className="panel-body">
-                            <SmartTable />
+                {this.props.smartTable ? 
+                    <div className="panel panel-default">
+                        <div className="panel-heading">
+                            <button type="button" className="btn btn-default btn-xs spoiler-trigger" data-toggle="collapse" onClick={e => this.toggle(e)}>Расширенный алгоритм Евклида</button>
+                        </div>
+                        <div className="panel-collapse collapse out">
+                            <div className="panel-body">
+                                <SmartTable />
+                            </div>
                         </div>
                     </div>
-                </div>
+                    : null
+                }
                 <div className="panel panel-default">
                     <div className="panel-heading">
                         <button type="button" className="btn btn-default btn-xs spoiler-trigger" data-toggle="collapse" onClick={e => this.toggle(e)}>Калькулятор</button>
@@ -188,3 +191,6 @@ export default class Toolbar extends Component {
         )
     }
 }
+
+Toolbar.propTypes    = { smartTable: React.PropTypes.bool };
+Toolbar.defaultProps = { smartTable : false }

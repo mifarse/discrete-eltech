@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import ReactDOM from 'react-dom'
 import Table from '../Table'
+import Toolbar from '../Toolbar'
 import getCookie from './getCookie'
 
 export default class GCDTest extends Component {
@@ -53,6 +54,7 @@ export default class GCDTest extends Component {
   render () {
     return (
       <div className="content-wrap">
+        <Toolbar />
         <h1>Наибольший общий делитель</h1>
         <h2>Контроль</h2>
         {this.state.input ? 

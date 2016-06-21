@@ -46,7 +46,7 @@ export default class InverseTest extends Component {
   render () {
     return (
       <div className="content-wrap">
-        <Toolbar />
+        <Toolbar smartTable={true}/>
         <h1>Нахождение обратного числа</h1>
         <h2>Контроль</h2>
         {this.state.input ? 

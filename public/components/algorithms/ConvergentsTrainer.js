@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import Table from '../Table'
+import Toolbar from '../Toolbar'
 
 export default class ConvergentsTrainer extends Component {
 
@@ -42,6 +43,7 @@ export default class ConvergentsTrainer extends Component {
   render () {
     return (
       <div className="content-wrap">
+        <Toolbar />
         <h1>Нахождение подходящих дробей</h1>
         <h2>Тренажёр</h2>
         {this.state.input ? 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import Table from '../Table'
+import Toolbar from '../Toolbar'
 import getCookie from './getCookie'
 
 export default class HornerTest extends Component {
@@ -64,6 +65,7 @@ export default class HornerTest extends Component {
   render () {
     return (
       <div className="content-wrap">
+        <Toolbar />
         <h1>Схема Горнера</h1>
         <h2>Контроль</h2>
         {this.state.input ? 

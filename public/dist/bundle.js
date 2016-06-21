@@ -40638,51 +40638,51 @@
 
 	var _InverseTest3 = _interopRequireDefault(_InverseTest2);
 
-	var _DiophantineShow2 = __webpack_require__(645);
+	var _DiophantineShow2 = __webpack_require__(647);
 
 	var _DiophantineShow3 = _interopRequireDefault(_DiophantineShow2);
 
-	var _DiophantineTrainer2 = __webpack_require__(646);
+	var _DiophantineTrainer2 = __webpack_require__(648);
 
 	var _DiophantineTrainer3 = _interopRequireDefault(_DiophantineTrainer2);
 
-	var _DiophantineTest2 = __webpack_require__(647);
+	var _DiophantineTest2 = __webpack_require__(649);
 
 	var _DiophantineTest3 = _interopRequireDefault(_DiophantineTest2);
 
-	var _FastDegreeShow2 = __webpack_require__(648);
+	var _FastDegreeShow2 = __webpack_require__(650);
 
 	var _FastDegreeShow3 = _interopRequireDefault(_FastDegreeShow2);
 
-	var _FastDegreeTrainer2 = __webpack_require__(649);
+	var _FastDegreeTrainer2 = __webpack_require__(651);
 
 	var _FastDegreeTrainer3 = _interopRequireDefault(_FastDegreeTrainer2);
 
-	var _FastDegreeTest2 = __webpack_require__(650);
+	var _FastDegreeTest2 = __webpack_require__(652);
 
 	var _FastDegreeTest3 = _interopRequireDefault(_FastDegreeTest2);
 
-	var _ConversionShow2 = __webpack_require__(651);
+	var _ConversionShow2 = __webpack_require__(653);
 
 	var _ConversionShow3 = _interopRequireDefault(_ConversionShow2);
 
-	var _ConversionTrainer2 = __webpack_require__(652);
+	var _ConversionTrainer2 = __webpack_require__(654);
 
 	var _ConversionTrainer3 = _interopRequireDefault(_ConversionTrainer2);
 
-	var _ConversionTest2 = __webpack_require__(653);
+	var _ConversionTest2 = __webpack_require__(655);
 
 	var _ConversionTest3 = _interopRequireDefault(_ConversionTest2);
 
-	var _HornerShow2 = __webpack_require__(654);
+	var _HornerShow2 = __webpack_require__(656);
 
 	var _HornerShow3 = _interopRequireDefault(_HornerShow2);
 
-	var _HornerTrainer2 = __webpack_require__(655);
+	var _HornerTrainer2 = __webpack_require__(657);
 
 	var _HornerTrainer3 = _interopRequireDefault(_HornerTrainer2);
 
-	var _HornerTest2 = __webpack_require__(656);
+	var _HornerTest2 = __webpack_require__(658);
 
 	var _HornerTest3 = _interopRequireDefault(_HornerTest2);
 
@@ -40865,6 +40865,10 @@
 
 	var _Table2 = _interopRequireDefault(_Table);
 
+	var _Toolbar = __webpack_require__(645);
+
+	var _Toolbar2 = _interopRequireDefault(_Toolbar);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -40925,6 +40929,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'content-wrap' },
+	        _react2.default.createElement(_Toolbar2.default, null),
 	        _react2.default.createElement(
 	          'h1',
 	          null,
@@ -41025,6 +41030,10 @@
 
 	var _Table2 = _interopRequireDefault(_Table);
 
+	var _Toolbar = __webpack_require__(645);
+
+	var _Toolbar2 = _interopRequireDefault(_Toolbar);
+
 	var _getCookie = __webpack_require__(632);
 
 	var _getCookie2 = _interopRequireDefault(_getCookie);
@@ -41104,6 +41113,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'content-wrap' },
+	        _react2.default.createElement(_Toolbar2.default, null),
 	        _react2.default.createElement(
 	          'h1',
 	          null,
@@ -41363,6 +41373,10 @@
 
 	var _Table2 = _interopRequireDefault(_Table);
 
+	var _Toolbar = __webpack_require__(645);
+
+	var _Toolbar2 = _interopRequireDefault(_Toolbar);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -41423,6 +41437,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'content-wrap' },
+	        _react2.default.createElement(_Toolbar2.default, null),
 	        _react2.default.createElement(
 	          'h1',
 	          null,
@@ -41544,6 +41559,10 @@
 
 	var _Table2 = _interopRequireDefault(_Table);
 
+	var _Toolbar = __webpack_require__(645);
+
+	var _Toolbar2 = _interopRequireDefault(_Toolbar);
+
 	var _getCookie = __webpack_require__(632);
 
 	var _getCookie2 = _interopRequireDefault(_getCookie);
@@ -41624,6 +41643,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'content-wrap' },
+	        _react2.default.createElement(_Toolbar2.default, null),
 	        _react2.default.createElement(
 	          'h1',
 	          null,
@@ -41869,6 +41889,10 @@
 
 	var _Table2 = _interopRequireDefault(_Table);
 
+	var _Toolbar = __webpack_require__(645);
+
+	var _Toolbar2 = _interopRequireDefault(_Toolbar);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -41929,6 +41953,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'content-wrap' },
+	        _react2.default.createElement(_Toolbar2.default, null),
 	        _react2.default.createElement(
 	          'h1',
 	          null,
@@ -42018,6 +42043,10 @@
 
 	var _Table2 = _interopRequireDefault(_Table);
 
+	var _Toolbar = __webpack_require__(645);
+
+	var _Toolbar2 = _interopRequireDefault(_Toolbar);
+
 	var _getCookie = __webpack_require__(632);
 
 	var _getCookie2 = _interopRequireDefault(_getCookie);
@@ -42100,6 +42129,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'content-wrap' },
+	        _react2.default.createElement(_Toolbar2.default, null),
 	        _react2.default.createElement(
 	          'h1',
 	          null,
@@ -42319,6 +42349,10 @@
 
 	var _Table2 = _interopRequireDefault(_Table);
 
+	var _Toolbar = __webpack_require__(645);
+
+	var _Toolbar2 = _interopRequireDefault(_Toolbar);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -42379,6 +42413,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'content-wrap' },
+	        _react2.default.createElement(_Toolbar2.default, null),
 	        _react2.default.createElement(
 	          'h1',
 	          null,
@@ -42459,6 +42494,10 @@
 
 	var _Table2 = _interopRequireDefault(_Table);
 
+	var _Toolbar = __webpack_require__(645);
+
+	var _Toolbar2 = _interopRequireDefault(_Toolbar);
+
 	var _getCookie = __webpack_require__(632);
 
 	var _getCookie2 = _interopRequireDefault(_getCookie);
@@ -42537,6 +42576,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'content-wrap' },
+	        _react2.default.createElement(_Toolbar2.default, null),
 	        _react2.default.createElement(
 	          'h1',
 	          null,
@@ -42773,6 +42813,10 @@
 
 	var _Table2 = _interopRequireDefault(_Table);
 
+	var _Toolbar = __webpack_require__(645);
+
+	var _Toolbar2 = _interopRequireDefault(_Toolbar);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -42833,6 +42877,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'content-wrap' },
+	        _react2.default.createElement(_Toolbar2.default, null),
 	        _react2.default.createElement(
 	          'h1',
 	          null,
@@ -42924,7 +42969,7 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _Toolbar = __webpack_require__(658);
+	var _Toolbar = __webpack_require__(645);
 
 	var _Toolbar2 = _interopRequireDefault(_Toolbar);
 
@@ -43000,7 +43045,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'content-wrap' },
-	        _react2.default.createElement(_Toolbar2.default, null),
+	        _react2.default.createElement(_Toolbar2.default, { smartTable: true }),
 	        _react2.default.createElement(
 	          'h1',
 	          null,
@@ -43058,6 +43103,487 @@
 
 /***/ },
 /* 645 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(122);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _SmartTable = __webpack_require__(646);
+
+	var _SmartTable2 = _interopRequireDefault(_SmartTable);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Toolbar = function (_Component) {
+	  _inherits(Toolbar, _Component);
+
+	  function Toolbar() {
+	    _classCallCheck(this, Toolbar);
+
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Toolbar).apply(this, arguments));
+	  }
+
+	  _createClass(Toolbar, [{
+	    key: 'toggle',
+	    value: function toggle(e) {
+	      $(e.target).parent().next().collapse('toggle');
+	    }
+	  }, {
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      var input = this.refs.root.querySelector('#input'),
+	          // input/output button
+	      number = this.refs.root.querySelectorAll('.numbers div'),
+	          // number buttons
+	      operator = this.refs.root.querySelectorAll('.operators div'),
+	          // operator buttons
+	      result = this.refs.root.querySelector('#result'),
+	          // equal button
+	      clear = this.refs.root.querySelector('#clear'),
+	          // clear button
+	      resultDisplayed = false; // flag to keep an eye on what output is displayed
+
+	      // adding click handlers to number buttons
+	      for (var i = 0; i < number.length; i++) {
+	        number[i].addEventListener("click", function (e) {
+
+	          // storing current input string and its last character in variables - used later
+	          var currentString = input.innerHTML;
+	          var lastChar = currentString[currentString.length - 1];
+
+	          // if result is not diplayed, just keep adding
+	          if (resultDisplayed === false) {
+	            input.innerHTML += e.target.innerHTML;
+	          } else if (resultDisplayed === true && lastChar === "+" || lastChar === "-" || lastChar === "×" || lastChar === "÷") {
+	            // if result is currently displayed and user pressed an operator
+	            // we need to keep on adding to the string for next operation
+	            resultDisplayed = false;
+	            input.innerHTML += e.target.innerHTML;
+	          } else {
+	            // if result is currently displayed and user pressed a number
+	            // we need clear the input string and add the new input to start the new opration
+	            resultDisplayed = false;
+	            input.innerHTML = "";
+	            input.innerHTML += e.target.innerHTML;
+	          }
+	        });
+	      }
+
+	      // adding click handlers to number buttons
+	      for (var i = 0; i < operator.length; i++) {
+	        operator[i].addEventListener("click", function (e) {
+
+	          // storing current input string and its last character in variables - used later
+	          var currentString = input.innerHTML;
+	          var lastChar = currentString[currentString.length - 1];
+
+	          // if last character entered is an operator, replace it with the currently pressed one
+	          if (lastChar === "+" || lastChar === "-" || lastChar === "×" || lastChar === "÷") {
+	            var newString = currentString.substring(0, currentString.length - 1) + e.target.innerHTML;
+	            input.innerHTML = newString;
+	          } else if (currentString.length == 0) {
+	            // if first key pressed is an opearator, don't do anything
+	            console.log("enter a number first");
+	          } else {
+	            // else just add the operator pressed to the input
+	            input.innerHTML += e.target.innerHTML;
+	          }
+	        });
+	      }
+
+	      // on click of 'equal' button
+	      result.addEventListener("click", function () {
+
+	        // this is the string that we will be processing eg. -10+26+33-56*34/23
+	        var inputString = input.innerHTML;
+
+	        // forming an array of numbers. eg for above string it will be: numbers = ["10", "26", "33", "56", "34", "23"]
+	        var numbers = inputString.split(/\+|\-|\×|\÷/g);
+
+	        // forming an array of operators. for above string it will be: operators = ["+", "+", "-", "*", "/"]
+	        // first we replace all the numbers and dot with empty string and then split
+	        var operators = inputString.replace(/[0-9]|\./g, "").split("");
+
+	        console.log(inputString);
+	        console.log(operators);
+	        console.log(numbers);
+	        console.log("----------------------------");
+
+	        // now we are looping through the array and doing one operation at a time.
+	        // first divide, then multiply, then subtraction and then addition
+	        // as we move we are alterning the original numbers and operators array
+	        // the final element remaining in the array will be the output
+
+	        var divide = operators.indexOf("÷");
+	        while (divide != -1) {
+	          numbers.splice(divide, 2, numbers[divide] / numbers[divide + 1]);
+	          operators.splice(divide, 1);
+	          divide = operators.indexOf("÷");
+	        }
+
+	        var multiply = operators.indexOf("×");
+	        while (multiply != -1) {
+	          numbers.splice(multiply, 2, numbers[multiply] * numbers[multiply + 1]);
+	          operators.splice(multiply, 1);
+	          multiply = operators.indexOf("×");
+	        }
+
+	        var subtract = operators.indexOf("-");
+	        while (subtract != -1) {
+	          numbers.splice(subtract, 2, numbers[subtract] - numbers[subtract + 1]);
+	          operators.splice(subtract, 1);
+	          subtract = operators.indexOf("-");
+	        }
+
+	        var add = operators.indexOf("+");
+	        while (add != -1) {
+	          // using parseFloat is necessary, otherwise it will result in string concatenation :)
+	          numbers.splice(add, 2, parseFloat(numbers[add]) + parseFloat(numbers[add + 1]));
+	          operators.splice(add, 1);
+	          add = operators.indexOf("+");
+	        }
+
+	        input.innerHTML = numbers[0]; // displaying the output
+
+	        resultDisplayed = true; // turning flag if result is displayed
+	      });
+
+	      // clearing the input on press of clear
+	      clear.addEventListener("click", function () {
+	        input.innerHTML = "";
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this2 = this;
+
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'panel-group', ref: 'root' },
+	        this.props.smartTable ? _react2.default.createElement(
+	          'div',
+	          { className: 'panel panel-default' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'panel-heading' },
+	            _react2.default.createElement(
+	              'button',
+	              { type: 'button', className: 'btn btn-default btn-xs spoiler-trigger', 'data-toggle': 'collapse', onClick: function onClick(e) {
+	                  return _this2.toggle(e);
+	                } },
+	              'Расширенный алгоритм Евклида'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'panel-collapse collapse out' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'panel-body' },
+	              _react2.default.createElement(_SmartTable2.default, null)
+	            )
+	          )
+	        ) : null,
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'panel panel-default' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'panel-heading' },
+	            _react2.default.createElement(
+	              'button',
+	              { type: 'button', className: 'btn btn-default btn-xs spoiler-trigger', 'data-toggle': 'collapse', onClick: function onClick(e) {
+	                  return _this2.toggle(e);
+	                } },
+	              'Калькулятор'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'panel-collapse collapse out' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'panel-body' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'calculator' },
+	                _react2.default.createElement('div', { className: 'input', id: 'input' }),
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'buttons' },
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'operators' },
+	                    _react2.default.createElement(
+	                      'div',
+	                      null,
+	                      '+'
+	                    ),
+	                    _react2.default.createElement(
+	                      'div',
+	                      null,
+	                      '-'
+	                    ),
+	                    _react2.default.createElement(
+	                      'div',
+	                      null,
+	                      '×'
+	                    ),
+	                    _react2.default.createElement(
+	                      'div',
+	                      null,
+	                      '÷'
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'leftPanel' },
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'numbers' },
+	                      _react2.default.createElement(
+	                        'div',
+	                        null,
+	                        '7'
+	                      ),
+	                      _react2.default.createElement(
+	                        'div',
+	                        null,
+	                        '8'
+	                      ),
+	                      _react2.default.createElement(
+	                        'div',
+	                        null,
+	                        '9'
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'numbers' },
+	                      _react2.default.createElement(
+	                        'div',
+	                        null,
+	                        '4'
+	                      ),
+	                      _react2.default.createElement(
+	                        'div',
+	                        null,
+	                        '5'
+	                      ),
+	                      _react2.default.createElement(
+	                        'div',
+	                        null,
+	                        '6'
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'numbers' },
+	                      _react2.default.createElement(
+	                        'div',
+	                        null,
+	                        '1'
+	                      ),
+	                      _react2.default.createElement(
+	                        'div',
+	                        null,
+	                        '2'
+	                      ),
+	                      _react2.default.createElement(
+	                        'div',
+	                        null,
+	                        '3'
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'numbers' },
+	                      _react2.default.createElement(
+	                        'div',
+	                        null,
+	                        '0'
+	                      ),
+	                      _react2.default.createElement(
+	                        'div',
+	                        null,
+	                        '.'
+	                      ),
+	                      _react2.default.createElement(
+	                        'div',
+	                        { id: 'clear' },
+	                        'C'
+	                      )
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'equal', id: 'result' },
+	                    '='
+	                  )
+	                )
+	              )
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Toolbar;
+	}(_react.Component);
+
+	exports.default = Toolbar;
+
+
+	Toolbar.propTypes = { smartTable: _react2.default.PropTypes.bool };
+	Toolbar.defaultProps = { smartTable: false };
+
+/***/ },
+/* 646 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(122);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Table = __webpack_require__(626);
+
+	var _Table2 = _interopRequireDefault(_Table);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var SmartTable = function (_Component) {
+	    _inherits(SmartTable, _Component);
+
+	    function SmartTable() {
+	        _classCallCheck(this, SmartTable);
+
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(SmartTable).apply(this, arguments));
+	    }
+
+	    _createClass(SmartTable, [{
+	        key: 'componentDidMount',
+	        value: function componentDidMount() {
+	            var t = [];
+	            for (var i = 0; i < 4; i++) {
+	                t.push([]);
+	                for (var j = 0; j < 10; j++) {
+	                    t[i].push(_react2.default.createElement('div', { className: 'number-wrap' }));
+	                }
+	            }
+	            t[0][0] = _react2.default.createElement(
+	                'div',
+	                { className: 'input-number-wrap' },
+	                _react2.default.createElement('input', { type: 'number' })
+	            );
+	            t[0][1] = _react2.default.createElement(
+	                'div',
+	                { className: 'input-number-wrap' },
+	                _react2.default.createElement('input', { type: 'number' })
+	            );
+
+	            this.setState({ table: t });
+	        }
+	    }, {
+	        key: 'solve',
+	        value: function solve(e) {
+	            var _this2 = this;
+
+	            var inputs = this.refs.st.querySelectorAll('input[type="number"]');
+	            var a = parseInt(inputs[0].value);
+	            var b = parseInt(inputs[1].value);
+	            if (a && b) {
+	                var url = 'http://discrete-eltech.eurodir.ru:8888/solve/pem?a=' + a + '&b=' + b;
+	                fetch(url).then(function (response) {
+	                    return response.json();
+	                }).then(function (table) {
+	                    var newTable = table.slice();
+	                    for (var i = 0; i < newTable.length; i++) {
+	                        for (var j = 0; j < newTable[i].length; j++) {
+	                            if (i == 0 && j < 2) {
+	                                newTable[i][j] = _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'input-number-wrap' },
+	                                    _react2.default.createElement('input', { type: 'number' })
+	                                );
+	                            } else {
+	                                newTable[i][j] = _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'number-wrap' },
+	                                    newTable[i][j]
+	                                );
+	                            }
+	                        }
+	                    }
+	                    _this2.setState({ table: table });
+	                }).catch(console.error);
+	            }
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            var _this3 = this;
+
+	            return _react2.default.createElement(
+	                'div',
+	                { className: 'smart-table' },
+	                this.state ? _react2.default.createElement(
+	                    'div',
+	                    { ref: 'st' },
+	                    _react2.default.createElement(_Table2.default, { data: this.state.table }),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'button-wrap' },
+	                        _react2.default.createElement(
+	                            'button',
+	                            { onClick: function onClick(e) {
+	                                    return _this3.solve(e);
+	                                } },
+	                            '='
+	                        )
+	                    )
+	                ) : null
+	            );
+	        }
+	    }]);
+
+	    return SmartTable;
+	}(_react.Component);
+
+	exports.default = SmartTable;
+
+/***/ },
+/* 647 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43275,7 +43801,7 @@
 	exports.default = DiophantineShow;
 
 /***/ },
-/* 646 */
+/* 648 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43297,6 +43823,10 @@
 	var _Table = __webpack_require__(626);
 
 	var _Table2 = _interopRequireDefault(_Table);
+
+	var _Toolbar = __webpack_require__(645);
+
+	var _Toolbar2 = _interopRequireDefault(_Toolbar);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -43392,6 +43922,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'content-wrap' },
+	        _react2.default.createElement(_Toolbar2.default, null),
 	        _react2.default.createElement(
 	          'h1',
 	          null,
@@ -43555,7 +44086,7 @@
 	exports.default = DiophantineTrainer;
 
 /***/ },
-/* 647 */
+/* 649 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43580,7 +44111,7 @@
 
 	var _Table2 = _interopRequireDefault(_Table);
 
-	var _Toolbar = __webpack_require__(658);
+	var _Toolbar = __webpack_require__(645);
 
 	var _Toolbar2 = _interopRequireDefault(_Toolbar);
 
@@ -43672,7 +44203,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'content-wrap' },
-	        _react2.default.createElement(_Toolbar2.default, null),
+	        _react2.default.createElement(_Toolbar2.default, { smartTable: true }),
 	        _react2.default.createElement(
 	          'h1',
 	          null,
@@ -43801,7 +44332,7 @@
 	exports.default = DiophantineTest;
 
 /***/ },
-/* 648 */
+/* 650 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43919,7 +44450,7 @@
 	exports.default = FastDegreeShow;
 
 /***/ },
-/* 649 */
+/* 651 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43941,6 +44472,10 @@
 	var _Table = __webpack_require__(626);
 
 	var _Table2 = _interopRequireDefault(_Table);
+
+	var _Toolbar = __webpack_require__(645);
+
+	var _Toolbar2 = _interopRequireDefault(_Toolbar);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -44002,6 +44537,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'content-wrap' },
+	        _react2.default.createElement(_Toolbar2.default, null),
 	        _react2.default.createElement(
 	          'h1',
 	          null,
@@ -44070,7 +44606,7 @@
 	exports.default = FastDegreeTrainer;
 
 /***/ },
-/* 650 */
+/* 652 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44094,6 +44630,10 @@
 	var _Table = __webpack_require__(626);
 
 	var _Table2 = _interopRequireDefault(_Table);
+
+	var _Toolbar = __webpack_require__(645);
+
+	var _Toolbar2 = _interopRequireDefault(_Toolbar);
 
 	var _getCookie = __webpack_require__(632);
 
@@ -44174,6 +44714,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'content-wrap' },
+	        _react2.default.createElement(_Toolbar2.default, null),
 	        _react2.default.createElement(
 	          'h1',
 	          null,
@@ -44237,7 +44778,7 @@
 	exports.default = FastDegreeTest;
 
 /***/ },
-/* 651 */
+/* 653 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44365,7 +44906,7 @@
 	exports.default = ConversionShow;
 
 /***/ },
-/* 652 */
+/* 654 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44387,6 +44928,10 @@
 	var _Table = __webpack_require__(626);
 
 	var _Table2 = _interopRequireDefault(_Table);
+
+	var _Toolbar = __webpack_require__(645);
+
+	var _Toolbar2 = _interopRequireDefault(_Toolbar);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -44448,6 +44993,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'content-wrap' },
+	        _react2.default.createElement(_Toolbar2.default, null),
 	        _react2.default.createElement(
 	          'h1',
 	          null,
@@ -44521,7 +45067,7 @@
 	exports.default = ConversionTrainer;
 
 /***/ },
-/* 653 */
+/* 655 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44545,6 +45091,10 @@
 	var _Table = __webpack_require__(626);
 
 	var _Table2 = _interopRequireDefault(_Table);
+
+	var _Toolbar = __webpack_require__(645);
+
+	var _Toolbar2 = _interopRequireDefault(_Toolbar);
 
 	var _getCookie = __webpack_require__(632);
 
@@ -44625,6 +45175,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'content-wrap' },
+	        _react2.default.createElement(_Toolbar2.default, null),
 	        _react2.default.createElement(
 	          'h1',
 	          null,
@@ -44693,7 +45244,7 @@
 	exports.default = ConversionTest;
 
 /***/ },
-/* 654 */
+/* 656 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44840,7 +45391,7 @@
 	exports.default = HornerShow;
 
 /***/ },
-/* 655 */
+/* 657 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44862,6 +45413,10 @@
 	var _Table = __webpack_require__(626);
 
 	var _Table2 = _interopRequireDefault(_Table);
+
+	var _Toolbar = __webpack_require__(645);
+
+	var _Toolbar2 = _interopRequireDefault(_Toolbar);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -44946,6 +45501,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'content-wrap' },
+	        _react2.default.createElement(_Toolbar2.default, null),
 	        _react2.default.createElement(
 	          'h1',
 	          null,
@@ -45002,7 +45558,7 @@
 	exports.default = HornerTrainer;
 
 /***/ },
-/* 656 */
+/* 658 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45026,6 +45582,10 @@
 	var _Table = __webpack_require__(626);
 
 	var _Table2 = _interopRequireDefault(_Table);
+
+	var _Toolbar = __webpack_require__(645);
+
+	var _Toolbar2 = _interopRequireDefault(_Toolbar);
 
 	var _getCookie = __webpack_require__(632);
 
@@ -45128,6 +45688,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'content-wrap' },
+	        _react2.default.createElement(_Toolbar2.default, null),
 	        _react2.default.createElement(
 	          'h1',
 	          null,
@@ -45180,483 +45741,6 @@
 	}(_react.Component);
 
 	exports.default = HornerTest;
-
-/***/ },
-/* 657 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(122);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _Table = __webpack_require__(626);
-
-	var _Table2 = _interopRequireDefault(_Table);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var SmartTable = function (_Component) {
-	    _inherits(SmartTable, _Component);
-
-	    function SmartTable() {
-	        _classCallCheck(this, SmartTable);
-
-	        return _possibleConstructorReturn(this, Object.getPrototypeOf(SmartTable).apply(this, arguments));
-	    }
-
-	    _createClass(SmartTable, [{
-	        key: 'componentDidMount',
-	        value: function componentDidMount() {
-	            var t = [];
-	            for (var i = 0; i < 4; i++) {
-	                t.push([]);
-	                for (var j = 0; j < 10; j++) {
-	                    t[i].push(_react2.default.createElement('div', { className: 'number-wrap' }));
-	                }
-	            }
-	            t[0][0] = _react2.default.createElement(
-	                'div',
-	                { className: 'input-number-wrap' },
-	                _react2.default.createElement('input', { type: 'number' })
-	            );
-	            t[0][1] = _react2.default.createElement(
-	                'div',
-	                { className: 'input-number-wrap' },
-	                _react2.default.createElement('input', { type: 'number' })
-	            );
-
-	            this.setState({ table: t });
-	        }
-	    }, {
-	        key: 'solve',
-	        value: function solve(e) {
-	            var _this2 = this;
-
-	            var inputs = this.refs.st.querySelectorAll('input[type="number"]');
-	            var a = parseInt(inputs[0].value);
-	            var b = parseInt(inputs[1].value);
-	            if (a && b) {
-	                var url = 'http://discrete-eltech.eurodir.ru:8888/solve/pem?a=' + a + '&b=' + b;
-	                fetch(url).then(function (response) {
-	                    return response.json();
-	                }).then(function (table) {
-	                    var newTable = table.slice();
-	                    for (var i = 0; i < newTable.length; i++) {
-	                        for (var j = 0; j < newTable[i].length; j++) {
-	                            if (i == 0 && j < 2) {
-	                                newTable[i][j] = _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'input-number-wrap' },
-	                                    _react2.default.createElement('input', { type: 'number' })
-	                                );
-	                            } else {
-	                                newTable[i][j] = _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'number-wrap' },
-	                                    newTable[i][j]
-	                                );
-	                            }
-	                        }
-	                    }
-	                    _this2.setState({ table: table });
-	                }).catch(console.error);
-	            }
-	        }
-	    }, {
-	        key: 'render',
-	        value: function render() {
-	            var _this3 = this;
-
-	            return _react2.default.createElement(
-	                'div',
-	                { className: 'smart-table' },
-	                this.state ? _react2.default.createElement(
-	                    'div',
-	                    { ref: 'st' },
-	                    _react2.default.createElement(_Table2.default, { data: this.state.table }),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'button-wrap' },
-	                        _react2.default.createElement(
-	                            'button',
-	                            { onClick: function onClick(e) {
-	                                    return _this3.solve(e);
-	                                } },
-	                            '='
-	                        )
-	                    )
-	                ) : null
-	            );
-	        }
-	    }]);
-
-	    return SmartTable;
-	}(_react.Component);
-
-	exports.default = SmartTable;
-
-/***/ },
-/* 658 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(122);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _SmartTable = __webpack_require__(657);
-
-	var _SmartTable2 = _interopRequireDefault(_SmartTable);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Toolbar = function (_Component) {
-	  _inherits(Toolbar, _Component);
-
-	  function Toolbar() {
-	    _classCallCheck(this, Toolbar);
-
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Toolbar).apply(this, arguments));
-	  }
-
-	  _createClass(Toolbar, [{
-	    key: 'toggle',
-	    value: function toggle(e) {
-	      $(e.target).parent().next().collapse('toggle');
-	    }
-	  }, {
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      var input = this.refs.root.querySelector('#input'),
-	          // input/output button
-	      number = this.refs.root.querySelectorAll('.numbers div'),
-	          // number buttons
-	      operator = this.refs.root.querySelectorAll('.operators div'),
-	          // operator buttons
-	      result = this.refs.root.querySelector('#result'),
-	          // equal button
-	      clear = this.refs.root.querySelector('#clear'),
-	          // clear button
-	      resultDisplayed = false; // flag to keep an eye on what output is displayed
-
-	      // adding click handlers to number buttons
-	      for (var i = 0; i < number.length; i++) {
-	        number[i].addEventListener("click", function (e) {
-
-	          // storing current input string and its last character in variables - used later
-	          var currentString = input.innerHTML;
-	          var lastChar = currentString[currentString.length - 1];
-
-	          // if result is not diplayed, just keep adding
-	          if (resultDisplayed === false) {
-	            input.innerHTML += e.target.innerHTML;
-	          } else if (resultDisplayed === true && lastChar === "+" || lastChar === "-" || lastChar === "×" || lastChar === "÷") {
-	            // if result is currently displayed and user pressed an operator
-	            // we need to keep on adding to the string for next operation
-	            resultDisplayed = false;
-	            input.innerHTML += e.target.innerHTML;
-	          } else {
-	            // if result is currently displayed and user pressed a number
-	            // we need clear the input string and add the new input to start the new opration
-	            resultDisplayed = false;
-	            input.innerHTML = "";
-	            input.innerHTML += e.target.innerHTML;
-	          }
-	        });
-	      }
-
-	      // adding click handlers to number buttons
-	      for (var i = 0; i < operator.length; i++) {
-	        operator[i].addEventListener("click", function (e) {
-
-	          // storing current input string and its last character in variables - used later
-	          var currentString = input.innerHTML;
-	          var lastChar = currentString[currentString.length - 1];
-
-	          // if last character entered is an operator, replace it with the currently pressed one
-	          if (lastChar === "+" || lastChar === "-" || lastChar === "×" || lastChar === "÷") {
-	            var newString = currentString.substring(0, currentString.length - 1) + e.target.innerHTML;
-	            input.innerHTML = newString;
-	          } else if (currentString.length == 0) {
-	            // if first key pressed is an opearator, don't do anything
-	            console.log("enter a number first");
-	          } else {
-	            // else just add the operator pressed to the input
-	            input.innerHTML += e.target.innerHTML;
-	          }
-	        });
-	      }
-
-	      // on click of 'equal' button
-	      result.addEventListener("click", function () {
-
-	        // this is the string that we will be processing eg. -10+26+33-56*34/23
-	        var inputString = input.innerHTML;
-
-	        // forming an array of numbers. eg for above string it will be: numbers = ["10", "26", "33", "56", "34", "23"]
-	        var numbers = inputString.split(/\+|\-|\×|\÷/g);
-
-	        // forming an array of operators. for above string it will be: operators = ["+", "+", "-", "*", "/"]
-	        // first we replace all the numbers and dot with empty string and then split
-	        var operators = inputString.replace(/[0-9]|\./g, "").split("");
-
-	        console.log(inputString);
-	        console.log(operators);
-	        console.log(numbers);
-	        console.log("----------------------------");
-
-	        // now we are looping through the array and doing one operation at a time.
-	        // first divide, then multiply, then subtraction and then addition
-	        // as we move we are alterning the original numbers and operators array
-	        // the final element remaining in the array will be the output
-
-	        var divide = operators.indexOf("÷");
-	        while (divide != -1) {
-	          numbers.splice(divide, 2, numbers[divide] / numbers[divide + 1]);
-	          operators.splice(divide, 1);
-	          divide = operators.indexOf("÷");
-	        }
-
-	        var multiply = operators.indexOf("×");
-	        while (multiply != -1) {
-	          numbers.splice(multiply, 2, numbers[multiply] * numbers[multiply + 1]);
-	          operators.splice(multiply, 1);
-	          multiply = operators.indexOf("×");
-	        }
-
-	        var subtract = operators.indexOf("-");
-	        while (subtract != -1) {
-	          numbers.splice(subtract, 2, numbers[subtract] - numbers[subtract + 1]);
-	          operators.splice(subtract, 1);
-	          subtract = operators.indexOf("-");
-	        }
-
-	        var add = operators.indexOf("+");
-	        while (add != -1) {
-	          // using parseFloat is necessary, otherwise it will result in string concatenation :)
-	          numbers.splice(add, 2, parseFloat(numbers[add]) + parseFloat(numbers[add + 1]));
-	          operators.splice(add, 1);
-	          add = operators.indexOf("+");
-	        }
-
-	        input.innerHTML = numbers[0]; // displaying the output
-
-	        resultDisplayed = true; // turning flag if result is displayed
-	      });
-
-	      // clearing the input on press of clear
-	      clear.addEventListener("click", function () {
-	        input.innerHTML = "";
-	      });
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var _this2 = this;
-
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'panel-group', ref: 'root' },
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'panel panel-default' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'panel-heading' },
-	            _react2.default.createElement(
-	              'button',
-	              { type: 'button', className: 'btn btn-default btn-xs spoiler-trigger', 'data-toggle': 'collapse', onClick: function onClick(e) {
-	                  return _this2.toggle(e);
-	                } },
-	              'Расширенный алгоритм Евклида'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'panel-collapse collapse out' },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'panel-body' },
-	              _react2.default.createElement(_SmartTable2.default, null)
-	            )
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'panel panel-default' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'panel-heading' },
-	            _react2.default.createElement(
-	              'button',
-	              { type: 'button', className: 'btn btn-default btn-xs spoiler-trigger', 'data-toggle': 'collapse', onClick: function onClick(e) {
-	                  return _this2.toggle(e);
-	                } },
-	              'Калькулятор'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'panel-collapse collapse out' },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'panel-body' },
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'calculator' },
-	                _react2.default.createElement('div', { className: 'input', id: 'input' }),
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'buttons' },
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'operators' },
-	                    _react2.default.createElement(
-	                      'div',
-	                      null,
-	                      '+'
-	                    ),
-	                    _react2.default.createElement(
-	                      'div',
-	                      null,
-	                      '-'
-	                    ),
-	                    _react2.default.createElement(
-	                      'div',
-	                      null,
-	                      '×'
-	                    ),
-	                    _react2.default.createElement(
-	                      'div',
-	                      null,
-	                      '÷'
-	                    )
-	                  ),
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'leftPanel' },
-	                    _react2.default.createElement(
-	                      'div',
-	                      { className: 'numbers' },
-	                      _react2.default.createElement(
-	                        'div',
-	                        null,
-	                        '7'
-	                      ),
-	                      _react2.default.createElement(
-	                        'div',
-	                        null,
-	                        '8'
-	                      ),
-	                      _react2.default.createElement(
-	                        'div',
-	                        null,
-	                        '9'
-	                      )
-	                    ),
-	                    _react2.default.createElement(
-	                      'div',
-	                      { className: 'numbers' },
-	                      _react2.default.createElement(
-	                        'div',
-	                        null,
-	                        '4'
-	                      ),
-	                      _react2.default.createElement(
-	                        'div',
-	                        null,
-	                        '5'
-	                      ),
-	                      _react2.default.createElement(
-	                        'div',
-	                        null,
-	                        '6'
-	                      )
-	                    ),
-	                    _react2.default.createElement(
-	                      'div',
-	                      { className: 'numbers' },
-	                      _react2.default.createElement(
-	                        'div',
-	                        null,
-	                        '1'
-	                      ),
-	                      _react2.default.createElement(
-	                        'div',
-	                        null,
-	                        '2'
-	                      ),
-	                      _react2.default.createElement(
-	                        'div',
-	                        null,
-	                        '3'
-	                      )
-	                    ),
-	                    _react2.default.createElement(
-	                      'div',
-	                      { className: 'numbers' },
-	                      _react2.default.createElement(
-	                        'div',
-	                        null,
-	                        '0'
-	                      ),
-	                      _react2.default.createElement(
-	                        'div',
-	                        null,
-	                        '.'
-	                      ),
-	                      _react2.default.createElement(
-	                        'div',
-	                        { id: 'clear' },
-	                        'C'
-	                      )
-	                    )
-	                  ),
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'equal', id: 'result' },
-	                    '='
-	                  )
-	                )
-	              )
-	            )
-	          )
-	        )
-	      );
-	    }
-	  }]);
-
-	  return Toolbar;
-	}(_react.Component);
-
-	exports.default = Toolbar;
 
 /***/ }
 /******/ ]);

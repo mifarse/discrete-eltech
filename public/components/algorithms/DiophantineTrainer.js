@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import Table from '../Table'
+import Toolbar from '../Toolbar'
 
 export default class DiophantineTrainer extends Component {
 
@@ -81,6 +82,7 @@ export default class DiophantineTrainer extends Component {
   render () {
     return (
       <div className="content-wrap">
+        <Toolbar />
         <h1>Решение диофантово уравнения</h1>
         <h2>Тренажёр</h2>
         {this.state.input ? 

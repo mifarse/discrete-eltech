@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import Table from '../Table'
+import Toolbar from '../Toolbar'
 import getCookie from './getCookie'
 
 export default class ConversionTest extends Component {
@@ -53,6 +54,7 @@ export default class ConversionTest extends Component {
   render () {
     return (
       <div className="content-wrap">
+        <Toolbar />
         <h1>Перевод из одной системы счисления в другую</h1>
         <h2>Контроль</h2>
         {this.state.input ? 
