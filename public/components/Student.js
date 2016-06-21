@@ -7,7 +7,7 @@ export default class Student extends Component {
   constructor (props) {
     super(props)
     
-    this.loadStudentInfo(this.props)
+    this.loadStudentInfo(props)
   }
 
   loadStudentInfo (props) {
@@ -19,7 +19,6 @@ export default class Student extends Component {
           student : student,
         })
       })
-      .catch(console.error)
 
     fetch('http://discrete-eltech.eurodir.ru:8888/s/' + props.params.studentID + '/tests')
       .then(response => response.json())
@@ -33,7 +32,6 @@ export default class Student extends Component {
           tests : tests,
         })
       })
-      .catch(console.error)
   }
 
   componentWillReceiveProps(nextProps) {
@@ -78,10 +76,15 @@ export default class Student extends Component {
                             <h3>Решение студента</h3>
                             <h4>Входные данные</h4>
                             <div>{test.object.input.join(', ')}</div>
-                            <h4>Таблица</h4>
-                            <Table data={test.object.table.map(row => row.map(col => 
-                              <div className="number-wrap">{col}</div>
-                            ))}/>
+                            {test.object.table ?
+                              <div> 
+                                <h4>Таблица</h4>
+                                <Table data={test.object.table.map(row => row.map(col => 
+                                  <div className="number-wrap">{col}</div>
+                                ))}/>
+                              </div>
+                              : null
+                            }
                             <h4>Ответ</h4>
                             <div>{JSON.stringify(test.object.output)}</div>
                           </div>

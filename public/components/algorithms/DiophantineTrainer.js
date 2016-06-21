@@ -39,7 +39,7 @@ export default class DiophantineTrainer extends Component {
             parseInt(b1.dataset.original) === 0;
           let class_y = (parseInt(a2.value) - parseInt(a2.dataset.original)) % 
             parseInt(b2.dataset.original) === 0;
-          console.log('tc = ', a1.value*this.state.input[0]+a2.value*this.state.input[1] === this.state.input[2])
+          console.log('tc = ', a1.value*this.state.input[0]+a2.value*this.state.input[1])
           let t_c = a1.value*this.state.input[0]+a2.value*this.state.input[1] === this.state.input[2];
           let t_x = Math.abs(parseInt(b1.value)) == Math.abs(parseInt(b1.dataset.original));
           let t_y = Math.abs(parseInt(b2.value)) == Math.abs(parseInt(b2.dataset.original));  

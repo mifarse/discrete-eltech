@@ -40242,7 +40242,7 @@
 
 	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Student).call(this, props));
 
-	    _this.loadStudentInfo(_this.props);
+	    _this.loadStudentInfo(props);
 	    return _this;
 	  }
 
@@ -40257,7 +40257,7 @@
 	        _this2.setState(_extends({}, _this2.state, {
 	          student: student
 	        }));
-	      }).catch(console.error);
+	      });
 
 	      fetch('http://discrete-eltech.eurodir.ru:8888/s/' + props.params.studentID + '/tests').then(function (response) {
 	        return response.json();
@@ -40268,7 +40268,7 @@
 	        _this2.setState(_extends({}, _this2.state, {
 	          tests: tests
 	        }));
-	      }).catch(console.error);
+	      });
 	    }
 	  }, {
 	    key: 'componentWillReceiveProps',
@@ -40374,20 +40374,24 @@
 	                        null,
 	                        test.object.input.join(', ')
 	                      ),
-	                      _react2.default.createElement(
-	                        'h4',
+	                      test.object.table ? _react2.default.createElement(
+	                        'div',
 	                        null,
-	                        'Таблица'
-	                      ),
-	                      _react2.default.createElement(_Table2.default, { data: test.object.table.map(function (row) {
-	                          return row.map(function (col) {
-	                            return _react2.default.createElement(
-	                              'div',
-	                              { className: 'number-wrap' },
-	                              col
-	                            );
-	                          });
-	                        }) }),
+	                        _react2.default.createElement(
+	                          'h4',
+	                          null,
+	                          'Таблица'
+	                        ),
+	                        _react2.default.createElement(_Table2.default, { data: test.object.table.map(function (row) {
+	                            return row.map(function (col) {
+	                              return _react2.default.createElement(
+	                                'div',
+	                                { className: 'number-wrap' },
+	                                col
+	                              );
+	                            });
+	                          }) })
+	                      ) : null,
 	                      _react2.default.createElement(
 	                        'h4',
 	                        null,
@@ -43879,7 +43883,7 @@
 	          if (a1.value && a2.value && b1.value && b2.value) {
 	            var class_x = (parseInt(a1.value) - parseInt(a1.dataset.original)) % parseInt(b1.dataset.original) === 0;
 	            var class_y = (parseInt(a2.value) - parseInt(a2.dataset.original)) % parseInt(b2.dataset.original) === 0;
-	            console.log('tc = ', a1.value * this.state.input[0] + a2.value * this.state.input[1] === this.state.input[2]);
+	            console.log('tc = ', a1.value * this.state.input[0] + a2.value * this.state.input[1]);
 	            var t_c = a1.value * this.state.input[0] + a2.value * this.state.input[1] === this.state.input[2];
 	            var t_x = Math.abs(parseInt(b1.value)) == Math.abs(parseInt(b1.dataset.original));
 	            var t_y = Math.abs(parseInt(b2.value)) == Math.abs(parseInt(b2.dataset.original));
