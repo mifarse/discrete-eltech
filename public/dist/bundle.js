@@ -43935,7 +43935,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'content-wrap' },
-	        _react2.default.createElement(_Toolbar2.default, null),
+	        _react2.default.createElement(_Toolbar2.default, { smartTable: true }),
 	        _react2.default.createElement(
 	          'h1',
 	          null,
