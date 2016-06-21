@@ -40586,55 +40586,55 @@
 
 	var _GCDTrainer3 = _interopRequireDefault(_GCDTrainer2);
 
-	var _GCDTest2 = __webpack_require__(631);
+	var _GCDTest2 = __webpack_require__(633);
 
 	var _GCDTest3 = _interopRequireDefault(_GCDTest2);
 
-	var _axbyShow2 = __webpack_require__(633);
+	var _axbyShow2 = __webpack_require__(635);
 
 	var _axbyShow3 = _interopRequireDefault(_axbyShow2);
 
-	var _axbyTrainer2 = __webpack_require__(634);
+	var _axbyTrainer2 = __webpack_require__(636);
 
 	var _axbyTrainer3 = _interopRequireDefault(_axbyTrainer2);
 
-	var _axbyTest2 = __webpack_require__(635);
+	var _axbyTest2 = __webpack_require__(637);
 
 	var _axbyTest3 = _interopRequireDefault(_axbyTest2);
 
-	var _FractionShow2 = __webpack_require__(636);
+	var _FractionShow2 = __webpack_require__(638);
 
 	var _FractionShow3 = _interopRequireDefault(_FractionShow2);
 
-	var _FractionTrainer2 = __webpack_require__(637);
+	var _FractionTrainer2 = __webpack_require__(639);
 
 	var _FractionTrainer3 = _interopRequireDefault(_FractionTrainer2);
 
-	var _FractionTest2 = __webpack_require__(638);
+	var _FractionTest2 = __webpack_require__(640);
 
 	var _FractionTest3 = _interopRequireDefault(_FractionTest2);
 
-	var _ConvergentsShow2 = __webpack_require__(639);
+	var _ConvergentsShow2 = __webpack_require__(641);
 
 	var _ConvergentsShow3 = _interopRequireDefault(_ConvergentsShow2);
 
-	var _ConvergentsTrainer2 = __webpack_require__(640);
+	var _ConvergentsTrainer2 = __webpack_require__(642);
 
 	var _ConvergentsTrainer3 = _interopRequireDefault(_ConvergentsTrainer2);
 
-	var _ConvergentsTest2 = __webpack_require__(641);
+	var _ConvergentsTest2 = __webpack_require__(643);
 
 	var _ConvergentsTest3 = _interopRequireDefault(_ConvergentsTest2);
 
-	var _InverseShow2 = __webpack_require__(642);
+	var _InverseShow2 = __webpack_require__(644);
 
 	var _InverseShow3 = _interopRequireDefault(_InverseShow2);
 
-	var _InverseTrainer2 = __webpack_require__(643);
+	var _InverseTrainer2 = __webpack_require__(645);
 
 	var _InverseTrainer3 = _interopRequireDefault(_InverseTrainer2);
 
-	var _InverseTest2 = __webpack_require__(644);
+	var _InverseTest2 = __webpack_require__(646);
 
 	var _InverseTest3 = _interopRequireDefault(_InverseTest2);
 
@@ -40865,7 +40865,7 @@
 
 	var _Table2 = _interopRequireDefault(_Table);
 
-	var _Toolbar = __webpack_require__(645);
+	var _Toolbar = __webpack_require__(631);
 
 	var _Toolbar2 = _interopRequireDefault(_Toolbar);
 
@@ -41014,2110 +41014,13 @@
 	  value: true
 	});
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(122);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactDom = __webpack_require__(535);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	var _Table = __webpack_require__(626);
-
-	var _Table2 = _interopRequireDefault(_Table);
-
-	var _Toolbar = __webpack_require__(645);
-
-	var _Toolbar2 = _interopRequireDefault(_Toolbar);
-
-	var _getCookie = __webpack_require__(632);
-
-	var _getCookie2 = _interopRequireDefault(_getCookie);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var GCDTest = function (_Component) {
-	  _inherits(GCDTest, _Component);
-
-	  function GCDTest(props) {
-	    _classCallCheck(this, GCDTest);
-
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(GCDTest).call(this, props));
-
-	    _this.state = {};
-
-	    _this.refreshExample();
-	    return _this;
-	  }
-
-	  _createClass(GCDTest, [{
-	    key: 'refreshExample',
-	    value: function refreshExample() {
-	      var _this2 = this;
-
-	      fetch('http://discrete-eltech.eurodir.ru:8888/test/nod?id=' + (0, _getCookie2.default)('student_id')).then(function (response) {
-	        return response.json();
-	      }).then(function (example) {
-	        var inputs = _reactDom2.default.findDOMNode(_this2).querySelectorAll('input[type="number"]'); // Fuck JavaScript
-	        [].forEach.call(inputs, function (input) {
-	          return input.value = '';
-	        });
-	        _this2.setState(example);
-	      }).catch(console.error);
-	    }
-	  }, {
-	    key: 'check',
-	    value: function check() {
-	      var _this3 = this;
-
-	      var tableNode = _reactDom2.default.findDOMNode(this).querySelectorAll('.table tr');
-	      var table = [].map.call(tableNode, function (tr) {
-	        return [].map.call(tr.querySelectorAll('input[type="number"]'), function (input) {
-	          return input.value !== '' ? parseInt(input.value) : '';
-	        });
-	      });
-	      fetch('http://discrete-eltech.eurodir.ru:8888/test/nod/', {
-	        method: 'post',
-	        body: JSON.stringify({
-	          input: this.state.input,
-	          table: table,
-	          output: parseInt(this.refs.output.value),
-	          test_id: this.state.test_id
-	        }),
-	        headers: new Headers({
-	          'Content-Type': 'application/json'
-	        })
-	      }).then(function (response) {
-	        return response.json();
-	      }).then(function (response) {
-	        return _this3.setState(_extends({}, _this3.state, {
-	          status: response.status
-	        }));
-	      }).catch(console.error);
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var _this4 = this;
-
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'content-wrap' },
-	        _react2.default.createElement(_Toolbar2.default, null),
-	        _react2.default.createElement(
-	          'h1',
-	          null,
-	          'Наибольший общий делитель'
-	        ),
-	        _react2.default.createElement(
-	          'h2',
-	          null,
-	          'Контроль'
-	        ),
-	        this.state.input ? _react2.default.createElement(
-	          'div',
-	          null,
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'Даны числа ',
-	            this.state.input.join(', '),
-	            '.'
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'Примените к ним алгоритм Евклида.'
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'Вводите полученные значения в следующую таблицу:'
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'table' },
-	            _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row, i) {
-	                return row.map(function (col, j) {
-	                  return i > 0 && j < 2 ? _react2.default.createElement('input', { type: 'number', disabled: true }) : _react2.default.createElement('input', { type: 'number' });
-	                });
-	              }) })
-	          ),
-	          _react2.default.createElement(
-	            'code',
-	            { className: 'answer-area' },
-	            'Ответ: НОД(',
-	            this.state.input.join(', '),
-	            ') =  ',
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'input-number-wrap' },
-	              _react2.default.createElement('input', { type: 'number', ref: 'output' })
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'button-wrap' },
-	            _react2.default.createElement(
-	              'button',
-	              { onClick: function onClick(e) {
-	                  return _this4.check(e);
-	                } },
-	              'Проверить'
-	            ),
-	            this.state.status !== undefined ? this.state.status ? _react2.default.createElement('i', { className: 'checker ok' }) : _react2.default.createElement('i', { className: 'checker wrong' }) : null
-	          )
-	        ) : ''
-	      );
-	    }
-	  }]);
-
-	  return GCDTest;
-	}(_react.Component);
-
-	exports.default = GCDTest;
-
-/***/ },
-/* 632 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.default = getCookie;
-	function getCookie(name) {
-	  var matches = document.cookie.match(new RegExp("(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"));
-	  return matches ? decodeURIComponent(matches[1]) : undefined;
-	}
-
-/***/ },
-/* 633 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(122);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _Table = __webpack_require__(626);
-
-	var _Table2 = _interopRequireDefault(_Table);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var axbyShow = function (_Component) {
-	  _inherits(axbyShow, _Component);
-
-	  function axbyShow(props) {
-	    _classCallCheck(this, axbyShow);
-
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(axbyShow).call(this, props));
-
-	    _this.state = {};
-
-	    _this.refreshExample();
-	    return _this;
-	  }
-
-	  _createClass(axbyShow, [{
-	    key: 'refreshExample',
-	    value: function refreshExample() {
-	      var _this2 = this;
-
-	      fetch('http://discrete-eltech.eurodir.ru:8888/solve/axby1').then(function (response) {
-	        return response.json();
-	      }).then(function (example) {
-	        _this2.setState(example);
-	      }).catch(console.error);
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var _this3 = this;
-
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        this.state.input ? _react2.default.createElement(
-	          'div',
-	          { className: 'content-wrap' },
-	          _react2.default.createElement(
-	            'h1',
-	            null,
-	            'Используя расширенный алгоритм Евклида, найдите частное решение диофантова уравнения'
-	          ),
-	          _react2.default.createElement(
-	            'h2',
-	            null,
-	            'Демонстрация'
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            this.state.input[0],
-	            'x + ',
-	            this.state.input[1],
-	            'y = 1'
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            '|',
-	            'x',
-	            '|',
-	            ' ',
-	            '<',
-	            ' ',
-	            '|',
-	            this.state.input[1],
-	            '|',
-	            ', ',
-	            '|',
-	            'y',
-	            '|',
-	            ' ',
-	            '<',
-	            ' ',
-	            '|',
-	            this.state.input[0],
-	            '|'
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'Для решения этой задачи нам необходимо воспользоваться расширенным алгоритмом Евклида, как показано в следующей таблице.'
-	          ),
-	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
-	              return row.map(function (col) {
-	                return _react2.default.createElement(
-	                  'div',
-	                  { className: 'number-wrap' },
-	                  col
-	                );
-	              });
-	            }) }),
-	          _react2.default.createElement(
-	            'code',
-	            null,
-	            'Ответ: (',
-	            this.state.output.join('; '),
-	            ')'
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'button-wrap' },
-	            _react2.default.createElement(
-	              'button',
-	              { onClick: function onClick(e) {
-	                  return _this3.refreshExample();
-	                } },
-	              'Обновить'
-	            )
-	          )
-	        ) : null
-	      );
-	    }
-	  }]);
-
-	  return axbyShow;
-	}(_react.Component);
-
-	exports.default = axbyShow;
-
-/***/ },
-/* 634 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(122);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(535);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	var _Table = __webpack_require__(626);
-
-	var _Table2 = _interopRequireDefault(_Table);
-
-	var _Toolbar = __webpack_require__(645);
-
-	var _Toolbar2 = _interopRequireDefault(_Toolbar);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var axbyTrainer = function (_Component) {
-	  _inherits(axbyTrainer, _Component);
-
-	  function axbyTrainer(props) {
-	    _classCallCheck(this, axbyTrainer);
-
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(axbyTrainer).call(this, props));
-
-	    _this.state = {};
-
-	    _this.refreshExample();
-	    return _this;
-	  }
-
-	  _createClass(axbyTrainer, [{
-	    key: 'refreshExample',
-	    value: function refreshExample() {
-	      var _this2 = this;
-
-	      fetch('http://discrete-eltech.eurodir.ru:8888/solve/axby1').then(function (response) {
-	        return response.json();
-	      }).then(function (example) {
-	        var inputs = _reactDom2.default.findDOMNode(_this2).querySelectorAll('input[type="number"]'); // Fuck JavaScript
-	        [].forEach.call(inputs, function (input) {
-	          input.value = '';
-	          input.classList.remove('ok');
-	          input.classList.remove('wrong');
-	        });
-	        _this2.setState(example);
-	      }).catch(console.error);
-	    }
-	  }, {
-	    key: 'check',
-	    value: function check(event) {
-	      if (event.currentTarget.value != '') {
-	        if (event.currentTarget.value === event.currentTarget.dataset.original) {
-	          event.currentTarget.classList.remove('wrong');
-	          event.currentTarget.classList.add('ok');
-	        } else {
-	          event.currentTarget.classList.remove('ok');
-	          event.currentTarget.classList.add('wrong');
-	        }
-	      }
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var _this3 = this;
-
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'content-wrap' },
-	        _react2.default.createElement(_Toolbar2.default, null),
-	        _react2.default.createElement(
-	          'h1',
-	          null,
-	          'Используя расширенный алгоритм Евклида, найдите частное решение диофантова уравнения'
-	        ),
-	        _react2.default.createElement(
-	          'h2',
-	          null,
-	          'Тренажёр'
-	        ),
-	        this.state.input ? _react2.default.createElement(
-	          'div',
-	          null,
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            this.state.input[0],
-	            'x + ',
-	            this.state.input[1],
-	            'y = 1'
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            '|',
-	            'x',
-	            '|',
-	            ' ',
-	            '<',
-	            ' ',
-	            '|',
-	            this.state.input[1],
-	            '|',
-	            ', ',
-	            '|',
-	            'y',
-	            '|',
-	            ' ',
-	            '<',
-	            ' ',
-	            '|',
-	            this.state.input[0],
-	            '|'
-	          ),
-	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
-	              return row.map(function (col) {
-	                return col !== '' ? _react2.default.createElement(
-	                  'div',
-	                  { className: 'input-number-wrap' },
-	                  _react2.default.createElement('input', { type: 'number', 'data-original': col, onBlur: function onBlur(e) {
-	                      return _this3.check(e);
-	                    } }),
-	                  _react2.default.createElement('i', { className: 'checker' })
-	                ) : null;
-	              });
-	            }) }),
-	          _react2.default.createElement(
-	            'code',
-	            { className: 'answer-area' },
-	            'Ответ: X =  ',
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'input-number-wrap' },
-	              _react2.default.createElement('input', { type: 'number', 'data-original': this.state.output[0], onBlur: function onBlur(e) {
-	                  return _this3.check(e);
-	                } }),
-	              _react2.default.createElement('i', { className: 'checker' })
-	            ),
-	            ' Y =  ',
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'input-number-wrap' },
-	              _react2.default.createElement('input', { type: 'number', 'data-original': this.state.output[1], onBlur: function onBlur(e) {
-	                  return _this3.check(e);
-	                } }),
-	              _react2.default.createElement('i', { className: 'checker' })
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'button',
-	            { onClick: function onClick(e) {
-	                return _this3.refreshExample();
-	              } },
-	            'Обновить'
-	          )
-	        ) : null
-	      );
-	    }
-	  }]);
-
-	  return axbyTrainer;
-	}(_react.Component);
-
-	exports.default = axbyTrainer;
-
-/***/ },
-/* 635 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(122);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(535);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	var _Table = __webpack_require__(626);
-
-	var _Table2 = _interopRequireDefault(_Table);
-
-	var _Toolbar = __webpack_require__(645);
-
-	var _Toolbar2 = _interopRequireDefault(_Toolbar);
-
-	var _getCookie = __webpack_require__(632);
-
-	var _getCookie2 = _interopRequireDefault(_getCookie);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var axbyTest = function (_Component) {
-	  _inherits(axbyTest, _Component);
-
-	  function axbyTest(props) {
-	    _classCallCheck(this, axbyTest);
-
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(axbyTest).call(this, props));
-
-	    _this.state = {};
-
-	    _this.refreshExample();
-	    return _this;
-	  }
-
-	  _createClass(axbyTest, [{
-	    key: 'refreshExample',
-	    value: function refreshExample() {
-	      var _this2 = this;
-
-	      fetch('http://discrete-eltech.eurodir.ru:8888/test/axby1?id=' + (0, _getCookie2.default)('student_id')).then(function (response) {
-	        return response.json();
-	      }).then(function (example) {
-	        var inputs = _reactDom2.default.findDOMNode(_this2).querySelectorAll('input[type="number"]'); // Fuck JavaScript
-	        [].forEach.call(inputs, function (input) {
-	          return input.value = '';
-	        });
-	        _this2.setState(example);
-	      }).catch(console.error);
-	    }
-	  }, {
-	    key: 'check',
-	    value: function check() {
-	      var _this3 = this;
-
-	      var tableNode = _reactDom2.default.findDOMNode(this).querySelectorAll('.table tr');
-	      var table = [].map.call(tableNode, function (tr) {
-	        return [].map.call(tr.querySelectorAll('input[type="number"]'), function (input) {
-	          return input.value !== '' ? parseInt(input.value) : '';
-	        });
-	      });
-	      var output = [parseInt(this.refs.X.value), parseInt(this.refs.Y.value)];
-	      fetch('http://discrete-eltech.eurodir.ru:8888/test/axby1/', {
-	        method: 'post',
-	        headers: new Headers({
-	          'Content-Type': 'application/json'
-	        }),
-	        body: JSON.stringify({
-	          input: this.state.input,
-	          table: table,
-	          output: output,
-	          test_id: this.state.test_id
-	        })
-	      }).then(function (response) {
-	        return response.json();
-	      }).then(function (response) {
-	        return _this3.setState(_extends({}, _this3.state, {
-	          status: response.status
-	        }));
-	      }).catch(console.error);
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var _this4 = this;
-
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'content-wrap' },
-	        _react2.default.createElement(_Toolbar2.default, null),
-	        _react2.default.createElement(
-	          'h1',
-	          null,
-	          'Используя расширенный алгоритм Евклида, найдите частное решение диофантова уравнения'
-	        ),
-	        _react2.default.createElement(
-	          'h2',
-	          null,
-	          'Контроль'
-	        ),
-	        this.state.input ? _react2.default.createElement(
-	          'div',
-	          null,
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            this.state.input[0],
-	            'x + ',
-	            this.state.input[1],
-	            'y = 1'
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            '|',
-	            'x',
-	            '|',
-	            ' ',
-	            '<',
-	            ' ',
-	            '|',
-	            this.state.input[1],
-	            '|',
-	            ', ',
-	            '|',
-	            'y',
-	            '|',
-	            ' ',
-	            '<',
-	            ' ',
-	            '|',
-	            this.state.input[0],
-	            '|'
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'table' },
-	            _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row, i) {
-	                return row.map(function (col, j) {
-	                  return i == 1 && j < 2 ? _react2.default.createElement('input', { type: 'number', disabled: true }) : _react2.default.createElement('input', { type: 'number' });
-	                });
-	              }) })
-	          ),
-	          _react2.default.createElement(
-	            'code',
-	            { className: 'answer-area' },
-	            'Ответ: X =  ',
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'input-number-wrap' },
-	              _react2.default.createElement('input', { type: 'number', ref: 'X' })
-	            ),
-	            ' Y =  ',
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'input-number-wrap' },
-	              _react2.default.createElement('input', { type: 'number', ref: 'Y' })
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'button-wrap' },
-	            _react2.default.createElement(
-	              'button',
-	              { onClick: function onClick(e) {
-	                  return _this4.check(e);
-	                } },
-	              'Проверить'
-	            ),
-	            this.state.status !== undefined ? this.state.status ? _react2.default.createElement('i', { className: 'checker ok' }) : _react2.default.createElement('i', { className: 'checker wrong' }) : null
-	          )
-	        ) : null
-	      );
-	    }
-	  }]);
-
-	  return axbyTest;
-	}(_react.Component);
-
-	exports.default = axbyTest;
-
-/***/ },
-/* 636 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(122);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _Table = __webpack_require__(626);
-
-	var _Table2 = _interopRequireDefault(_Table);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var FractionShow = function (_Component) {
-	  _inherits(FractionShow, _Component);
-
-	  function FractionShow(props) {
-	    _classCallCheck(this, FractionShow);
-
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(FractionShow).call(this, props));
-
-	    _this.state = {};
-
-	    _this.refreshExample();
-	    return _this;
-	  }
-
-	  _createClass(FractionShow, [{
-	    key: 'refreshExample',
-	    value: function refreshExample() {
-	      var _this2 = this;
-
-	      fetch('http://discrete-eltech.eurodir.ru:8888/solve/fraction').then(function (response) {
-	        return response.json();
-	      }).then(function (example) {
-	        _this2.setState(example);
-	      }).catch(console.error);
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var _this3 = this;
-
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        this.state.input ? _react2.default.createElement(
-	          'div',
-	          { className: 'content-wrap' },
-	          _react2.default.createElement(
-	            'h1',
-	            null,
-	            'Разложение в цепную дробь'
-	          ),
-	          _react2.default.createElement(
-	            'h2',
-	            null,
-	            'Демонстрация'
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'Дана дробь ',
-	            this.state.input[0],
-	            '/',
-	            this.state.input[1]
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'Возьмем ',
-	            this.state.input[0],
-	            ' и ',
-	            this.state.input[1],
-	            ' и применим алгоритм Евклида, получим следующую таблицу:'
-	          ),
-	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
-	              return row.map(function (col) {
-	                return _react2.default.createElement(
-	                  'div',
-	                  { className: 'number-wrap' },
-	                  col
-	                );
-	              });
-	            }) }),
-	          _react2.default.createElement(
-	            'code',
-	            null,
-	            'Ответ: [',
-	            this.state.output.filter(function (x) {
-	              return x !== 0;
-	            }).join(', '),
-	            ']'
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'button-wrap' },
-	            _react2.default.createElement(
-	              'button',
-	              { onClick: function onClick(e) {
-	                  return _this3.refreshExample();
-	                } },
-	              'Обновить'
-	            )
-	          )
-	        ) : null
-	      );
-	    }
-	  }]);
-
-	  return FractionShow;
-	}(_react.Component);
-
-	exports.default = FractionShow;
-
-/***/ },
-/* 637 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(122);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(535);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	var _Table = __webpack_require__(626);
-
-	var _Table2 = _interopRequireDefault(_Table);
-
-	var _Toolbar = __webpack_require__(645);
-
-	var _Toolbar2 = _interopRequireDefault(_Toolbar);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var FractionTrainer = function (_Component) {
-	  _inherits(FractionTrainer, _Component);
-
-	  function FractionTrainer(props) {
-	    _classCallCheck(this, FractionTrainer);
-
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(FractionTrainer).call(this, props));
-
-	    _this.state = {};
-
-	    _this.refreshExample();
-	    return _this;
-	  }
-
-	  _createClass(FractionTrainer, [{
-	    key: 'refreshExample',
-	    value: function refreshExample() {
-	      var _this2 = this;
-
-	      fetch('http://discrete-eltech.eurodir.ru:8888/solve/fraction').then(function (response) {
-	        return response.json();
-	      }).then(function (example) {
-	        var inputs = _reactDom2.default.findDOMNode(_this2).querySelectorAll('input[type="number"]'); // Fuck JavaScript
-	        [].forEach.call(inputs, function (input) {
-	          input.value = '';
-	          input.classList.remove('ok');
-	          input.classList.remove('wrong');
-	        });
-	        _this2.setState(example);
-	      }).catch(console.error);
-	    }
-	  }, {
-	    key: 'check',
-	    value: function check(event) {
-	      if (event.currentTarget.value != '') {
-	        if (event.currentTarget.value === event.currentTarget.dataset.original) {
-	          event.currentTarget.classList.remove('wrong');
-	          event.currentTarget.classList.add('ok');
-	        } else {
-	          event.currentTarget.classList.remove('ok');
-	          event.currentTarget.classList.add('wrong');
-	        }
-	      }
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var _this3 = this;
-
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'content-wrap' },
-	        _react2.default.createElement(_Toolbar2.default, null),
-	        _react2.default.createElement(
-	          'h1',
-	          null,
-	          'Разложение в цепную дробь'
-	        ),
-	        _react2.default.createElement(
-	          'h2',
-	          null,
-	          'Тренажёр'
-	        ),
-	        this.state.input ? _react2.default.createElement(
-	          'div',
-	          null,
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'Дана дробь ',
-	            this.state.input[0],
-	            '/',
-	            this.state.input[1]
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'Возьмем ',
-	            this.state.input[0],
-	            ' и ',
-	            this.state.input[1],
-	            ' и применим алгоритм Евклида, получим следующую таблицу:'
-	          ),
-	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
-	              return row.map(function (col) {
-	                return col !== '' ? _react2.default.createElement(
-	                  'div',
-	                  { className: 'input-number-wrap' },
-	                  _react2.default.createElement('input', { type: 'number', 'data-original': col, onBlur: function onBlur(e) {
-	                      return _this3.check(e);
-	                    } }),
-	                  _react2.default.createElement('i', { className: 'checker' })
-	                ) : null;
-	              });
-	            }) }),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'button-wrap' },
-	            _react2.default.createElement(
-	              'button',
-	              { onClick: function onClick(e) {
-	                  return _this3.refreshExample();
-	                } },
-	              'Обновить'
-	            )
-	          )
-	        ) : null
-	      );
-	    }
-	  }]);
-
-	  return FractionTrainer;
-	}(_react.Component);
-
-	exports.default = FractionTrainer;
-
-/***/ },
-/* 638 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(122);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(535);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	var _Table = __webpack_require__(626);
-
-	var _Table2 = _interopRequireDefault(_Table);
-
-	var _Toolbar = __webpack_require__(645);
-
-	var _Toolbar2 = _interopRequireDefault(_Toolbar);
-
-	var _getCookie = __webpack_require__(632);
-
-	var _getCookie2 = _interopRequireDefault(_getCookie);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var FractionTest = function (_Component) {
-	  _inherits(FractionTest, _Component);
-
-	  function FractionTest(props) {
-	    _classCallCheck(this, FractionTest);
-
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(FractionTest).call(this, props));
-
-	    _this.state = {};
-
-	    _this.refreshExample();
-	    return _this;
-	  }
-
-	  _createClass(FractionTest, [{
-	    key: 'refreshExample',
-	    value: function refreshExample() {
-	      var _this2 = this;
-
-	      fetch('http://discrete-eltech.eurodir.ru:8888/test/fraction?id=' + (0, _getCookie2.default)('student_id')).then(function (response) {
-	        return response.json();
-	      }).then(function (example) {
-	        var inputs = _reactDom2.default.findDOMNode(_this2).querySelectorAll('input[type="number"]'); // Fuck JavaScript
-	        [].forEach.call(inputs, function (input) {
-	          return input.value = '';
-	        });
-	        _this2.setState(example);
-	      }).catch(console.error);
-	    }
-	  }, {
-	    key: 'check',
-	    value: function check() {
-	      var _this3 = this;
-
-	      var tableNode = _reactDom2.default.findDOMNode(this).querySelectorAll('.table tr');
-	      var table = [].map.call(tableNode, function (tr) {
-	        return [].map.call(tr.querySelectorAll('input[type="number"]'), function (input) {
-	          return input.value !== '' ? parseInt(input.value) : '';
-	        });
-	      });
-	      var output = table[1].filter(function (val) {
-	        return val !== '' && val !== 0;
-	      });
-	      fetch('http://discrete-eltech.eurodir.ru:8888/test/fraction/', {
-	        method: 'post',
-	        headers: new Headers({
-	          'Content-Type': 'application/json'
-	        }),
-	        body: JSON.stringify({
-	          input: this.state.input,
-	          table: table,
-	          output: output,
-	          test_id: this.state.test_id
-	        })
-	      }).then(function (response) {
-	        return response.json();
-	      }).then(function (response) {
-	        return _this3.setState(_extends({}, _this3.state, {
-	          status: response.status
-	        }));
-	      }).catch(console.error);
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var _this4 = this;
-
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'content-wrap' },
-	        _react2.default.createElement(_Toolbar2.default, null),
-	        _react2.default.createElement(
-	          'h1',
-	          null,
-	          'Разложение в цепную дробь'
-	        ),
-	        _react2.default.createElement(
-	          'h2',
-	          null,
-	          'Контроль'
-	        ),
-	        this.state.input ? _react2.default.createElement(
-	          'div',
-	          null,
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'Дана дробь ',
-	            this.state.input[0],
-	            '/',
-	            this.state.input[1]
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'table' },
-	            _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row, i) {
-	                return row.map(function (col, j) {
-	                  return i == 1 && j < 2 ? _react2.default.createElement('input', { type: 'number', disabled: true }) : _react2.default.createElement('input', { type: 'number' });
-	                });
-	              }) })
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'button-wrap' },
-	            _react2.default.createElement(
-	              'button',
-	              { onClick: function onClick(e) {
-	                  return _this4.check(e);
-	                } },
-	              'Проверить'
-	            ),
-	            this.state.status !== undefined ? this.state.status ? _react2.default.createElement('i', { className: 'checker ok' }) : _react2.default.createElement('i', { className: 'checker wrong' }) : null
-	          )
-	        ) : null
-	      );
-	    }
-	  }]);
-
-	  return FractionTest;
-	}(_react.Component);
-
-	exports.default = FractionTest;
-
-/***/ },
-/* 639 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(122);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _Table = __webpack_require__(626);
-
-	var _Table2 = _interopRequireDefault(_Table);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var ConvergentsShow = function (_Component) {
-	  _inherits(ConvergentsShow, _Component);
-
-	  function ConvergentsShow(props) {
-	    _classCallCheck(this, ConvergentsShow);
-
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(ConvergentsShow).call(this, props));
-
-	    _this.state = {};
-
-	    _this.refreshExample();
-	    return _this;
-	  }
-
-	  _createClass(ConvergentsShow, [{
-	    key: 'refreshExample',
-	    value: function refreshExample() {
-	      var _this2 = this;
-
-	      fetch('http://discrete-eltech.eurodir.ru:8888/solve/convergents').then(function (response) {
-	        return response.json();
-	      }).then(function (example) {
-	        _this2.setState(example);
-	      }).catch(console.error);
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var _this3 = this;
-
-	      var output = [];
-	      if (this.state.input) {
-	        for (var i = 2; i < this.state.table[2].length; i++) {
-	          if (this.state.table[2][i] !== 0) {
-	            output.push([this.state.table[2][i], this.state.table[3][i]]);
-	          }
-	        }
-	      }
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        this.state.input ? _react2.default.createElement(
-	          'div',
-	          { className: 'content-wrap' },
-	          _react2.default.createElement(
-	            'h1',
-	            null,
-	            'Нахождение подходящих дробей'
-	          ),
-	          _react2.default.createElement(
-	            'h2',
-	            null,
-	            'Демонстрация'
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'Дана дробь ',
-	            this.state.input[0],
-	            '/',
-	            this.state.input[1]
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'Возьмем ',
-	            this.state.input[0],
-	            ' и ',
-	            this.state.input[1],
-	            ' и применим расширенный алгоритм Евклида для подходящих дробей.'
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'Получим следующую таблицу:'
-	          ),
-	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
-	              return row.map(function (col) {
-	                return _react2.default.createElement(
-	                  'div',
-	                  { className: 'number-wrap' },
-	                  col
-	                );
-	              });
-	            }) }),
-	          _react2.default.createElement(
-	            'code',
-	            null,
-	            'Ответ: [',
-	            output.map(function (f) {
-	              return f[0] + '/' + f[1];
-	            }).join(', '),
-	            ']'
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'button-wrap' },
-	            _react2.default.createElement(
-	              'button',
-	              { onClick: function onClick(e) {
-	                  return _this3.refreshExample();
-	                } },
-	              'Обновить'
-	            )
-	          )
-	        ) : null
-	      );
-	    }
-	  }]);
-
-	  return ConvergentsShow;
-	}(_react.Component);
-
-	exports.default = ConvergentsShow;
-
-/***/ },
-/* 640 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(122);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(535);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	var _Table = __webpack_require__(626);
-
-	var _Table2 = _interopRequireDefault(_Table);
-
-	var _Toolbar = __webpack_require__(645);
-
-	var _Toolbar2 = _interopRequireDefault(_Toolbar);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var ConvergentsTrainer = function (_Component) {
-	  _inherits(ConvergentsTrainer, _Component);
-
-	  function ConvergentsTrainer(props) {
-	    _classCallCheck(this, ConvergentsTrainer);
-
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(ConvergentsTrainer).call(this, props));
-
-	    _this.state = {};
-
-	    _this.refreshExample();
-	    return _this;
-	  }
-
-	  _createClass(ConvergentsTrainer, [{
-	    key: 'refreshExample',
-	    value: function refreshExample() {
-	      var _this2 = this;
-
-	      fetch('http://discrete-eltech.eurodir.ru:8888/solve/convergents').then(function (response) {
-	        return response.json();
-	      }).then(function (example) {
-	        var inputs = _reactDom2.default.findDOMNode(_this2).querySelectorAll('input[type="number"]'); // Fuck JavaScript
-	        [].forEach.call(inputs, function (input) {
-	          input.value = '';
-	          input.classList.remove('ok');
-	          input.classList.remove('wrong');
-	        });
-	        _this2.setState(example);
-	      }).catch(console.error);
-	    }
-	  }, {
-	    key: 'check',
-	    value: function check(event) {
-	      if (event.currentTarget.value != '') {
-	        if (event.currentTarget.value === event.currentTarget.dataset.original) {
-	          event.currentTarget.classList.remove('wrong');
-	          event.currentTarget.classList.add('ok');
-	        } else {
-	          event.currentTarget.classList.remove('ok');
-	          event.currentTarget.classList.add('wrong');
-	        }
-	      }
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var _this3 = this;
-
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'content-wrap' },
-	        _react2.default.createElement(_Toolbar2.default, null),
-	        _react2.default.createElement(
-	          'h1',
-	          null,
-	          'Нахождение подходящих дробей'
-	        ),
-	        _react2.default.createElement(
-	          'h2',
-	          null,
-	          'Тренажёр'
-	        ),
-	        this.state.input ? _react2.default.createElement(
-	          'div',
-	          null,
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'Найдите подходящие дроби для ',
-	            this.state.input[0],
-	            '/',
-	            this.state.input[1]
-	          ),
-	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
-	              return row.map(function (col) {
-	                return col !== '' ? _react2.default.createElement(
-	                  'div',
-	                  { className: 'input-number-wrap' },
-	                  _react2.default.createElement('input', { type: 'number', 'data-original': col, onBlur: function onBlur(e) {
-	                      return _this3.check(e);
-	                    } }),
-	                  _react2.default.createElement('i', { className: 'checker' })
-	                ) : null;
-	              });
-	            }) }),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'button-wrap' },
-	            _react2.default.createElement(
-	              'button',
-	              { onClick: function onClick(e) {
-	                  return _this3.refreshExample();
-	                } },
-	              'Обновить'
-	            )
-	          )
-	        ) : null
-	      );
-	    }
-	  }]);
-
-	  return ConvergentsTrainer;
-	}(_react.Component);
-
-	exports.default = ConvergentsTrainer;
-
-/***/ },
-/* 641 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(122);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(535);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	var _Table = __webpack_require__(626);
-
-	var _Table2 = _interopRequireDefault(_Table);
-
-	var _Toolbar = __webpack_require__(645);
-
-	var _Toolbar2 = _interopRequireDefault(_Toolbar);
-
-	var _getCookie = __webpack_require__(632);
-
-	var _getCookie2 = _interopRequireDefault(_getCookie);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var ConvergentsTest = function (_Component) {
-	  _inherits(ConvergentsTest, _Component);
-
-	  function ConvergentsTest(props) {
-	    _classCallCheck(this, ConvergentsTest);
-
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(ConvergentsTest).call(this, props));
-
-	    _this.state = {};
-
-	    _this.refreshExample();
-	    return _this;
-	  }
-
-	  _createClass(ConvergentsTest, [{
-	    key: 'refreshExample',
-	    value: function refreshExample() {
-	      var _this2 = this;
-
-	      fetch('http://discrete-eltech.eurodir.ru:8888/test/convergents?id=' + (0, _getCookie2.default)('student_id')).then(function (response) {
-	        return response.json();
-	      }).then(function (example) {
-	        var inputs = _reactDom2.default.findDOMNode(_this2).querySelectorAll('input[type="number"]'); // Fuck JavaScript
-	        [].forEach.call(inputs, function (input) {
-	          return input.value = '';
-	        });
-	        _this2.setState(example);
-	      }).catch(console.error);
-	    }
-	  }, {
-	    key: 'check',
-	    value: function check() {
-	      var _this3 = this;
-
-	      var tableNode = _reactDom2.default.findDOMNode(this).querySelectorAll('.table tr');
-	      var table = [].map.call(tableNode, function (tr) {
-	        return [].map.call(tr.querySelectorAll('input[type="number"]'), function (input) {
-	          return input.value !== '' ? parseInt(input.value) : '';
-	        });
-	      });
-	      fetch('http://discrete-eltech.eurodir.ru:8888/test/convergents/', {
-	        method: 'post',
-	        headers: new Headers({
-	          'Content-Type': 'application/json'
-	        }),
-	        body: JSON.stringify({
-	          input: this.state.input,
-	          table: table,
-	          test_id: this.state.test_id
-	        })
-	      }).then(function (response) {
-	        return response.json();
-	      }).then(function (response) {
-	        return _this3.setState(_extends({}, _this3.state, {
-	          status: response.status
-	        }));
-	      }).catch(console.error);
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var _this4 = this;
-
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'content-wrap' },
-	        _react2.default.createElement(_Toolbar2.default, null),
-	        _react2.default.createElement(
-	          'h1',
-	          null,
-	          'Нахождение подходящих дробей'
-	        ),
-	        _react2.default.createElement(
-	          'h2',
-	          null,
-	          'Контроль'
-	        ),
-	        this.state.input ? _react2.default.createElement(
-	          'div',
-	          null,
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'Найдите подходящие дроби для ',
-	            this.state.input[0],
-	            '/',
-	            this.state.input[1]
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'table' },
-	            _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row, i) {
-	                return row.map(function (col, j) {
-	                  return i == 1 && j < 2 ? _react2.default.createElement('input', { type: 'number', disabled: true }) : _react2.default.createElement('input', { type: 'number' });
-	                });
-	              }) })
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'button-wrap' },
-	            _react2.default.createElement(
-	              'button',
-	              { onClick: function onClick(e) {
-	                  return _this4.check(e);
-	                } },
-	              'Проверить'
-	            ),
-	            this.state.status !== undefined ? this.state.status ? _react2.default.createElement('i', { className: 'checker ok' }) : _react2.default.createElement('i', { className: 'checker wrong' }) : null
-	          )
-	        ) : null
-	      );
-	    }
-	  }]);
-
-	  return ConvergentsTest;
-	}(_react.Component);
-
-	exports.default = ConvergentsTest;
-
-/***/ },
-/* 642 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(122);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _Table = __webpack_require__(626);
-
-	var _Table2 = _interopRequireDefault(_Table);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var InverseShow = function (_Component) {
-	  _inherits(InverseShow, _Component);
-
-	  function InverseShow(props) {
-	    _classCallCheck(this, InverseShow);
-
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(InverseShow).call(this, props));
-
-	    _this.state = {};
-
-	    _this.refreshExample();
-	    return _this;
-	  }
-
-	  _createClass(InverseShow, [{
-	    key: 'refreshExample',
-	    value: function refreshExample() {
-	      var _this2 = this;
-
-	      fetch('http://discrete-eltech.eurodir.ru:8888/solve/inverse').then(function (response) {
-	        return response.json();
-	      }).then(function (example) {
-	        _this2.setState(example);
-	      }).catch(console.error);
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var _this3 = this;
-
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        this.state.input ? _react2.default.createElement(
-	          'div',
-	          { className: 'content-wrap' },
-	          _react2.default.createElement(
-	            'h1',
-	            null,
-	            'Нахождение обратного числа'
-	          ),
-	          _react2.default.createElement(
-	            'h2',
-	            null,
-	            'Демонстрация'
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'Найти обратный элемент к ',
-	            this.state.input[1],
-	            ' в кольце вычетов по модулю ',
-	            this.state.input[0]
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'Классы вычетов определяется остатком по модулю ',
-	            this.state.input[0]
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'Или другими словами мы имеем уравнение'
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            this.state.input[1],
-	            'x = 1 mod ',
-	            this.state.input[0]
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'Где x обратное число, перейдём к уравнению'
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            this.state.input[1],
-	            'x - ',
-	            this.state.input[0],
-	            'y = 1'
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'Применим к ',
-	            this.state.input[0],
-	            ' и ',
-	            this.state.input[1],
-	            ' расширенный алгоритм Евклида.Если x ',
-	            '<',
-	            ' 0 нужно прибавить к нему модуль кольца вычетов'
-	          ),
-	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
-	              return row.map(function (col) {
-	                return _react2.default.createElement(
-	                  'div',
-	                  { className: 'number-wrap' },
-	                  col
-	                );
-	              });
-	            }) }),
-	          _react2.default.createElement(
-	            'code',
-	            null,
-	            'Ответ: ',
-	            this.state.output
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'button-wrap' },
-	            _react2.default.createElement(
-	              'button',
-	              { onClick: function onClick(e) {
-	                  return _this3.refreshExample();
-	                } },
-	              'Обновить'
-	            )
-	          )
-	        ) : null
-	      );
-	    }
-	  }]);
-
-	  return InverseShow;
-	}(_react.Component);
-
-	exports.default = InverseShow;
-
-/***/ },
-/* 643 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(122);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(535);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	var _Table = __webpack_require__(626);
-
-	var _Table2 = _interopRequireDefault(_Table);
-
-	var _Toolbar = __webpack_require__(645);
-
-	var _Toolbar2 = _interopRequireDefault(_Toolbar);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var InverseTrainer = function (_Component) {
-	  _inherits(InverseTrainer, _Component);
-
-	  function InverseTrainer(props) {
-	    _classCallCheck(this, InverseTrainer);
-
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(InverseTrainer).call(this, props));
-
-	    _this.state = {};
-
-	    _this.refreshExample();
-	    return _this;
-	  }
-
-	  _createClass(InverseTrainer, [{
-	    key: 'refreshExample',
-	    value: function refreshExample() {
-	      var _this2 = this;
-
-	      fetch('http://discrete-eltech.eurodir.ru:8888/solve/inverse').then(function (response) {
-	        return response.json();
-	      }).then(function (example) {
-	        var inputs = _reactDom2.default.findDOMNode(_this2).querySelectorAll('input[type="number"]'); // Fuck JavaScript
-	        [].forEach.call(inputs, function (input) {
-	          input.value = '';
-	          input.classList.remove('ok');
-	          input.classList.remove('wrong');
-	        });
-	        _this2.setState(example);
-	      }).catch(console.error);
-	    }
-	  }, {
-	    key: 'check',
-	    value: function check(event) {
-	      if (event.currentTarget.value != '') {
-	        if (event.currentTarget.value === event.currentTarget.dataset.original) {
-	          event.currentTarget.classList.remove('wrong');
-	          event.currentTarget.classList.add('ok');
-	        } else {
-	          event.currentTarget.classList.remove('ok');
-	          event.currentTarget.classList.add('wrong');
-	        }
-	      }
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var _this3 = this;
-
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'content-wrap' },
-	        _react2.default.createElement(_Toolbar2.default, null),
-	        _react2.default.createElement(
-	          'h1',
-	          null,
-	          'Нахождение обратного числа'
-	        ),
-	        _react2.default.createElement(
-	          'h2',
-	          null,
-	          'Тренажёр'
-	        ),
-	        this.state.input ? _react2.default.createElement(
-	          'div',
-	          null,
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'Найти обратный элемент к ',
-	            this.state.input[1],
-	            ' в поле вычетов по модулю ',
-	            this.state.input[0],
-	            ' заполнив нужную часть таблицы расширенного алгоритма Евклида. Классы вычетов определяется остатком по модулю ',
-	            this.state.input[0]
-	          ),
-	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
-	              return row.map(function (col) {
-	                return col !== '' ? _react2.default.createElement(
-	                  'div',
-	                  { className: 'input-number-wrap' },
-	                  _react2.default.createElement('input', { type: 'number', 'data-original': col, onBlur: function onBlur(e) {
-	                      return _this3.check(e);
-	                    } }),
-	                  _react2.default.createElement('i', { className: 'checker' })
-	                ) : null;
-	              });
-	            }) }),
-	          _react2.default.createElement(
-	            'code',
-	            { className: 'answer-area' },
-	            'Ответ:  ',
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'input-number-wrap' },
-	              _react2.default.createElement('input', { type: 'number', 'data-original': this.state.output, onBlur: function onBlur(e) {
-	                  return _this3.check(e);
-	                } }),
-	              _react2.default.createElement('i', { className: 'checker' })
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'button-wrap' },
-	            _react2.default.createElement(
-	              'button',
-	              { onClick: function onClick(e) {
-	                  return _this3.refreshExample();
-	                } },
-	              'Обновить'
-	            )
-	          )
-	        ) : null
-	      );
-	    }
-	  }]);
-
-	  return InverseTrainer;
-	}(_react.Component);
-
-	exports.default = InverseTrainer;
-
-/***/ },
-/* 644 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(122);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(535);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	var _Toolbar = __webpack_require__(645);
-
-	var _Toolbar2 = _interopRequireDefault(_Toolbar);
-
-	var _getCookie = __webpack_require__(632);
-
-	var _getCookie2 = _interopRequireDefault(_getCookie);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var InverseTest = function (_Component) {
-	  _inherits(InverseTest, _Component);
-
-	  function InverseTest(props) {
-	    _classCallCheck(this, InverseTest);
-
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(InverseTest).call(this, props));
-
-	    _this.state = {};
-
-	    _this.refreshExample();
-	    return _this;
-	  }
-
-	  _createClass(InverseTest, [{
-	    key: 'refreshExample',
-	    value: function refreshExample() {
-	      var _this2 = this;
-
-	      fetch('http://discrete-eltech.eurodir.ru:8888/test/inverse?id=' + (0, _getCookie2.default)('student_id')).then(function (response) {
-	        return response.json();
-	      }).then(function (example) {
-	        var inputs = _reactDom2.default.findDOMNode(_this2).querySelectorAll('input[type="number"]'); // Fuck JavaScript
-	        [].forEach.call(inputs, function (input) {
-	          return input.value = '';
-	        });
-	        _this2.setState(example);
-	      }).catch(console.error);
-	    }
-	  }, {
-	    key: 'check',
-	    value: function check() {
-	      var _this3 = this;
-
-	      fetch('http://discrete-eltech.eurodir.ru:8888/test/inverse/', {
-	        method: 'post',
-	        headers: new Headers({
-	          'Content-Type': 'application/json'
-	        }),
-	        body: JSON.stringify({
-	          input: this.state.input,
-	          output: parseInt(this.refs.output.value),
-	          test_id: this.state.test_id
-	        })
-	      }).then(function (response) {
-	        return response.json();
-	      }).then(function (response) {
-	        return _this3.setState(_extends({}, _this3.state, {
-	          status: response.status
-	        }));
-	      }).catch(console.error);
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var _this4 = this;
-
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'content-wrap' },
-	        _react2.default.createElement(_Toolbar2.default, { smartTable: true }),
-	        _react2.default.createElement(
-	          'h1',
-	          null,
-	          'Нахождение обратного числа'
-	        ),
-	        _react2.default.createElement(
-	          'h2',
-	          null,
-	          'Контроль'
-	        ),
-	        this.state.input ? _react2.default.createElement(
-	          'div',
-	          null,
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'Найти обратный элемент к ',
-	            this.state.input[1],
-	            ' в поле вычетов по модулю ',
-	            this.state.input[0],
-	            ' заполнив нужную часть таблицы расширенного алгоритма Евклида. Классы вычетов определяется остатком по модулю ',
-	            this.state.input[0]
-	          ),
-	          _react2.default.createElement(
-	            'code',
-	            { className: 'answer-area' },
-	            'Ответ:  ',
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'input-number-wrap' },
-	              _react2.default.createElement('input', { type: 'number', ref: 'output' })
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'button-wrap' },
-	            _react2.default.createElement(
-	              'button',
-	              { onClick: function onClick(e) {
-	                  return _this4.check(e);
-	                } },
-	              'Проверить'
-	            ),
-	            this.state.status !== undefined ? this.state.status ? _react2.default.createElement('i', { className: 'checker ok' }) : _react2.default.createElement('i', { className: 'checker wrong' }) : null
-	          )
-	        ) : null
-	      );
-	    }
-	  }]);
-
-	  return InverseTest;
-	}(_react.Component);
-
-	exports.default = InverseTest;
-
-/***/ },
-/* 645 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(122);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _SmartTable = __webpack_require__(646);
+	var _SmartTable = __webpack_require__(632);
 
 	var _SmartTable2 = _interopRequireDefault(_SmartTable);
 
@@ -43455,7 +41358,7 @@
 	Toolbar.defaultProps = { smartTable: false };
 
 /***/ },
-/* 646 */
+/* 632 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43581,6 +41484,2103 @@
 	}(_react.Component);
 
 	exports.default = SmartTable;
+
+/***/ },
+/* 633 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(122);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(535);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	var _Table = __webpack_require__(626);
+
+	var _Table2 = _interopRequireDefault(_Table);
+
+	var _Toolbar = __webpack_require__(631);
+
+	var _Toolbar2 = _interopRequireDefault(_Toolbar);
+
+	var _getCookie = __webpack_require__(634);
+
+	var _getCookie2 = _interopRequireDefault(_getCookie);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var GCDTest = function (_Component) {
+	  _inherits(GCDTest, _Component);
+
+	  function GCDTest(props) {
+	    _classCallCheck(this, GCDTest);
+
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(GCDTest).call(this, props));
+
+	    _this.state = {};
+
+	    _this.refreshExample();
+	    return _this;
+	  }
+
+	  _createClass(GCDTest, [{
+	    key: 'refreshExample',
+	    value: function refreshExample() {
+	      var _this2 = this;
+
+	      fetch('http://discrete-eltech.eurodir.ru:8888/test/nod?id=' + (0, _getCookie2.default)('student_id')).then(function (response) {
+	        return response.json();
+	      }).then(function (example) {
+	        var inputs = _reactDom2.default.findDOMNode(_this2).querySelectorAll('input[type="number"]'); // Fuck JavaScript
+	        [].forEach.call(inputs, function (input) {
+	          return input.value = '';
+	        });
+	        _this2.setState(example);
+	      }).catch(console.error);
+	    }
+	  }, {
+	    key: 'check',
+	    value: function check() {
+	      var _this3 = this;
+
+	      var tableNode = _reactDom2.default.findDOMNode(this).querySelectorAll('.table tr');
+	      var table = [].map.call(tableNode, function (tr) {
+	        return [].map.call(tr.querySelectorAll('input[type="number"]'), function (input) {
+	          return input.value !== '' ? parseInt(input.value) : '';
+	        });
+	      });
+	      fetch('http://discrete-eltech.eurodir.ru:8888/test/nod/', {
+	        method: 'post',
+	        body: JSON.stringify({
+	          input: this.state.input,
+	          table: table,
+	          output: parseInt(this.refs.output.value),
+	          test_id: this.state.test_id
+	        }),
+	        headers: new Headers({
+	          'Content-Type': 'application/json'
+	        })
+	      }).then(function (response) {
+	        return response.json();
+	      }).then(function (response) {
+	        return _this3.setState(_extends({}, _this3.state, {
+	          status: response.status
+	        }));
+	      }).catch(console.error);
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this4 = this;
+
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'content-wrap' },
+	        _react2.default.createElement(_Toolbar2.default, null),
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'Наибольший общий делитель'
+	        ),
+	        _react2.default.createElement(
+	          'h2',
+	          null,
+	          'Контроль'
+	        ),
+	        this.state.input ? _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Даны числа ',
+	            this.state.input.join(', '),
+	            '.'
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Примените к ним алгоритм Евклида.'
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Вводите полученные значения в следующую таблицу:'
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'table' },
+	            _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row, i) {
+	                return row.map(function (col, j) {
+	                  return i > 0 && j < 2 ? _react2.default.createElement('input', { type: 'number', disabled: true }) : _react2.default.createElement('input', { type: 'number' });
+	                });
+	              }) })
+	          ),
+	          _react2.default.createElement(
+	            'code',
+	            { className: 'answer-area' },
+	            'Ответ: НОД(',
+	            this.state.input.join(', '),
+	            ') =  ',
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'input-number-wrap' },
+	              _react2.default.createElement('input', { type: 'number', ref: 'output' })
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'button-wrap' },
+	            _react2.default.createElement(
+	              'button',
+	              { onClick: function onClick(e) {
+	                  return _this4.check(e);
+	                } },
+	              'Проверить'
+	            ),
+	            this.state.status !== undefined ? this.state.status ? _react2.default.createElement('i', { className: 'checker ok' }) : _react2.default.createElement('i', { className: 'checker wrong' }) : null
+	          )
+	        ) : ''
+	      );
+	    }
+	  }]);
+
+	  return GCDTest;
+	}(_react.Component);
+
+	exports.default = GCDTest;
+
+/***/ },
+/* 634 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = getCookie;
+	function getCookie(name) {
+	  var matches = document.cookie.match(new RegExp("(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"));
+	  return matches ? decodeURIComponent(matches[1]) : undefined;
+	}
+
+/***/ },
+/* 635 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(122);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Table = __webpack_require__(626);
+
+	var _Table2 = _interopRequireDefault(_Table);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var axbyShow = function (_Component) {
+	  _inherits(axbyShow, _Component);
+
+	  function axbyShow(props) {
+	    _classCallCheck(this, axbyShow);
+
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(axbyShow).call(this, props));
+
+	    _this.state = {};
+
+	    _this.refreshExample();
+	    return _this;
+	  }
+
+	  _createClass(axbyShow, [{
+	    key: 'refreshExample',
+	    value: function refreshExample() {
+	      var _this2 = this;
+
+	      fetch('http://discrete-eltech.eurodir.ru:8888/solve/axby1').then(function (response) {
+	        return response.json();
+	      }).then(function (example) {
+	        _this2.setState(example);
+	      }).catch(console.error);
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this3 = this;
+
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        this.state.input ? _react2.default.createElement(
+	          'div',
+	          { className: 'content-wrap' },
+	          _react2.default.createElement(
+	            'h1',
+	            null,
+	            'Используя расширенный алгоритм Евклида, найдите частное решение диофантова уравнения'
+	          ),
+	          _react2.default.createElement(
+	            'h2',
+	            null,
+	            'Демонстрация'
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            this.state.input[0],
+	            'x + ',
+	            this.state.input[1],
+	            'y = 1'
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            '|',
+	            'x',
+	            '|',
+	            ' ',
+	            '<',
+	            ' ',
+	            '|',
+	            this.state.input[1],
+	            '|',
+	            ', ',
+	            '|',
+	            'y',
+	            '|',
+	            ' ',
+	            '<',
+	            ' ',
+	            '|',
+	            this.state.input[0],
+	            '|'
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Для решения этой задачи нам необходимо воспользоваться расширенным алгоритмом Евклида, как показано в следующей таблице.'
+	          ),
+	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
+	              return row.map(function (col) {
+	                return _react2.default.createElement(
+	                  'div',
+	                  { className: 'number-wrap' },
+	                  col
+	                );
+	              });
+	            }) }),
+	          _react2.default.createElement(
+	            'code',
+	            null,
+	            'Ответ: (',
+	            this.state.output.join('; '),
+	            ')'
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'button-wrap' },
+	            _react2.default.createElement(
+	              'button',
+	              { onClick: function onClick(e) {
+	                  return _this3.refreshExample();
+	                } },
+	              'Обновить'
+	            )
+	          )
+	        ) : null
+	      );
+	    }
+	  }]);
+
+	  return axbyShow;
+	}(_react.Component);
+
+	exports.default = axbyShow;
+
+/***/ },
+/* 636 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(122);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(535);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	var _Table = __webpack_require__(626);
+
+	var _Table2 = _interopRequireDefault(_Table);
+
+	var _Toolbar = __webpack_require__(631);
+
+	var _Toolbar2 = _interopRequireDefault(_Toolbar);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var axbyTrainer = function (_Component) {
+	  _inherits(axbyTrainer, _Component);
+
+	  function axbyTrainer(props) {
+	    _classCallCheck(this, axbyTrainer);
+
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(axbyTrainer).call(this, props));
+
+	    _this.state = {};
+
+	    _this.refreshExample();
+	    return _this;
+	  }
+
+	  _createClass(axbyTrainer, [{
+	    key: 'refreshExample',
+	    value: function refreshExample() {
+	      var _this2 = this;
+
+	      fetch('http://discrete-eltech.eurodir.ru:8888/solve/axby1').then(function (response) {
+	        return response.json();
+	      }).then(function (example) {
+	        var inputs = _reactDom2.default.findDOMNode(_this2).querySelectorAll('input[type="number"]'); // Fuck JavaScript
+	        [].forEach.call(inputs, function (input) {
+	          input.value = '';
+	          input.classList.remove('ok');
+	          input.classList.remove('wrong');
+	        });
+	        _this2.setState(example);
+	      }).catch(console.error);
+	    }
+	  }, {
+	    key: 'check',
+	    value: function check(event) {
+	      if (event.currentTarget.value != '') {
+	        if (event.currentTarget.value === event.currentTarget.dataset.original) {
+	          event.currentTarget.classList.remove('wrong');
+	          event.currentTarget.classList.add('ok');
+	        } else {
+	          event.currentTarget.classList.remove('ok');
+	          event.currentTarget.classList.add('wrong');
+	        }
+	      }
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this3 = this;
+
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'content-wrap' },
+	        _react2.default.createElement(_Toolbar2.default, null),
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'Используя расширенный алгоритм Евклида, найдите частное решение диофантова уравнения'
+	        ),
+	        _react2.default.createElement(
+	          'h2',
+	          null,
+	          'Тренажёр'
+	        ),
+	        this.state.input ? _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            this.state.input[0],
+	            'x + ',
+	            this.state.input[1],
+	            'y = 1'
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            '|',
+	            'x',
+	            '|',
+	            ' ',
+	            '<',
+	            ' ',
+	            '|',
+	            this.state.input[1],
+	            '|',
+	            ', ',
+	            '|',
+	            'y',
+	            '|',
+	            ' ',
+	            '<',
+	            ' ',
+	            '|',
+	            this.state.input[0],
+	            '|'
+	          ),
+	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
+	              return row.map(function (col) {
+	                return col !== '' ? _react2.default.createElement(
+	                  'div',
+	                  { className: 'input-number-wrap' },
+	                  _react2.default.createElement('input', { type: 'number', 'data-original': col, onBlur: function onBlur(e) {
+	                      return _this3.check(e);
+	                    } }),
+	                  _react2.default.createElement('i', { className: 'checker' })
+	                ) : null;
+	              });
+	            }) }),
+	          _react2.default.createElement(
+	            'code',
+	            { className: 'answer-area' },
+	            'Ответ: X =  ',
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'input-number-wrap' },
+	              _react2.default.createElement('input', { type: 'number', 'data-original': this.state.output[0], onBlur: function onBlur(e) {
+	                  return _this3.check(e);
+	                } }),
+	              _react2.default.createElement('i', { className: 'checker' })
+	            ),
+	            ' Y =  ',
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'input-number-wrap' },
+	              _react2.default.createElement('input', { type: 'number', 'data-original': this.state.output[1], onBlur: function onBlur(e) {
+	                  return _this3.check(e);
+	                } }),
+	              _react2.default.createElement('i', { className: 'checker' })
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'button',
+	            { onClick: function onClick(e) {
+	                return _this3.refreshExample();
+	              } },
+	            'Обновить'
+	          )
+	        ) : null
+	      );
+	    }
+	  }]);
+
+	  return axbyTrainer;
+	}(_react.Component);
+
+	exports.default = axbyTrainer;
+
+/***/ },
+/* 637 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(122);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(535);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	var _Table = __webpack_require__(626);
+
+	var _Table2 = _interopRequireDefault(_Table);
+
+	var _Toolbar = __webpack_require__(631);
+
+	var _Toolbar2 = _interopRequireDefault(_Toolbar);
+
+	var _getCookie = __webpack_require__(634);
+
+	var _getCookie2 = _interopRequireDefault(_getCookie);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var axbyTest = function (_Component) {
+	  _inherits(axbyTest, _Component);
+
+	  function axbyTest(props) {
+	    _classCallCheck(this, axbyTest);
+
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(axbyTest).call(this, props));
+
+	    _this.state = {};
+
+	    _this.refreshExample();
+	    return _this;
+	  }
+
+	  _createClass(axbyTest, [{
+	    key: 'refreshExample',
+	    value: function refreshExample() {
+	      var _this2 = this;
+
+	      fetch('http://discrete-eltech.eurodir.ru:8888/test/axby1?id=' + (0, _getCookie2.default)('student_id')).then(function (response) {
+	        return response.json();
+	      }).then(function (example) {
+	        var inputs = _reactDom2.default.findDOMNode(_this2).querySelectorAll('input[type="number"]'); // Fuck JavaScript
+	        [].forEach.call(inputs, function (input) {
+	          return input.value = '';
+	        });
+	        _this2.setState(example);
+	      }).catch(console.error);
+	    }
+	  }, {
+	    key: 'check',
+	    value: function check() {
+	      var _this3 = this;
+
+	      var tableNode = _reactDom2.default.findDOMNode(this).querySelectorAll('.table tr');
+	      var table = [].map.call(tableNode, function (tr) {
+	        return [].map.call(tr.querySelectorAll('input[type="number"]'), function (input) {
+	          return input.value !== '' ? parseInt(input.value) : '';
+	        });
+	      });
+	      var output = [parseInt(this.refs.X.value), parseInt(this.refs.Y.value)];
+	      fetch('http://discrete-eltech.eurodir.ru:8888/test/axby1/', {
+	        method: 'post',
+	        headers: new Headers({
+	          'Content-Type': 'application/json'
+	        }),
+	        body: JSON.stringify({
+	          input: this.state.input,
+	          table: table,
+	          output: output,
+	          test_id: this.state.test_id
+	        })
+	      }).then(function (response) {
+	        return response.json();
+	      }).then(function (response) {
+	        return _this3.setState(_extends({}, _this3.state, {
+	          status: response.status
+	        }));
+	      }).catch(console.error);
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this4 = this;
+
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'content-wrap' },
+	        _react2.default.createElement(_Toolbar2.default, null),
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'Используя расширенный алгоритм Евклида, найдите частное решение диофантова уравнения'
+	        ),
+	        _react2.default.createElement(
+	          'h2',
+	          null,
+	          'Контроль'
+	        ),
+	        this.state.input ? _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            this.state.input[0],
+	            'x + ',
+	            this.state.input[1],
+	            'y = 1'
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            '|',
+	            'x',
+	            '|',
+	            ' ',
+	            '<',
+	            ' ',
+	            '|',
+	            this.state.input[1],
+	            '|',
+	            ', ',
+	            '|',
+	            'y',
+	            '|',
+	            ' ',
+	            '<',
+	            ' ',
+	            '|',
+	            this.state.input[0],
+	            '|'
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'table' },
+	            _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row, i) {
+	                return row.map(function (col, j) {
+	                  return i == 1 && j < 2 ? _react2.default.createElement('input', { type: 'number', disabled: true }) : _react2.default.createElement('input', { type: 'number' });
+	                });
+	              }) })
+	          ),
+	          _react2.default.createElement(
+	            'code',
+	            { className: 'answer-area' },
+	            'Ответ: X =  ',
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'input-number-wrap' },
+	              _react2.default.createElement('input', { type: 'number', ref: 'X' })
+	            ),
+	            ' Y =  ',
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'input-number-wrap' },
+	              _react2.default.createElement('input', { type: 'number', ref: 'Y' })
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'button-wrap' },
+	            _react2.default.createElement(
+	              'button',
+	              { onClick: function onClick(e) {
+	                  return _this4.check(e);
+	                } },
+	              'Проверить'
+	            ),
+	            this.state.status !== undefined ? this.state.status ? _react2.default.createElement('i', { className: 'checker ok' }) : _react2.default.createElement('i', { className: 'checker wrong' }) : null
+	          )
+	        ) : null
+	      );
+	    }
+	  }]);
+
+	  return axbyTest;
+	}(_react.Component);
+
+	exports.default = axbyTest;
+
+/***/ },
+/* 638 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(122);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Table = __webpack_require__(626);
+
+	var _Table2 = _interopRequireDefault(_Table);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var FractionShow = function (_Component) {
+	  _inherits(FractionShow, _Component);
+
+	  function FractionShow(props) {
+	    _classCallCheck(this, FractionShow);
+
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(FractionShow).call(this, props));
+
+	    _this.state = {};
+
+	    _this.refreshExample();
+	    return _this;
+	  }
+
+	  _createClass(FractionShow, [{
+	    key: 'refreshExample',
+	    value: function refreshExample() {
+	      var _this2 = this;
+
+	      fetch('http://discrete-eltech.eurodir.ru:8888/solve/fraction').then(function (response) {
+	        return response.json();
+	      }).then(function (example) {
+	        _this2.setState(example);
+	      }).catch(console.error);
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this3 = this;
+
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        this.state.input ? _react2.default.createElement(
+	          'div',
+	          { className: 'content-wrap' },
+	          _react2.default.createElement(
+	            'h1',
+	            null,
+	            'Разложение в цепную дробь'
+	          ),
+	          _react2.default.createElement(
+	            'h2',
+	            null,
+	            'Демонстрация'
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Дана дробь ',
+	            this.state.input[0],
+	            '/',
+	            this.state.input[1]
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Возьмем ',
+	            this.state.input[0],
+	            ' и ',
+	            this.state.input[1],
+	            ' и применим алгоритм Евклида, получим следующую таблицу:'
+	          ),
+	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
+	              return row.map(function (col) {
+	                return _react2.default.createElement(
+	                  'div',
+	                  { className: 'number-wrap' },
+	                  col
+	                );
+	              });
+	            }) }),
+	          _react2.default.createElement(
+	            'code',
+	            null,
+	            'Ответ: [',
+	            this.state.output.filter(function (x) {
+	              return x !== 0;
+	            }).join(', '),
+	            ']'
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'button-wrap' },
+	            _react2.default.createElement(
+	              'button',
+	              { onClick: function onClick(e) {
+	                  return _this3.refreshExample();
+	                } },
+	              'Обновить'
+	            )
+	          )
+	        ) : null
+	      );
+	    }
+	  }]);
+
+	  return FractionShow;
+	}(_react.Component);
+
+	exports.default = FractionShow;
+
+/***/ },
+/* 639 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(122);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(535);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	var _Table = __webpack_require__(626);
+
+	var _Table2 = _interopRequireDefault(_Table);
+
+	var _Toolbar = __webpack_require__(631);
+
+	var _Toolbar2 = _interopRequireDefault(_Toolbar);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var FractionTrainer = function (_Component) {
+	  _inherits(FractionTrainer, _Component);
+
+	  function FractionTrainer(props) {
+	    _classCallCheck(this, FractionTrainer);
+
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(FractionTrainer).call(this, props));
+
+	    _this.state = {};
+
+	    _this.refreshExample();
+	    return _this;
+	  }
+
+	  _createClass(FractionTrainer, [{
+	    key: 'refreshExample',
+	    value: function refreshExample() {
+	      var _this2 = this;
+
+	      fetch('http://discrete-eltech.eurodir.ru:8888/solve/fraction').then(function (response) {
+	        return response.json();
+	      }).then(function (example) {
+	        var inputs = _reactDom2.default.findDOMNode(_this2).querySelectorAll('input[type="number"]'); // Fuck JavaScript
+	        [].forEach.call(inputs, function (input) {
+	          input.value = '';
+	          input.classList.remove('ok');
+	          input.classList.remove('wrong');
+	        });
+	        _this2.setState(example);
+	      }).catch(console.error);
+	    }
+	  }, {
+	    key: 'check',
+	    value: function check(event) {
+	      if (event.currentTarget.value != '') {
+	        if (event.currentTarget.value === event.currentTarget.dataset.original) {
+	          event.currentTarget.classList.remove('wrong');
+	          event.currentTarget.classList.add('ok');
+	        } else {
+	          event.currentTarget.classList.remove('ok');
+	          event.currentTarget.classList.add('wrong');
+	        }
+	      }
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this3 = this;
+
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'content-wrap' },
+	        _react2.default.createElement(_Toolbar2.default, null),
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'Разложение в цепную дробь'
+	        ),
+	        _react2.default.createElement(
+	          'h2',
+	          null,
+	          'Тренажёр'
+	        ),
+	        this.state.input ? _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Дана дробь ',
+	            this.state.input[0],
+	            '/',
+	            this.state.input[1]
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Возьмем ',
+	            this.state.input[0],
+	            ' и ',
+	            this.state.input[1],
+	            ' и применим алгоритм Евклида, получим следующую таблицу:'
+	          ),
+	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
+	              return row.map(function (col) {
+	                return col !== '' ? _react2.default.createElement(
+	                  'div',
+	                  { className: 'input-number-wrap' },
+	                  _react2.default.createElement('input', { type: 'number', 'data-original': col, onBlur: function onBlur(e) {
+	                      return _this3.check(e);
+	                    } }),
+	                  _react2.default.createElement('i', { className: 'checker' })
+	                ) : null;
+	              });
+	            }) }),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'button-wrap' },
+	            _react2.default.createElement(
+	              'button',
+	              { onClick: function onClick(e) {
+	                  return _this3.refreshExample();
+	                } },
+	              'Обновить'
+	            )
+	          )
+	        ) : null
+	      );
+	    }
+	  }]);
+
+	  return FractionTrainer;
+	}(_react.Component);
+
+	exports.default = FractionTrainer;
+
+/***/ },
+/* 640 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(122);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(535);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	var _Table = __webpack_require__(626);
+
+	var _Table2 = _interopRequireDefault(_Table);
+
+	var _Toolbar = __webpack_require__(631);
+
+	var _Toolbar2 = _interopRequireDefault(_Toolbar);
+
+	var _getCookie = __webpack_require__(634);
+
+	var _getCookie2 = _interopRequireDefault(_getCookie);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var FractionTest = function (_Component) {
+	  _inherits(FractionTest, _Component);
+
+	  function FractionTest(props) {
+	    _classCallCheck(this, FractionTest);
+
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(FractionTest).call(this, props));
+
+	    _this.state = {};
+
+	    _this.refreshExample();
+	    return _this;
+	  }
+
+	  _createClass(FractionTest, [{
+	    key: 'refreshExample',
+	    value: function refreshExample() {
+	      var _this2 = this;
+
+	      fetch('http://discrete-eltech.eurodir.ru:8888/test/fraction?id=' + (0, _getCookie2.default)('student_id')).then(function (response) {
+	        return response.json();
+	      }).then(function (example) {
+	        var inputs = _reactDom2.default.findDOMNode(_this2).querySelectorAll('input[type="number"]'); // Fuck JavaScript
+	        [].forEach.call(inputs, function (input) {
+	          return input.value = '';
+	        });
+	        _this2.setState(example);
+	      }).catch(console.error);
+	    }
+	  }, {
+	    key: 'check',
+	    value: function check() {
+	      var _this3 = this;
+
+	      var tableNode = _reactDom2.default.findDOMNode(this).querySelectorAll('.table tr');
+	      var table = [].map.call(tableNode, function (tr) {
+	        return [].map.call(tr.querySelectorAll('input[type="number"]'), function (input) {
+	          return input.value !== '' ? parseInt(input.value) : '';
+	        });
+	      });
+	      var output = table[1].filter(function (val) {
+	        return val !== '' && val !== 0;
+	      });
+	      fetch('http://discrete-eltech.eurodir.ru:8888/test/fraction/', {
+	        method: 'post',
+	        headers: new Headers({
+	          'Content-Type': 'application/json'
+	        }),
+	        body: JSON.stringify({
+	          input: this.state.input,
+	          table: table,
+	          output: output,
+	          test_id: this.state.test_id
+	        })
+	      }).then(function (response) {
+	        return response.json();
+	      }).then(function (response) {
+	        return _this3.setState(_extends({}, _this3.state, {
+	          status: response.status
+	        }));
+	      }).catch(console.error);
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this4 = this;
+
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'content-wrap' },
+	        _react2.default.createElement(_Toolbar2.default, null),
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'Разложение в цепную дробь'
+	        ),
+	        _react2.default.createElement(
+	          'h2',
+	          null,
+	          'Контроль'
+	        ),
+	        this.state.input ? _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Дана дробь ',
+	            this.state.input[0],
+	            '/',
+	            this.state.input[1]
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'table' },
+	            _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row, i) {
+	                return row.map(function (col, j) {
+	                  return i == 1 && j < 2 ? _react2.default.createElement('input', { type: 'number', disabled: true }) : _react2.default.createElement('input', { type: 'number' });
+	                });
+	              }) })
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'button-wrap' },
+	            _react2.default.createElement(
+	              'button',
+	              { onClick: function onClick(e) {
+	                  return _this4.check(e);
+	                } },
+	              'Проверить'
+	            ),
+	            this.state.status !== undefined ? this.state.status ? _react2.default.createElement('i', { className: 'checker ok' }) : _react2.default.createElement('i', { className: 'checker wrong' }) : null
+	          )
+	        ) : null
+	      );
+	    }
+	  }]);
+
+	  return FractionTest;
+	}(_react.Component);
+
+	exports.default = FractionTest;
+
+/***/ },
+/* 641 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(122);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Table = __webpack_require__(626);
+
+	var _Table2 = _interopRequireDefault(_Table);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var ConvergentsShow = function (_Component) {
+	  _inherits(ConvergentsShow, _Component);
+
+	  function ConvergentsShow(props) {
+	    _classCallCheck(this, ConvergentsShow);
+
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(ConvergentsShow).call(this, props));
+
+	    _this.state = {};
+
+	    _this.refreshExample();
+	    return _this;
+	  }
+
+	  _createClass(ConvergentsShow, [{
+	    key: 'refreshExample',
+	    value: function refreshExample() {
+	      var _this2 = this;
+
+	      fetch('http://discrete-eltech.eurodir.ru:8888/solve/convergents').then(function (response) {
+	        return response.json();
+	      }).then(function (example) {
+	        _this2.setState(example);
+	      }).catch(console.error);
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this3 = this;
+
+	      var output = [];
+	      if (this.state.input) {
+	        for (var i = 2; i < this.state.table[2].length; i++) {
+	          if (this.state.table[2][i] !== 0) {
+	            output.push([this.state.table[2][i], this.state.table[3][i]]);
+	          }
+	        }
+	      }
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        this.state.input ? _react2.default.createElement(
+	          'div',
+	          { className: 'content-wrap' },
+	          _react2.default.createElement(
+	            'h1',
+	            null,
+	            'Нахождение подходящих дробей'
+	          ),
+	          _react2.default.createElement(
+	            'h2',
+	            null,
+	            'Демонстрация'
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Дана дробь ',
+	            this.state.input[0],
+	            '/',
+	            this.state.input[1]
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Возьмем ',
+	            this.state.input[0],
+	            ' и ',
+	            this.state.input[1],
+	            ' и применим расширенный алгоритм Евклида для подходящих дробей.'
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Получим следующую таблицу:'
+	          ),
+	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
+	              return row.map(function (col) {
+	                return _react2.default.createElement(
+	                  'div',
+	                  { className: 'number-wrap' },
+	                  col
+	                );
+	              });
+	            }) }),
+	          _react2.default.createElement(
+	            'code',
+	            null,
+	            'Ответ: [',
+	            output.map(function (f) {
+	              return f[0] + '/' + f[1];
+	            }).join(', '),
+	            ']'
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'button-wrap' },
+	            _react2.default.createElement(
+	              'button',
+	              { onClick: function onClick(e) {
+	                  return _this3.refreshExample();
+	                } },
+	              'Обновить'
+	            )
+	          )
+	        ) : null
+	      );
+	    }
+	  }]);
+
+	  return ConvergentsShow;
+	}(_react.Component);
+
+	exports.default = ConvergentsShow;
+
+/***/ },
+/* 642 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(122);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(535);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	var _Table = __webpack_require__(626);
+
+	var _Table2 = _interopRequireDefault(_Table);
+
+	var _Toolbar = __webpack_require__(631);
+
+	var _Toolbar2 = _interopRequireDefault(_Toolbar);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var ConvergentsTrainer = function (_Component) {
+	  _inherits(ConvergentsTrainer, _Component);
+
+	  function ConvergentsTrainer(props) {
+	    _classCallCheck(this, ConvergentsTrainer);
+
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(ConvergentsTrainer).call(this, props));
+
+	    _this.state = {};
+
+	    _this.refreshExample();
+	    return _this;
+	  }
+
+	  _createClass(ConvergentsTrainer, [{
+	    key: 'refreshExample',
+	    value: function refreshExample() {
+	      var _this2 = this;
+
+	      fetch('http://discrete-eltech.eurodir.ru:8888/solve/convergents').then(function (response) {
+	        return response.json();
+	      }).then(function (example) {
+	        var inputs = _reactDom2.default.findDOMNode(_this2).querySelectorAll('input[type="number"]'); // Fuck JavaScript
+	        [].forEach.call(inputs, function (input) {
+	          input.value = '';
+	          input.classList.remove('ok');
+	          input.classList.remove('wrong');
+	        });
+	        _this2.setState(example);
+	      }).catch(console.error);
+	    }
+	  }, {
+	    key: 'check',
+	    value: function check(event) {
+	      if (event.currentTarget.value != '') {
+	        if (event.currentTarget.value === event.currentTarget.dataset.original) {
+	          event.currentTarget.classList.remove('wrong');
+	          event.currentTarget.classList.add('ok');
+	        } else {
+	          event.currentTarget.classList.remove('ok');
+	          event.currentTarget.classList.add('wrong');
+	        }
+	      }
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this3 = this;
+
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'content-wrap' },
+	        _react2.default.createElement(_Toolbar2.default, null),
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'Нахождение подходящих дробей'
+	        ),
+	        _react2.default.createElement(
+	          'h2',
+	          null,
+	          'Тренажёр'
+	        ),
+	        this.state.input ? _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Найдите подходящие дроби для ',
+	            this.state.input[0],
+	            '/',
+	            this.state.input[1]
+	          ),
+	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
+	              return row.map(function (col) {
+	                return col !== '' ? _react2.default.createElement(
+	                  'div',
+	                  { className: 'input-number-wrap' },
+	                  _react2.default.createElement('input', { type: 'number', 'data-original': col, onBlur: function onBlur(e) {
+	                      return _this3.check(e);
+	                    } }),
+	                  _react2.default.createElement('i', { className: 'checker' })
+	                ) : null;
+	              });
+	            }) }),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'button-wrap' },
+	            _react2.default.createElement(
+	              'button',
+	              { onClick: function onClick(e) {
+	                  return _this3.refreshExample();
+	                } },
+	              'Обновить'
+	            )
+	          )
+	        ) : null
+	      );
+	    }
+	  }]);
+
+	  return ConvergentsTrainer;
+	}(_react.Component);
+
+	exports.default = ConvergentsTrainer;
+
+/***/ },
+/* 643 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(122);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(535);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	var _Table = __webpack_require__(626);
+
+	var _Table2 = _interopRequireDefault(_Table);
+
+	var _Toolbar = __webpack_require__(631);
+
+	var _Toolbar2 = _interopRequireDefault(_Toolbar);
+
+	var _getCookie = __webpack_require__(634);
+
+	var _getCookie2 = _interopRequireDefault(_getCookie);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var ConvergentsTest = function (_Component) {
+	  _inherits(ConvergentsTest, _Component);
+
+	  function ConvergentsTest(props) {
+	    _classCallCheck(this, ConvergentsTest);
+
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(ConvergentsTest).call(this, props));
+
+	    _this.state = {};
+
+	    _this.refreshExample();
+	    return _this;
+	  }
+
+	  _createClass(ConvergentsTest, [{
+	    key: 'refreshExample',
+	    value: function refreshExample() {
+	      var _this2 = this;
+
+	      fetch('http://discrete-eltech.eurodir.ru:8888/test/convergents?id=' + (0, _getCookie2.default)('student_id')).then(function (response) {
+	        return response.json();
+	      }).then(function (example) {
+	        var inputs = _reactDom2.default.findDOMNode(_this2).querySelectorAll('input[type="number"]'); // Fuck JavaScript
+	        [].forEach.call(inputs, function (input) {
+	          return input.value = '';
+	        });
+	        _this2.setState(example);
+	      }).catch(console.error);
+	    }
+	  }, {
+	    key: 'check',
+	    value: function check() {
+	      var _this3 = this;
+
+	      var tableNode = _reactDom2.default.findDOMNode(this).querySelectorAll('.table tr');
+	      var table = [].map.call(tableNode, function (tr) {
+	        return [].map.call(tr.querySelectorAll('input[type="number"]'), function (input) {
+	          return input.value !== '' ? parseInt(input.value) : '';
+	        });
+	      });
+	      fetch('http://discrete-eltech.eurodir.ru:8888/test/convergents/', {
+	        method: 'post',
+	        headers: new Headers({
+	          'Content-Type': 'application/json'
+	        }),
+	        body: JSON.stringify({
+	          input: this.state.input,
+	          table: table,
+	          test_id: this.state.test_id
+	        })
+	      }).then(function (response) {
+	        return response.json();
+	      }).then(function (response) {
+	        return _this3.setState(_extends({}, _this3.state, {
+	          status: response.status
+	        }));
+	      }).catch(console.error);
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this4 = this;
+
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'content-wrap' },
+	        _react2.default.createElement(_Toolbar2.default, null),
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'Нахождение подходящих дробей'
+	        ),
+	        _react2.default.createElement(
+	          'h2',
+	          null,
+	          'Контроль'
+	        ),
+	        this.state.input ? _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Найдите подходящие дроби для ',
+	            this.state.input[0],
+	            '/',
+	            this.state.input[1]
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'table' },
+	            _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row, i) {
+	                return row.map(function (col, j) {
+	                  return i == 1 && j < 2 ? _react2.default.createElement('input', { type: 'number', disabled: true }) : _react2.default.createElement('input', { type: 'number' });
+	                });
+	              }) })
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'button-wrap' },
+	            _react2.default.createElement(
+	              'button',
+	              { onClick: function onClick(e) {
+	                  return _this4.check(e);
+	                } },
+	              'Проверить'
+	            ),
+	            this.state.status !== undefined ? this.state.status ? _react2.default.createElement('i', { className: 'checker ok' }) : _react2.default.createElement('i', { className: 'checker wrong' }) : null
+	          )
+	        ) : null
+	      );
+	    }
+	  }]);
+
+	  return ConvergentsTest;
+	}(_react.Component);
+
+	exports.default = ConvergentsTest;
+
+/***/ },
+/* 644 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(122);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Table = __webpack_require__(626);
+
+	var _Table2 = _interopRequireDefault(_Table);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var InverseShow = function (_Component) {
+	  _inherits(InverseShow, _Component);
+
+	  function InverseShow(props) {
+	    _classCallCheck(this, InverseShow);
+
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(InverseShow).call(this, props));
+
+	    _this.state = {};
+
+	    _this.refreshExample();
+	    return _this;
+	  }
+
+	  _createClass(InverseShow, [{
+	    key: 'refreshExample',
+	    value: function refreshExample() {
+	      var _this2 = this;
+
+	      fetch('http://discrete-eltech.eurodir.ru:8888/solve/inverse').then(function (response) {
+	        return response.json();
+	      }).then(function (example) {
+	        _this2.setState(example);
+	      }).catch(console.error);
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this3 = this;
+
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        this.state.input ? _react2.default.createElement(
+	          'div',
+	          { className: 'content-wrap' },
+	          _react2.default.createElement(
+	            'h1',
+	            null,
+	            'Нахождение обратного числа'
+	          ),
+	          _react2.default.createElement(
+	            'h2',
+	            null,
+	            'Демонстрация'
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Найти обратный элемент к ',
+	            this.state.input[1],
+	            ' в кольце вычетов по модулю ',
+	            this.state.input[0]
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Классы вычетов определяется остатком по модулю ',
+	            this.state.input[0]
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Или другими словами мы имеем уравнение'
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            this.state.input[1],
+	            'x = 1 mod ',
+	            this.state.input[0]
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Где x обратное число, перейдём к уравнению'
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            this.state.input[1],
+	            'x - ',
+	            this.state.input[0],
+	            'y = 1'
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Применим к ',
+	            this.state.input[0],
+	            ' и ',
+	            this.state.input[1],
+	            ' расширенный алгоритм Евклида.Если x ',
+	            '<',
+	            ' 0 нужно прибавить к нему модуль кольца вычетов'
+	          ),
+	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
+	              return row.map(function (col) {
+	                return _react2.default.createElement(
+	                  'div',
+	                  { className: 'number-wrap' },
+	                  col
+	                );
+	              });
+	            }) }),
+	          _react2.default.createElement(
+	            'code',
+	            null,
+	            'Ответ: ',
+	            this.state.output
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'button-wrap' },
+	            _react2.default.createElement(
+	              'button',
+	              { onClick: function onClick(e) {
+	                  return _this3.refreshExample();
+	                } },
+	              'Обновить'
+	            )
+	          )
+	        ) : null
+	      );
+	    }
+	  }]);
+
+	  return InverseShow;
+	}(_react.Component);
+
+	exports.default = InverseShow;
+
+/***/ },
+/* 645 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(122);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(535);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	var _Table = __webpack_require__(626);
+
+	var _Table2 = _interopRequireDefault(_Table);
+
+	var _Toolbar = __webpack_require__(631);
+
+	var _Toolbar2 = _interopRequireDefault(_Toolbar);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var InverseTrainer = function (_Component) {
+	  _inherits(InverseTrainer, _Component);
+
+	  function InverseTrainer(props) {
+	    _classCallCheck(this, InverseTrainer);
+
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(InverseTrainer).call(this, props));
+
+	    _this.state = {};
+
+	    _this.refreshExample();
+	    return _this;
+	  }
+
+	  _createClass(InverseTrainer, [{
+	    key: 'refreshExample',
+	    value: function refreshExample() {
+	      var _this2 = this;
+
+	      fetch('http://discrete-eltech.eurodir.ru:8888/solve/inverse').then(function (response) {
+	        return response.json();
+	      }).then(function (example) {
+	        var inputs = _reactDom2.default.findDOMNode(_this2).querySelectorAll('input[type="number"]'); // Fuck JavaScript
+	        [].forEach.call(inputs, function (input) {
+	          input.value = '';
+	          input.classList.remove('ok');
+	          input.classList.remove('wrong');
+	        });
+	        _this2.setState(example);
+	      }).catch(console.error);
+	    }
+	  }, {
+	    key: 'check',
+	    value: function check(event) {
+	      if (event.currentTarget.value != '') {
+	        if (event.currentTarget.value === event.currentTarget.dataset.original) {
+	          event.currentTarget.classList.remove('wrong');
+	          event.currentTarget.classList.add('ok');
+	        } else {
+	          event.currentTarget.classList.remove('ok');
+	          event.currentTarget.classList.add('wrong');
+	        }
+	      }
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this3 = this;
+
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'content-wrap' },
+	        _react2.default.createElement(_Toolbar2.default, null),
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'Нахождение обратного числа'
+	        ),
+	        _react2.default.createElement(
+	          'h2',
+	          null,
+	          'Тренажёр'
+	        ),
+	        this.state.input ? _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Найти обратный элемент к ',
+	            this.state.input[1],
+	            ' в поле вычетов по модулю ',
+	            this.state.input[0],
+	            ' заполнив нужную часть таблицы расширенного алгоритма Евклида. Классы вычетов определяется остатком по модулю ',
+	            this.state.input[0]
+	          ),
+	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
+	              return row.map(function (col) {
+	                return col !== '' ? _react2.default.createElement(
+	                  'div',
+	                  { className: 'input-number-wrap' },
+	                  _react2.default.createElement('input', { type: 'number', 'data-original': col, onBlur: function onBlur(e) {
+	                      return _this3.check(e);
+	                    } }),
+	                  _react2.default.createElement('i', { className: 'checker' })
+	                ) : null;
+	              });
+	            }) }),
+	          _react2.default.createElement(
+	            'code',
+	            { className: 'answer-area' },
+	            'Ответ:  ',
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'input-number-wrap' },
+	              _react2.default.createElement('input', { type: 'number', 'data-original': this.state.output, onBlur: function onBlur(e) {
+	                  return _this3.check(e);
+	                } }),
+	              _react2.default.createElement('i', { className: 'checker' })
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'button-wrap' },
+	            _react2.default.createElement(
+	              'button',
+	              { onClick: function onClick(e) {
+	                  return _this3.refreshExample();
+	                } },
+	              'Обновить'
+	            )
+	          )
+	        ) : null
+	      );
+	    }
+	  }]);
+
+	  return InverseTrainer;
+	}(_react.Component);
+
+	exports.default = InverseTrainer;
+
+/***/ },
+/* 646 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(122);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(535);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	var _Toolbar = __webpack_require__(631);
+
+	var _Toolbar2 = _interopRequireDefault(_Toolbar);
+
+	var _getCookie = __webpack_require__(634);
+
+	var _getCookie2 = _interopRequireDefault(_getCookie);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var InverseTest = function (_Component) {
+	  _inherits(InverseTest, _Component);
+
+	  function InverseTest(props) {
+	    _classCallCheck(this, InverseTest);
+
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(InverseTest).call(this, props));
+
+	    _this.state = {};
+
+	    _this.refreshExample();
+	    return _this;
+	  }
+
+	  _createClass(InverseTest, [{
+	    key: 'refreshExample',
+	    value: function refreshExample() {
+	      var _this2 = this;
+
+	      fetch('http://discrete-eltech.eurodir.ru:8888/test/inverse?id=' + (0, _getCookie2.default)('student_id')).then(function (response) {
+	        return response.json();
+	      }).then(function (example) {
+	        var inputs = _reactDom2.default.findDOMNode(_this2).querySelectorAll('input[type="number"]'); // Fuck JavaScript
+	        [].forEach.call(inputs, function (input) {
+	          return input.value = '';
+	        });
+	        _this2.setState(example);
+	      }).catch(console.error);
+	    }
+	  }, {
+	    key: 'check',
+	    value: function check() {
+	      var _this3 = this;
+
+	      fetch('http://discrete-eltech.eurodir.ru:8888/test/inverse/', {
+	        method: 'post',
+	        headers: new Headers({
+	          'Content-Type': 'application/json'
+	        }),
+	        body: JSON.stringify({
+	          input: this.state.input,
+	          output: parseInt(this.refs.output.value),
+	          test_id: this.state.test_id
+	        })
+	      }).then(function (response) {
+	        return response.json();
+	      }).then(function (response) {
+	        return _this3.setState(_extends({}, _this3.state, {
+	          status: response.status
+	        }));
+	      }).catch(console.error);
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this4 = this;
+
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'content-wrap' },
+	        _react2.default.createElement(_Toolbar2.default, { smartTable: true }),
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'Нахождение обратного числа'
+	        ),
+	        _react2.default.createElement(
+	          'h2',
+	          null,
+	          'Контроль'
+	        ),
+	        this.state.input ? _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Найти обратный элемент к ',
+	            this.state.input[1],
+	            ' в поле вычетов по модулю ',
+	            this.state.input[0],
+	            ' заполнив нужную часть таблицы расширенного алгоритма Евклида. Классы вычетов определяется остатком по модулю ',
+	            this.state.input[0]
+	          ),
+	          _react2.default.createElement(
+	            'code',
+	            { className: 'answer-area' },
+	            'Ответ:  ',
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'input-number-wrap' },
+	              _react2.default.createElement('input', { type: 'number', ref: 'output' })
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'button-wrap' },
+	            _react2.default.createElement(
+	              'button',
+	              { onClick: function onClick(e) {
+	                  return _this4.check(e);
+	                } },
+	              'Проверить'
+	            ),
+	            this.state.status !== undefined ? this.state.status ? _react2.default.createElement('i', { className: 'checker ok' }) : _react2.default.createElement('i', { className: 'checker wrong' }) : null
+	          )
+	        ) : null
+	      );
+	    }
+	  }]);
+
+	  return InverseTest;
+	}(_react.Component);
+
+	exports.default = InverseTest;
 
 /***/ },
 /* 647 */
@@ -43824,7 +43824,7 @@
 
 	var _Table2 = _interopRequireDefault(_Table);
 
-	var _Toolbar = __webpack_require__(645);
+	var _Toolbar = __webpack_require__(631);
 
 	var _Toolbar2 = _interopRequireDefault(_Toolbar);
 
@@ -43870,26 +43870,22 @@
 	  }, {
 	    key: 'check',
 	    value: function check(event) {
-	      console.log('current value = ', event.currentTarget.value);
 	      if (event.currentTarget.value != '') {
-	        console.log('.output = ', event.currentTarget.closest('.output'));
 	        if (event.currentTarget.closest('.output')) {
 	          var a1 = this.refs.a1;
 	          var a2 = this.refs.a2;
 	          var b1 = this.refs.b1;
 	          var b2 = this.refs.b2;
 	          if (a1.value && a2.value && b1.value && b2.value) {
-	            console.log('a2 value = ', parseInt(a2.value));
-	            console.log('a2 original = ', parseInt(a2.dataset.original));
-	            console.log('b2 original = ', parseInt(b2.dataset.original));
-	            console.log('class_y = ', (parseInt(a2.value) - parseInt(a2.dataset.original)) % parseInt(b2.dataset.original));
 	            var class_x = (parseInt(a1.value) - parseInt(a1.dataset.original)) % parseInt(b1.dataset.original) === 0;
 	            var class_y = (parseInt(a2.value) - parseInt(a2.dataset.original)) % parseInt(b2.dataset.original) === 0;
+	            console.log('tc = ', a1.value * this.state.input[0] + a2.value * this.state.input[1] === this.state.input[2]);
+	            var t_c = a1.value * this.state.input[0] + a2.value * this.state.input[1] === this.state.input[2];
 	            var t_x = Math.abs(parseInt(b1.value)) == Math.abs(parseInt(b1.dataset.original));
 	            var t_y = Math.abs(parseInt(b2.value)) == Math.abs(parseInt(b2.dataset.original));
 	            var t_s = parseInt(b1.value) * parseInt(b2.value) < 0;
-	            console.log(class_y, class_x, t_x, t_y, t_s);
-	            if (class_y && class_x && t_x && t_y && t_s) {
+	            console.log(class_y, class_x, t_x, t_y, t_s, t_c);
+	            if (class_y && class_x && t_x && t_y && t_s && t_c) {
 	              var inputs = this.refs.outputWrap.querySelectorAll('input[type=number]');
 	              [].forEach.call(inputs, function (input) {
 	                input.classList.remove('wrong');
@@ -44111,11 +44107,11 @@
 
 	var _Table2 = _interopRequireDefault(_Table);
 
-	var _Toolbar = __webpack_require__(645);
+	var _Toolbar = __webpack_require__(631);
 
 	var _Toolbar2 = _interopRequireDefault(_Toolbar);
 
-	var _getCookie = __webpack_require__(632);
+	var _getCookie = __webpack_require__(634);
 
 	var _getCookie2 = _interopRequireDefault(_getCookie);
 
@@ -44473,7 +44469,7 @@
 
 	var _Table2 = _interopRequireDefault(_Table);
 
-	var _Toolbar = __webpack_require__(645);
+	var _Toolbar = __webpack_require__(631);
 
 	var _Toolbar2 = _interopRequireDefault(_Toolbar);
 
@@ -44631,11 +44627,11 @@
 
 	var _Table2 = _interopRequireDefault(_Table);
 
-	var _Toolbar = __webpack_require__(645);
+	var _Toolbar = __webpack_require__(631);
 
 	var _Toolbar2 = _interopRequireDefault(_Toolbar);
 
-	var _getCookie = __webpack_require__(632);
+	var _getCookie = __webpack_require__(634);
 
 	var _getCookie2 = _interopRequireDefault(_getCookie);
 
@@ -44929,7 +44925,7 @@
 
 	var _Table2 = _interopRequireDefault(_Table);
 
-	var _Toolbar = __webpack_require__(645);
+	var _Toolbar = __webpack_require__(631);
 
 	var _Toolbar2 = _interopRequireDefault(_Toolbar);
 
@@ -45092,11 +45088,11 @@
 
 	var _Table2 = _interopRequireDefault(_Table);
 
-	var _Toolbar = __webpack_require__(645);
+	var _Toolbar = __webpack_require__(631);
 
 	var _Toolbar2 = _interopRequireDefault(_Toolbar);
 
-	var _getCookie = __webpack_require__(632);
+	var _getCookie = __webpack_require__(634);
 
 	var _getCookie2 = _interopRequireDefault(_getCookie);
 
@@ -45414,7 +45410,7 @@
 
 	var _Table2 = _interopRequireDefault(_Table);
 
-	var _Toolbar = __webpack_require__(645);
+	var _Toolbar = __webpack_require__(631);
 
 	var _Toolbar2 = _interopRequireDefault(_Toolbar);
 
@@ -45583,11 +45579,11 @@
 
 	var _Table2 = _interopRequireDefault(_Table);
 
-	var _Toolbar = __webpack_require__(645);
+	var _Toolbar = __webpack_require__(631);
 
 	var _Toolbar2 = _interopRequireDefault(_Toolbar);
 
-	var _getCookie = __webpack_require__(632);
+	var _getCookie = __webpack_require__(634);
 
 	var _getCookie2 = _interopRequireDefault(_getCookie);
 
