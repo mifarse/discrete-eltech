@@ -16,7 +16,6 @@ export default class HornerShow extends Component {
       .then(example => {
         this.setState(example)
       })
-      .catch(console.error)
   }
 
   polynomial (factors) {
@@ -39,6 +38,12 @@ export default class HornerShow extends Component {
             <h1>Схема Горнера</h1>
             <h2>Демонстрация</h2>
             <p>Поделим многочлен {this.polynomial(this.state.input[0])} на бином ({this.polynomial([1, -1 * this.state.input[1]])})</p>
+            <p>Составим таблицу из двух строк</p>
+            <p>В первой строке запишем коэффициенты многочлена {this.polynomial(this.state.input[0])}, расположенные по убыванию степеней переменной x</p>
+            <p>Так как мы делим на ({this.polynomial([1, -1 * this.state.input[1]])}), то во второй строке запишем {this.state.input[1]}</p>
+            <p>Во вторую ячейку второй строки запишем число {this.state.input[0][0]}, просто перенеся его из соответствующей ячейки первой строки</p>
+            <p>Следующую ячейку заполним по такому принципу: {this.state.input[1]} * {this.state.input[0][0]} + {this.state.input[0][1]} = {this.state.table[1][2]}</p>
+            <p>Аналогично заполним и четвертую ячейку второй строки: {this.state.input[1]} * {this.state.table[1][2]} + {this.state.input[0][2]} = {this.state.table[1][3]}, и так далее</p>
             <Table data={this.state.table.map(row => row.map(col => 
                 <div className="number-wrap">{col}</div>
             ))}/>
