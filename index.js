@@ -140,7 +140,8 @@ if (cluster.isMaster){
 					t_x = Math.abs(req.body.output.x[1]) == Math.abs(server_solution.output.x[1]);
 					t_y = Math.abs(req.body.output.y[1]) == Math.abs(server_solution.output.y[1]);  
 					t_s = req.body.output.y[1]*req.body.output.x[1] < 0;
-					isSimilar = class_y && class_x && t_x && t_y && t_s;
+					t_c = req.body.output.x[0]*req.body.input[0]+req.body.output.y[0]*req.body.input[1] == req.body.input[2];
+					isSimilar = class_y && class_x && t_x && t_y && t_s && t_c;
 					break;
 				case 'axby1':
 					if ((req.body.table[2][ req.body.table[2].length -1 ] == '') && (req.body.table[3][ req.body.table[3].length -1 ] == '')){
