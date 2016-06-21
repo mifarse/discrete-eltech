@@ -43666,7 +43666,7 @@
 	          _react2.default.createElement(
 	            'h1',
 	            null,
-	            'Решение диофантово уравнения'
+	            'Решение диофантова уравнения'
 	          ),
 	          _react2.default.createElement(
 	            'h2',
@@ -43939,7 +43939,7 @@
 	        _react2.default.createElement(
 	          'h1',
 	          null,
-	          'Решение диофантово уравнения'
+	          'Решение диофантова уравнения'
 	        ),
 	        _react2.default.createElement(
 	          'h2',
@@ -44220,7 +44220,7 @@
 	        _react2.default.createElement(
 	          'h1',
 	          null,
-	          'Решение диофантово уравнения'
+	          'Решение диофантова уравнения'
 	        ),
 	        _react2.default.createElement(
 	          'h2',

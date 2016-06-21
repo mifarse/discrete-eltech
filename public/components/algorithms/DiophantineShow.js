@@ -24,7 +24,7 @@ export default class DiophantineShow extends Component {
       <div>
         {this.state.input ? 
           <div className="content-wrap">
-            <h1>Решение диофантово уравнения</h1>
+            <h1>Решение диофантова уравнения</h1>
             <h2>Демонстрация</h2>
             <p>Дано уравнение в целых числах:</p>
             <p>{this.state.input[0]}x + {this.state.input[1]}y = {this.state.input[2]}</p>

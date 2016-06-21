@@ -78,7 +78,7 @@ export default class DiophantineTrainer extends Component {
     return (
       <div className="content-wrap">
         <Toolbar />
-        <h1>Решение диофантово уравнения</h1>
+        <h1>Решение диофантова уравнения</h1>
         <h2>Тренажёр</h2>
         {this.state.input ? 
           <div>
