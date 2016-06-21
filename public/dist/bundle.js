@@ -41076,7 +41076,7 @@
 	          // if result is not diplayed, just keep adding
 	          if (resultDisplayed === false) {
 	            input.innerHTML += e.target.innerHTML;
-	          } else if (resultDisplayed === true && lastChar === "+" || lastChar === "-" || lastChar === "×" || lastChar === "÷") {
+	          } else if (resultDisplayed === true && lastChar === "+" || lastChar === "-" || lastChar === "×" || lastChar === "÷" || lastChar === "%") {
 	            // if result is currently displayed and user pressed an operator
 	            // we need to keep on adding to the string for next operation
 	            resultDisplayed = false;
@@ -41100,7 +41100,7 @@
 	          var lastChar = currentString[currentString.length - 1];
 
 	          // if last character entered is an operator, replace it with the currently pressed one
-	          if (lastChar === "+" || lastChar === "-" || lastChar === "×" || lastChar === "÷") {
+	          if (lastChar === "+" || lastChar === "-" || lastChar === "×" || lastChar === "÷" || lastChar === "%") {
 	            var newString = currentString.substring(0, currentString.length - 1) + e.target.innerHTML;
 	            input.innerHTML = newString;
 	          } else if (currentString.length == 0) {
@@ -41120,7 +41120,7 @@
 	        var inputString = input.innerHTML;
 
 	        // forming an array of numbers. eg for above string it will be: numbers = ["10", "26", "33", "56", "34", "23"]
-	        var numbers = inputString.split(/\+|\-|\×|\÷/g);
+	        var numbers = inputString.split(/\+|\-|\×|\÷|\%/g);
 
 	        // forming an array of operators. for above string it will be: operators = ["+", "+", "-", "*", "/"]
 	        // first we replace all the numbers and dot with empty string and then split
@@ -41163,6 +41163,14 @@
 	          numbers.splice(add, 2, parseFloat(numbers[add]) + parseFloat(numbers[add + 1]));
 	          operators.splice(add, 1);
 	          add = operators.indexOf("+");
+	        }
+
+	        var percent = operators.indexOf("%");
+	        while (percent != -1) {
+	          // using parseFloat is necessary, otherwise it will result in string concatenation :)
+	          numbers.splice(percent, 2, parseFloat(numbers[percent]) % parseFloat(numbers[percent + 1]));
+	          operators.splice(percent, 1);
+	          percent = operators.indexOf("%");
 	        }
 
 	        input.innerHTML = numbers[0]; // displaying the output
@@ -41256,6 +41264,11 @@
 	                      'div',
 	                      null,
 	                      '÷'
+	                    ),
+	                    _react2.default.createElement(
+	                      'div',
+	                      null,
+	                      '%'
 	                    )
 	                  ),
 	                  _react2.default.createElement(
