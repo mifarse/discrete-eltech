@@ -27,7 +27,6 @@ export default class InverseShow extends Component {
             <h1>Нахождение обратного числа</h1>
             <h2>Демонстрация</h2>
             <p>Найти обратный элемент к {this.state.input[1]} в кольце вычетов по модулю {this.state.input[0]}</p>
-            <p>Классы вычетов определяется остатком по модулю {this.state.input[0]}</p>
             <p>Или другими словами мы имеем уравнение</p>
             <p>{this.state.input[1]}x = 1 mod {this.state.input[0]}</p>
             <p>Где x обратное число, перейдём к уравнению</p>

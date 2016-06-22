@@ -43212,12 +43212,6 @@
 	          _react2.default.createElement(
 	            'p',
 	            null,
-	            'Классы вычетов определяется остатком по модулю ',
-	            this.state.input[0]
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
 	            'Или другими словами мы имеем уравнение'
 	          ),
 	          _react2.default.createElement(
@@ -43358,12 +43352,26 @@
 	    key: 'check',
 	    value: function check(event) {
 	      if (event.currentTarget.value != '') {
-	        if (event.currentTarget.value === event.currentTarget.dataset.original) {
-	          event.currentTarget.classList.remove('wrong');
-	          event.currentTarget.classList.add('ok');
+	        if (event.target.classList.contains('output')) {
+	          var val = parseInt(event.target.value);
+	          var original = parseInt(event.target.dataset.original);
+	          var mod = parseInt(this.state.input[0]);
+	          console.log(val, original, mod, (val - original) % mod);
+	          if ((val - original) % mod === 0) {
+	            event.currentTarget.classList.remove('wrong');
+	            event.currentTarget.classList.add('ok');
+	          } else {
+	            event.currentTarget.classList.remove('ok');
+	            event.currentTarget.classList.add('wrong');
+	          }
 	        } else {
-	          event.currentTarget.classList.remove('ok');
-	          event.currentTarget.classList.add('wrong');
+	          if (event.currentTarget.value === event.currentTarget.dataset.original) {
+	            event.currentTarget.classList.remove('wrong');
+	            event.currentTarget.classList.add('ok');
+	          } else {
+	            event.currentTarget.classList.remove('ok');
+	            event.currentTarget.classList.add('wrong');
+	          }
 	        }
 	      }
 	    }
@@ -43396,8 +43404,7 @@
 	            this.state.input[1],
 	            ' в поле вычетов по модулю ',
 	            this.state.input[0],
-	            ' заполнив нужную часть таблицы расширенного алгоритма Евклида. Классы вычетов определяется остатком по модулю ',
-	            this.state.input[0]
+	            ' заполнив нужную часть таблицы расширенного алгоритма Евклида'
 	          ),
 	          _react2.default.createElement(_Table2.default, { data: this.state.table.map(function (row) {
 	              return row.map(function (col) {
@@ -43418,7 +43425,8 @@
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'input-number-wrap' },
-	              _react2.default.createElement('input', { type: 'number', 'data-original': this.state.output, onBlur: function onBlur(e) {
+	              _react2.default.createElement('input', { type: 'number', className: 'output',
+	                'data-original': this.state.output, onBlur: function onBlur(e) {
 	                  return _this3.check(e);
 	                } }),
 	              _react2.default.createElement('i', { className: 'checker' })
@@ -43564,8 +43572,7 @@
 	            this.state.input[1],
 	            ' в поле вычетов по модулю ',
 	            this.state.input[0],
-	            ' заполнив нужную часть таблицы расширенного алгоритма Евклида. Классы вычетов определяется остатком по модулю ',
-	            this.state.input[0]
+	            ' заполнив нужную часть таблицы расширенного алгоритма Евклида'
 	          ),
 	          _react2.default.createElement(
 	            'code',

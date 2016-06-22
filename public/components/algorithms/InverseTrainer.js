@@ -29,13 +29,29 @@ export default class InverseTrainer extends Component {
 
   check (event) {
     if (event.currentTarget.value != '') {
-      if (event.currentTarget.value === event.currentTarget.dataset.original) {
-        event.currentTarget.classList.remove('wrong')
-        event.currentTarget.classList.add('ok')
+      if (event.target.classList.contains('output')) {
+        const val      = parseInt(event.target.value)
+        const original = parseInt(event.target.dataset.original)
+        const mod      = parseInt(this.state.input[0])
+        console.log(val, original, mod, (val - original) % mod)
+        if ((val - original) % mod === 0) {
+          event.currentTarget.classList.remove('wrong')
+          event.currentTarget.classList.add('ok')
+        }
+        else {
+          event.currentTarget.classList.remove('ok')
+          event.currentTarget.classList.add('wrong')
+        }
       }
       else {
-        event.currentTarget.classList.remove('ok')
-        event.currentTarget.classList.add('wrong')
+        if (event.currentTarget.value === event.currentTarget.dataset.original) {
+          event.currentTarget.classList.remove('wrong')
+          event.currentTarget.classList.add('ok')
+        }
+        else {
+          event.currentTarget.classList.remove('ok')
+          event.currentTarget.classList.add('wrong')
+        }
       }
     }
   }
@@ -48,7 +64,7 @@ export default class InverseTrainer extends Component {
         <h2>Тренажёр</h2>
         {this.state.input ? 
           <div>
-            <p>Найти обратный элемент к {this.state.input[1]} в поле вычетов по модулю {this.state.input[0]} заполнив нужную часть таблицы расширенного алгоритма Евклида. Классы вычетов определяется остатком по модулю {this.state.input[0]}</p>
+            <p>Найти обратный элемент к {this.state.input[1]} в поле вычетов по модулю {this.state.input[0]} заполнив нужную часть таблицы расширенного алгоритма Евклида</p>
             <Table data={this.state.table.map(row => row.map(col => 
               col !== '' ? (
                 <div className="input-number-wrap">
@@ -60,7 +76,8 @@ export default class InverseTrainer extends Component {
             <code className="answer-area">
               Ответ: &nbsp;
               <div className="input-number-wrap">
-                <input type="number" data-original={this.state.output} onBlur={e => this.check(e)}/>
+                <input type="number" className="output" 
+                  data-original={this.state.output} onBlur={e => this.check(e)}/>
                 <i className="checker"></i>
               </div>
             </code>
