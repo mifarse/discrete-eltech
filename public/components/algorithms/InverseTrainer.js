@@ -33,7 +33,6 @@ export default class InverseTrainer extends Component {
         const val      = parseInt(event.target.value)
         const original = parseInt(event.target.dataset.original)
         const mod      = parseInt(this.state.input[0])
-        console.log(val, original, mod, (val - original) % mod)
         if ((val - original) % mod === 0) {
           event.currentTarget.classList.remove('wrong')
           event.currentTarget.classList.add('ok')

@@ -34,30 +34,50 @@ export default class DiophantineTrainer extends Component {
         let a2 = this.refs.a2
         let b1 = this.refs.b1
         let b2 = this.refs.b2
-        if (a1.value && a2.value && b1.value && b2.value) {
+
+        console.log('a1 = ' + a1.value, 'b1 = ' + b1.value, 'a2 = ' + a2.value, 'b2 = ' + b2.value)
+
+        if (a1.value && a2.value) {
           let class_x = (parseInt(a1.value) - parseInt(a1.dataset.original)) % 
             parseInt(b1.dataset.original) === 0;
           let class_y = (parseInt(a2.value) - parseInt(a2.dataset.original)) % 
             parseInt(b2.dataset.original) === 0;
-          console.log('tc = ', a1.value*this.state.input[0]+a2.value*this.state.input[1])
+
+          console.log(class_x, class_y)
+
+          if (class_x && class_y) {
+            a1.classList.remove('wrong')
+            a1.classList.add('ok')
+            a2.classList.remove('wrong')
+            a2.classList.add('ok')
+          }
+          else {
+            a1.classList.remove('ok')
+            a1.classList.add('wrong')
+            a2.classList.remove('ok')
+            a2.classList.add('wrong')
+          }
+        }
+
+        if (b1.value && b2.value) {
           let t_c = a1.value*this.state.input[0]+a2.value*this.state.input[1] === this.state.input[2];
           let t_x = Math.abs(parseInt(b1.value)) == Math.abs(parseInt(b1.dataset.original));
           let t_y = Math.abs(parseInt(b2.value)) == Math.abs(parseInt(b2.dataset.original));  
           let t_s = parseInt(b1.value) * parseInt(b2.value) < 0;
-          console.log(class_y, class_x, t_x, t_y, t_s, t_c)
-          if (class_y && class_x && t_x && t_y && t_s && t_c) {
-            let inputs = this.refs.outputWrap.querySelectorAll('input[type=number]');
-            [].forEach.call(inputs, input => {
-              input.classList.remove('wrong')
-              input.classList.add('ok')
-            })
+
+          console.log(t_c, t_x, t_y, t_s)
+
+          if (t_x && t_y && t_s && t_c) {
+            b1.classList.remove('ok')
+            b1.classList.add('wrong')
+            b2.classList.remove('ok')
+            b2.classList.add('wrong')
           }
           else {
-            let inputs = this.refs.outputWrap.querySelectorAll('input[type=number]');
-            [].forEach.call(inputs, input => {
-              input.classList.remove('ok')
-              input.classList.add('wrong')
-            })
+            b1.classList.remove('wrong')
+            b1.classList.add('ok')
+            b2.classList.remove('wrong')
+            b2.classList.add('ok')
           }
         }
       }
