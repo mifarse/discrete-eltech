@@ -179,7 +179,7 @@ if (cluster.isMaster){
 	});
 
 	app.get('/getgroup/:group_id', function(req, res){
-		if (req.params.group_id == "не указана")
+		if (isNaN(req.params.group_id))
 			StudentSchema.find({group: null}, function(err, data){
 				if (err) { console.log(err); res.jsonp([]);}
 				else res.jsonp(data);
