@@ -204,8 +204,10 @@ if (cluster.isMaster){
 			else {
 				megadata = []
 				for (i = 0; i < data.length; i++)
-					if (data[i]._id != null)
-					megadata.push([data[i]._id, data[i].count])
+					if (data[i]._id == null)
+						megadata.push(["группа не указана", data[i].count])
+					else
+						megadata.push([data[i]._id, data[i].count])
 				res.jsonp(megadata)
 			}
 		})
