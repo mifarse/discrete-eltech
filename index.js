@@ -179,10 +179,16 @@ if (cluster.isMaster){
 	});
 
 	app.get('/getgroup/:group_id', function(req, res){
-		StudentSchema.find({group: req.params.group_id}, function(err, data){
-			if (err) { console.log(err); res.jsonp([]);}
-			else res.jsonp(data);
-		}).sort({last_name: 1});
+		if (req.params.group_id == "не указана")
+			StudentSchema.find({group: null}, function(err, data){
+				if (err) { console.log(err); res.jsonp([]);}
+				else res.jsonp(data);
+			}).sort({last_name: 1});
+		else
+			StudentSchema.find({group: req.params.group_id}, function(err, data){
+				if (err) { console.log(err); res.jsonp([]);}
+				else res.jsonp(data);
+			}).sort({last_name: 1});
 	});
 
 	app.get('/g/list', (req,res) => {
@@ -205,7 +211,7 @@ if (cluster.isMaster){
 				megadata = []
 				for (i = 0; i < data.length; i++)
 					if (data[i]._id == null)
-						megadata.push(["группа не указана", data[i].count])
+						megadata.push(["не указана", data[i].count])
 					else
 						megadata.push([data[i]._id, data[i].count])
 				res.jsonp(megadata)
