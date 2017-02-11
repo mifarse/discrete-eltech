@@ -17,11 +17,6 @@ export default function Header () {
           <li><Link to="/"><img src="/images/leti.png" className="logo" alt="ЛЭТИ" title="Home" /></Link></li>
           <li><Link to="/about">О проекте</Link></li>
           <li><Link to="/group">Список групп</Link></li>
-          <li>
-            <a href="http://discrete-eltech.eurodir.ru:8888/generatedoc" target="_blank">
-              Отчет
-            </a>
-          </li>
         </ul>
         {studentID ? 
           <Link to={'/student/' + studentID} className="button">Личный кабинет</Link> : 
